@@ -1,0 +1,52 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve' or 'jekyll server --watch'. If you change this file, please restart the server process.
+
+# Site settings
+title: Quru
+email: sales@quru.com
+description: >
+  Quru is an open source solutions specialist that designs, develops, consults and
+  implements enterprise business solutions. Quru also supplies IT services to several
+  customers including international auction house Bonhams. Quru partners with most
+  major open source vendors including Red Hat, Docker, EnterpriseDB and MariaDB.
+baseurl:  # the subpath of your site, e.g. /blog
+url: http://www.quru.com  # the base hostname & protocol for your site
+twitter_username: quru
+github_username:  qurusales
+
+author:
+  name:           Roland Whitehead
+  url:            https://twitter.com/rolandw
+  email:          i.am@rolandw.me
+
+
+# Build settings
+#markdown: kramdown
+version: 0.1
+github:
+  repo: https://github.com/qurusales/qurusales.github.io
+collections:
+  pages:
+    output: true
+  vendors:
+    output: true
+  whitepapers:
+    output: true
+  partners:
+    output: true
+  quru:
+    output: true
+  products:
+    output: true
+  resources:
+    output: true
+  qis:
+    output: true
+  whatwedo:
+    output: true
+  redhat:
+    output: true

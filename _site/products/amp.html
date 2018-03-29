@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Quru - AMP - Drag and drop datacentre management</title>
+  <meta name="description" content="Agile Metal Platform (AMP) is a joint development project between Quru and A24.io, a Tokyo based cloud services company. Quru are currently working to develo...">
+  <meta name="google-site-verification" content="CUwdgKgMYtgtXO6GhUTjNcGFd1NA8HEBzXcXkt8h3Uc" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/images/quru144.png" />
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/quru.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" media="print" href="/css/quru_print.css">
+
+  <link rel="canonical" href="http://www.quru.com/products/amp.html">
+  <link rel="alternate" type="application/rss+xml" title="Quru" href="http://www.quru.com/feed.xml">
+
+<!--  <script type="text/javascript" src="//images.quru.com/static/js/mootools_yc.js"></script>
+  <script defer async type="text/javascript" src="/static/js/quru.js"></script>
+  <script defer async type="text/javascript" src="/static/js/nav.js"></script>-->
+
+  <link rel="stylesheet" href="//images.quru.com/static/styles/canvas_view.css" type="text/css" />
+  <!--[if lte IE 8]>
+  	<script src="//images.quru.com/static/js/excanvas_yc.js" type="text/javascript"></script>
+  	<![endif]-->
+  <script src="//images.quru.com/static/js/canvas_view_yc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  		QU.whenReady(function() {
+  			// Initialise the clickable images
+  			canvas_view_init_all_images('clickable', {
+  				showcontrols: 'yes',
+  				title: 'Quru Image Server',
+  				description: 'The Quru Image Server is a high performance dynamic imaging ' +
+  				             'solution for presenting your image collections on the web. ' +
+  				             'It is ideal for use in conjunction with your existing web site ' +
+  				             'for applications such as product catalogues.\n\n' +
+  				             'For more information, email us or request a call.'
+  			});
+  		});
+
+  		// Story must be >= sidebar height to avoid sidebar overlapping the footer.
+  		// This needs to be done after dynamic elements have loaded, not just the initial DOM.
+  		//QU.whenReady(function() {
+                //if ($('sidebar')) {
+                //   if (($('sidebar').getStyle('position') == 'absolute') &&
+                //      ($('sidebar').clientHeight > $('story').clientHeight))
+                //      {
+                //          $('story').setStyle('min-height', $('sidebar').clientHeight+'px');
+                //      }
+                //   }
+	        //});
+  	</script>
+
+    <script type="text/javascript">
+    // Resize the full-width slideshows when the window is resized
+    window.addEventListener('resize', function() {
+        if (window._cb_resize !== undefined) clearTimeout(window._cb_resize);
+        window._cb_resize = setTimeout(resetSlideshows, 500);
+    });
+    function resetSlideshows() {
+        var shows = document.querySelectorAll('.slideshow');
+        for (var i = 0; i < shows.length; i++) {
+            var el = shows[i];
+            if (el.id && el._show) slideshow_view_init(el.id, el._show.options);
+         }
+    };
+    </script>
+</head>
+
+
+  <body class="no_touch">
+
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NJ52MS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJ52MS');</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4753067-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<div id="page" class="banner">
+
+<div id="header">
+    <a id="logo" href="/"><img src="/images/quru374.png" border="0" alt="Quru" /></a>
+</div>
+
+<div id="telephone">
+<img src="/css/contact.png" alt="T: "/> +44 20 7160 2888
+</div>
+
+<div id="nav">
+    <ul id="navigation">
+        <li><a href="/whatwedo/" class="first">What we do</a>
+            <ul class="article_list">
+                <li><a href="/whatwedo/softwaredevelopment.html">Software development</a></li><li><a href="/whatwedo/consultingdesigndeployment.html">Consulting, design and deployment</a></li><li><a href="/whatwedo/subscriptionsales.html">Open source subscription sales</a></li><li><a href="/whatwedo/quruproducts.html">Quru products</a></li>
+            </ul>
+       </li>
+
+       <li><a href="/vendors/">Open Source Partners</a>
+            <ul class="article_list">
+                <li><a href="/vendors/coscale.html">Coscale</a></li><li><a href="/vendors/docker.html">Docker</a></li><li><a href="/vendors/enterprisedb.html">EnterpriseDB</a></li><li><a href="/vendors/mariadb.html">MariaDB</a></li><li><a href="/vendors/nagios.html">Nagios</a></li><li><a href="/vendors/nginx.html">NGINX</a></li><li><a href="/vendors/redhat.html">Red Hat</a></li><li><a href="/vendors/sep.html">SEP</a></li>
+            </ul>
+       </li>
+
+       <li><a href="/products/">Quru products</a>
+            <ul class="article_list">
+                <li><a href="/products/amp.html">AMP</a></li><li><a href="/products/qis.html">Quru Image Server</a></li>
+            </ul>
+       </li>
+
+       <li><a href="/resources/">Resources</a>
+            <ul class="article_list">
+                <li><a href="/resources/about.html">About us</a></li><li><a href="/resources/contactus.html">Contact us</a></li><li><a href="/resources/enterpriseclients.html">Enterprise clients</a></li>
+            </ul>
+       </li>
+
+    </ul>
+</div>
+
+<div id="social">
+    <div class="followUs">
+        <a href="http://twitter.com/quru" target="_blank" rel="nofollow">Follow</a>
+    </div>
+    <div class="tweetThis">
+        <a href="#" onclick="TweetThis('http://www.quru.com/index/', '%20from%20Quru', 'quru'); return false;">Tweet</a>
+    </div>
+</div>
+
+
+    
+    <div id="content">
+      <div id="story">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">AMP - Drag and drop datacentre management</h1>
+  </header>
+
+  <div class="eightws">Agile design and deployment of hybrid cloud solutions</div>
+  <div class="post-content">
+
+    
+    <p>Agile Metal Platform (AMP) is a joint development project between Quru and A24.io, a Tokyo based cloud services company. Quru are currently working to develop AMP into a robust, highly available, scaleable but totally understandable infrastructure management system.</p>
+
+<p>AMP’s history:</p>
+
+<p>AMP was originally conceived by Advantage 24 as a way of providing a self-provisioning system for their Infrastructure as a Service business. Clients would be able to provision bare metal servers, virtual machines or containers from a web-portal where each customer would have their own access and user management, could visually build, modify and manage their infrastructure before deploying and inspecting each element through an RDP session or shell. Advantage 24 would be able to monitor the resources used optimising them for both the customer and for Advantage 24’s data centers and then passing through billing information.</p>
+
+<p>AMP was first launched as a prototype in 2015 and was instantly adopted by a number of Advantage 24’s customers. When the trial ended, several of these customers demanded that they should continue to use it; they still are.</p>
+
+<p>Advantage 24’s prototype identified a number of issues that it needed to build on, the biggest of which was making it into an easily installed, resilient package that could be used in other data centers. Quru has taken advantage of the prototype to re-examine what AMP should provide and how it is assembled. We have re-architected the product and are re-building it from the ground up.</p>
+
+<p>AMP will remain a plug-able framework where different components can be simply added and different platforms and requirements added with minimal extra work.</p>
+
+<p>AMP features:</p>
+
+<p>Although there are many solutions that provide some of AMPs features, AMP is a solution that is easy to use and is ideally matched to enterprise requirements and brings many of the benefits that OpenStack provides with very little of the , to make a solution that is indeed usable.</p>
+
+<ul>
+  <li>Enable datacenter managers to build an inventory of physical assets</li>
+  <li>Provide a multi-tenant, role managed means of managing physical, virtual or containerised solutions either in the datacentre or in the cloud</li>
+  <li>Provision, configure, power and connect to all devices via a web GUI</li>
+  <li>Provide user editable configuration templates that can be managed through the web GUI.</li>
+  <li>Monitor hardware and virtual machine usage for performance and billing.</li>
+</ul>
+
+<p>Enterprises currently rel on cross functional IT teams and architects to cobble together complex infrastructures for even simple development projects.</p>
+
+<p>Using AMP individuals are empowered to build resilient systems quickly and easily dragging, dropping and linking to deploy and configure bare metal, VMs, containers, storage, network and cloud resources.</p>
+
+<p>AMP technology:</p>
+
+<p>AMP is built on containerised open source components, providing software defined storage and software defined networking, predefined templates of available services which users can modify and build upon, using role and user management to control who can design, deploy and manage what.</p>
+
+<p>AMP manages bare metal, virtualised machines &amp; containers locally, in remote linked data centers and in the public cloud through a web interface or via CLI. An API will enable most of AMPs abilities to be integrated into third party solutions.</p>
+
+<p>AMP Architecture:</p>
+
+<ul>
+  <li>Bare metal hardware with IPMI with x64 or Power architecture (Quru are IBM lead partner for Linux on Power in the UK)</li>
+  <li>Virtualisation hosts running KVM or XEN (with VirtualBox for localised testing in development)</li>
+  <li>Docker containers (Quru are Docker’s UK partner)</li>
+  <li>Ansible for configuration management (Quru are a Red Hat premier partner and currently lead Ansible consulting for Red Hat in the UK)</li>
+  <li>xCat for OS deployment</li>
+  <li>Nagios for monitoring hardware and VMs (Quru are Nagios’ most active UK partner)</li>
+  <li>CoScale for monitoring containers (Quru are CoScale’s UK partner)</li>
+  <li>Linux based networking through Cumulus OS</li>
+  <li>Software defined storage through GlusterFS and LINBIT DR:BD (Quru are LINBIT’s UK partner).</li>
+</ul>
+
+<p>We are building AMP with standard, web focused tools such as Go, Python and JavaScript for development languages and PostgreSQL as a core database (Quru are EnterpriseDB’s primary UK partner). Our knowledge of the open source community is enabling us to draw on many open source projects (in addition to Red Hat and IBM, Quru are Canonical’s lead UK partner and so have access to knowledge that is deeper than our own).</p>
+
+<p>Quru welcomes other developers and partners to the project on a case basis so  contact us if you would like to contribute.  We expect to deploy the next version prototype by Q4 2018 and an initial GM product by the end of 2018.</p>
+
+  </div>
+
+  <div class="post-footer">
+    <div id='About'>
+  <hr>
+  <h3>About Quru</h3>
+  <p>Quru is a market leader in the technical development, deployment and support of Linux and open source solutions that help organisations to reduce costs and increase operational agility and capability. We have also developed multiple award-winning software solutions ranging from mobile phone apps to global enterprise systems. Quru is based in <a href="http://www.somersethouse.org.uk/" target="somersethouse">Somerset House</a> on the banks of the Thames, right in the centre of London. <a href="/resources/about.html" id="morelink">More...</a></p>
+</div>
+
+  </div>
+  <div class="clear"></div>
+<div id="footer">
+  <div class="column" id="footerColumn1">
+    <ul>
+      <li><a href="/partners/">Enterprise clients</a></li>
+      <li><a href="/vendors/">Open source solutions</a></li>
+      <li><a href="/products/">Quru software</a></li>
+      <li><a href="/resources/">Resources</a></li>
+    </ul>
+  </div>
+  <div class="column" id="footerColumn2">
+    <ul class="article_list">
+      <li>
+	<a href="/qurulabs/">QuruLabs</a>
+      </li>
+      <li>
+	<a href="/healthcheck/">Health check</a>
+      </li>
+      <li>
+	<a href="/architecture/">Linux infrastructure design</a>
+      </li>
+      <li>
+	<a href="/implementation/">Linux implementation</a>
+      </li>
+      <li>
+	<a href="/development/">Development</a>
+      </li>
+    </ul>
+  </div>
+  <div class="column" id="footerColumn3">
+    <div class="article_list">
+      
+    </div>
+  </div>
+  <div class="clear"></div>
+</div> 
+
+
+</article>
+
+      </div>
+
+      <div id="sidebar">
+        
+
+
+
+        
+
+
+
+        <div class="sidebarItem" id="contactUs">
+<h3>Request a call</h3>
+<div class="copy">
+<form name="contacts" method="post" action="/emailform" onsubmit="return emailform(this)" data-use-ajax="yes">
+<label for="realname">Name</label>
+<input type="text" name="realname" maxlength="50" placeholder="Your name" />
+<label for="email">Email</label>
+<input type="email" name="email" placeholder="name@domain.com" />
+<label for="phone">Phone no.</label>
+<input type="tel" name="phone" placeholder="+44 20 7160 2888" />
+<input id="email_submit" type="submit" class="button" value="Submit" />
+<input type="hidden" name="token" value="eyJ0b2tlbl90aW1lIjoiMTUyMDg1ODc5MS43MyIsInJlY2lwaWVudCI6ImluZm9AcXVydS5jb20iLCJhc19qc29uIjp0cnVlLCJzdWJqZWN0IjoiUXVydSB3ZWIgZW5xdWlyeSBhYm91dCBJQk0ifQ.YJptRiYEZvtL3-Nkmo1k82dVFiM">
+<div id="email_status"></div>
+</form>
+</div>
+</div>
+
+        
+
+<div class="sidebarItem" id="partners">
+  <ul class="nobullets">
+    <li><a href="/" target="_new"><img src="https://www.quru.com/static/images/quru_logo.png" alt="Quru"></a></li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+  </body>
+
+</html>
