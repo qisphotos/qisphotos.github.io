@@ -1,5 +1,5 @@
-QuruSales website
-=================
+Quru Image Server website
+=========================
 
 # Introduction #
 
