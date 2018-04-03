@@ -1,15 +1,15 @@
-QuruSales website
-=================
+Quru Image Server website
+=========================
 
 # Introduction #
 
-This site is the development site for the Quru marketing website. It can be viewed either locally (assuming that you have Jekyll and thus Ruby installed) or via github at [http://qurusales.github.io](http://qurusales.github.io).
+This site is the development site for the Quru marketing website. It can be viewed either locally (assuming that you have Jekyll and thus Ruby installed) or via github at [https://qisphotos.github.io](https://qisphotos.github.io).
 
 
 #  Installation #
 There are three stages:
 
-1. Get yourself a github account and an invitation to contribute to qurusales.github.io
+1. Get yourself a github account and an invitation to contribute to qisphotos.github.io
 1. Install Ruby and then Jekyll
 1. Check-out the repo
 
@@ -39,7 +39,7 @@ and all should be ready to go.
 The best way to check out the repo is to use an SSH key but that does require some work on your behalf and that of the repo admins. In the meantime, just do it via https. You will
 
 1. Locate where you want to install it (on a Mac there is a convenient 'Sites' directory in your home directory or you could put it with your other development code)
-1. Navigate to the [https://github.com/qurusales/qurusales.github.io](https://github.com/qurusales/qurusales.github.io) site (which is probably where you are reading this) and you will see a bright green button "Clone or download". Click on this button and copy the URL that starts with "https://". If it starts with "git@" then click on the blue link "Use HTTPS" to change the URL.
+1. Navigate to the [https://github.com/qisphotos/qisphotos.github.io](https://github.com/qisphotos/qisphotos.github.io) site (which is probably where you are reading this) and you will see a bright green button "Clone or download". Click on this button and copy the URL that starts with "https://". If it starts with "git@" then click on the blue link "Use HTTPS" to change the URL.
 1. In your terminal navigate to where you want to install the site and enter ```git clone ``` and paste the address. Hit enter. This will clone the site locally.
 1. To preview the site locally, simply navigate to inside this folder and run in ther terminal ```jekyll serve --watch```. This will start serving your local files locally and will give you a URL to brwose to. It will update the pages as you save your edits.
 *If your pages don't seem to be changing, check out the output from this terminal as it will list all the errors!*
