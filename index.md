@@ -44,8 +44,8 @@ Simply upload a single high resolution image and instruct the browser to downloa
 
 
 <ul>
-<li> <a href="/products/qisforbusiness.html" class="qis_type2" id="qis_for_business">Further details for management</a></li>
-<li><a href="/products/qistechnology.html" class="qis_type2" id="qis_technology">Further details for developers</a></li>
+<li> <a href="/features/qisforbusiness.html" class="qis_type2" id="qis_for_business">Further details for management</a></li>
+<li><a href="/features/qistechnology.html" class="qis_type2" id="qis_technology">Further details for developers</a></li>
 </ul>
 
 -----

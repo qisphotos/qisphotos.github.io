@@ -6,15 +6,12 @@
 # 'jekyll serve' or 'jekyll server --watch'. If you change this file, please restart the server process.
 
 # Site settings
-title: Quru
+title: Quru Image Server
 email: sales@quru.com
 description: >
-  Quru is an open source solutions specialist that designs, develops, consults and
-  implements enterprise business solutions. Quru also supplies IT services to several
-  customers including international auction house Bonhams. Quru partners with most
-  major open source vendors including Red Hat, Docker, EnterpriseDB and MariaDB.
+  QIS is an image server
 baseurl:  # the subpath of your site, e.g. /blog
-url: http://www.quru.com  # the base hostname & protocol for your site
+url: https://qis.app  # the base hostname & protocol for your site
 twitter_username: quru
 github_username:  qurusales
 
@@ -32,21 +29,13 @@ github:
 collections:
   pages:
     output: true
-  vendors:
+  blog:
     output: true
-  whitepapers:
+  documentation:
     output: true
-  partners:
+  features:
     output: true
-  quru:
+  pricing:
     output: true
-  products:
-    output: true
-  resources:
-    output: true
-  qis:
-    output: true
-  whatwedo:
-    output: true
-  redhat:
+  casestudies:
     output: true
