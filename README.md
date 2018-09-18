@@ -47,4 +47,4 @@ The best way to check out the repo is to use an SSH key but that does require so
 
 
 # Updating #
-When you are happy with your code, please don't forget to commit it to your local repo and then push your local repo up to github. Github pages will then automatically rebuild the site (it usually takes about 2 minutes)
+When you are happy with your code, please don't forget to commit it to your local repo and then push your local repo up to github. Github pages will then automatically rebuild the site (it usually takes about 2 minutes).
