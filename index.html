@@ -152,19 +152,19 @@
       let main_heading = document.querySelector('.main-heading')
       console.log('should be our nav' + openNav)
       console.log('should be our panel' + to_be_opened)
-      if (currentPanel.classList.contains = 'inactive') {
-        main_heading.style.visibility = 'visible';
-      } else if  (currentPanel && openNav) {
+      if (currentPanel && openNav) {
           openNav.classList.remove('navigation-active');
           openNav.classList.add('navigation-inactive');
           currentPanel.classList.remove('active');
           currentPanel.classList.add('inactive');
           console.log('IF positive got run inside showPanel')
-        } else {
+        // } else if (openNav.classList.contains = 'navigation-inactive') {
+        //   main_heading.style.visibility = 'visible';
+        } else  {
           console.log('IF else got run inside showPanel')
-          main_heading.style.visibility = 'hidden';
+          // main_heading.style.visibility = 'hidden';
           to_be_opened.classList.add('active');
-          openNav.classList.add('navigation-active');
+          openNav.classList.add('navigation-active');          
           console.log('we hope that nav active has been added')
           // setTimeout(() => {
           // to_be_opened.classList.remove('inactive');
@@ -177,10 +177,12 @@
 
 <script>
     function toHome(){
-    let activePlanel = document.querySelector(".active");
+    let activePlanel = document.querySelector("active");
     console.log('toHome Got Run')
       activePlanel.classList.remove('active');
       activePlanel.classList.add('inactive');
+      openNav.classList.remove('navigation-active');
+      openNav.classList.add('navigation-inactive')
 
     }
 
