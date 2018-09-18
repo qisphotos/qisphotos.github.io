@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quru Image Server</title>
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+</head>
+<body>
+  <div id="image_container" class="image-container">
+    <div class="dark-layer">
+        <ul class="slideshow">
+            <li><span>Image 01</span><div></div></li>
+            <li><span>Image 02</span><div></div></li>
+            <li><span>Image 03</span><div></div></li>
+            <li><span>Image 04</span><div></div></li>
+            <li><span>Image 05</span><div></div></li>            
+        </ul>
+    
+      <div class="row" style="margin-left: 0; margin-right: 0;">
+        <div class="col-md-6" style="padding-left:0;">
+          <div class="quru-image-server-tag">
+            <p><span>Quru </span>Image Server</p>
+          </div>  
+          <div class="main-heading">
+              <h1>Perfect detail at any scale</h1>
+          </div>
+          <div>
+            <button class="download-button">Download</button>
+          </div>
+          <div class="social">
+              <ul>
+                <li><i>Instagram</i></li>
+                <li><i>Linkedin</i></li>
+              </ul>
+              <p id="rendered" class="rendered">Image rendered in 2.35 seconds from a 64MG Raw Format</p>
+
+          </div>
+        </div>
+
+        <div class="col-md-6" style="padding-right:0; height: 100%;">           
+          <nav id="navigation" class="navigation navigation-inactive">
+              <ul>
+                <li onclick="toHome()">                    
+                    Home
+                </li>
+                <br>
+                <li data-panel="image-resizing-panel">
+                    Image Resizing
+                  </li>
+                  <br>
+                <li data-panel="image-conversion-panel">
+                    Image Conversion
+                  </li>
+                  <br>
+                <li data-panel="watermarking-and-protection-panel">
+                  Watermarking & protection 
+                </li>
+                <br>
+                <li data-panel="image-analytics-panel">
+                  Image analytics
+                </li>
+                <br>
+                <li data-panel="pricing-panel">
+                  Pricing
+                </li>
+                <br>            
+                <li data-panel="case-studies-panel">
+                  Case studies
+                </li>
+                <br>
+                <li data-panel="about-us-panel">
+                  About us
+                </li>
+                <br>
+              </ul>
+          </nav>
+
+          <div id="image-resizing-panel" class="panel image-resizing-panel">
+            <div class="content">
+              <div class="top-thing">
+                <p>Product Information <span>|</span> <span>Technical Data</span></p>
+              </div>
+
+              <div class="heading">
+                <h1>
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h1>
+              </div>
+
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Reprehenderit nihil, veniam cupiditate fugit, 
+                natus excepturi numquam aliquam sint at facilis id rem dolor similique, 
+                ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit. 
+                Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+              </p>
+
+              <span>Try the online demo</span>
+            </div>  
+          </div> 
+          
+          <div id="image-conversion-panel" class="panel image-conversion-panel">
+              <div class="content">
+                <div class="top-thing">
+                  <p>Product Information <span>|</span> <span>Technical Data</span></p>
+                </div>
+  
+                <div class="heading">
+                  <h1>
+                    Image Conversion Panel - and some more text
+                  </h1>
+                </div>
+  
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                  Reprehenderit nihil, veniam cupiditate fugit, 
+                  natus excepturi numquam aliquam sint at facilis id rem dolor similique, 
+                  ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                  Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit. 
+                  Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                </p>
+  
+                <span>Try the online demo</span>
+              </div>  
+          </div> 
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setUp(){
+      let nav = document.querySelector(".navigation");
+      nav.addEventListener("click", showPanel);
+    }
+
+    function showPanel(e){
+      console.log('showPanel got run')
+      let panel = e.target.dataset.panel;            
+      let to_be_opened = document.getElementById(panel); 
+      let currentPanel = document.querySelector('.active');
+      let openNav = document.getElementById('navigation');
+      let main_heading = document.querySelector('.main-heading')
+      console.log('should be our nav' + openNav)
+      console.log('should be our panel' + to_be_opened)
+      if (currentPanel.classList.contains = 'inactive') {
+        main_heading.style.visibility = 'visible';
+      } else if  (currentPanel && openNav) {
+          openNav.classList.remove('navigation-active');
+          openNav.classList.add('navigation-inactive');
+          currentPanel.classList.remove('active');
+          currentPanel.classList.add('inactive');
+          console.log('IF positive got run inside showPanel')
+        } else {
+          console.log('IF else got run inside showPanel')
+          main_heading.style.visibility = 'hidden';
+          to_be_opened.classList.add('active');
+          openNav.classList.add('navigation-active');
+          console.log('we hope that nav active has been added')
+          // setTimeout(() => {
+          // to_be_opened.classList.remove('inactive');
+          // openNav.classList.remove('navigation-active')
+          // openNav.classList.add('navigation-inactive')
+          // }, 500);
+        }
+      }   
+  </script>
+
+<script>
+    function toHome(){
+    let activePlanel = document.querySelector(".active");
+    console.log('toHome Got Run')
+      activePlanel.classList.remove('active');
+      activePlanel.classList.add('inactive');
+
+    }
+
+</script>
+
+  <script>
+       function SetupwhenReady(fn) {
+        if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+            fn();
+        } else {
+            document.addEventListener('DOMContentLoaded', fn);          
+        }
+    };
+    SetupwhenReady(setUp);
+  </script>
+
+</body>
+</html>
