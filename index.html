@@ -27,7 +27,7 @@
           <div class="quru-image-server-tag">
             <p><span>Quru </span>Image Server</p>
           </div>  
-          <div class="main-heading">
+          <div id="heading" class="main-heading">
               <h1>Perfect detail at any scale</h1>
           </div>
           <div>
@@ -46,7 +46,7 @@
         <div class="col-md-6" style="padding-right:0; height: 100%;">           
           <nav id="navigation" class="navigation navigation-inactive">
               <ul>
-                <li onclick="toHome()">                    
+                <li data-panel="home" onclick="toHome()">                    
                     Home
                 </li>
                 <br>
@@ -80,8 +80,8 @@
                 <br>
               </ul>
           </nav>
-
-          <div id="image-resizing-panel" class="panel image-resizing-panel">
+        <div id="panels">
+          <div id="image-resizing-panel" class="side-panel panel image-resizing-panel">
             <div class="content">
               <div class="top-thing">
                 <p>Product Information <span>|</span> <span>Technical Data</span></p>
@@ -89,7 +89,7 @@
 
               <div class="heading">
                 <h1>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                  image resizing panel and some more text for padding
                 </h1>
               </div>
 
@@ -106,7 +106,7 @@
             </div>  
           </div> 
           
-          <div id="image-conversion-panel" class="panel image-conversion-panel">
+          <div id="image-conversion-panel" class="side-panel panel image-conversion-panel">
               <div class="content">
                 <div class="top-thing">
                   <p>Product Information <span>|</span> <span>Technical Data</span></p>
@@ -129,8 +129,34 @@
   
                 <span>Try the online demo</span>
               </div>  
-          </div> 
+          </div>
+          
+          <div id="watermarking-and-protection-panel" class="side-panel panel watermarking-and-protection-panel">
+            <div class="content">
+              <div class="top-thing">
+                <p>Product Information <span>|</span> <span>Technical Data</span></p>
+              </div>
 
+              <div class="heading">
+                <h1>
+                  Watermarking & Protection
+                </h1>
+              </div>
+
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Reprehenderit nihil, veniam cupiditate fugit, 
+                natus excepturi numquam aliquam sint at facilis id rem dolor similique, 
+                ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit. 
+                Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+              </p>
+
+              <span>Try the online demo</span>
+            </div>  
+        </div>
+        
+        </div>    
             
         </div>
       </div>
@@ -144,46 +170,33 @@
     }
 
     function showPanel(e){
-      console.log('showPanel got run')
-      let panel = e.target.dataset.panel;            
-      let to_be_opened = document.getElementById(panel); 
-      let currentPanel = document.querySelector('.active');
-      let openNav = document.getElementById('navigation');
-      let main_heading = document.querySelector('.main-heading')
-      console.log('should be our nav' + openNav)
-      console.log('should be our panel' + to_be_opened)
-      if (currentPanel && openNav) {
-          openNav.classList.remove('navigation-active');
-          openNav.classList.add('navigation-inactive');
-          currentPanel.classList.remove('active');
-          currentPanel.classList.add('inactive');
-          console.log('IF positive got run inside showPanel')
-        // } else if (openNav.classList.contains = 'navigation-inactive') {
-        //   main_heading.style.visibility = 'visible';
-        } else  {
-          console.log('IF else got run inside showPanel')
-          // main_heading.style.visibility = 'hidden';
-          to_be_opened.classList.add('active');
-          openNav.classList.add('navigation-active');          
-          console.log('we hope that nav active has been added')
-          // setTimeout(() => {
-          // to_be_opened.classList.remove('inactive');
-          // openNav.classList.remove('navigation-active')
-          // openNav.classList.add('navigation-inactive')
-          // }, 500);
-        }
-      }   
+      let panel = e.target.dataset.panel;       
+      let to_be_opened = document.getElementById(panel);
+      let navigation = document.getElementById('navigation')
+      let allPanels = document.getElementsByClassName('side-panel') 
+
+      for (let i=0; i < allPanels.length; i++) {        
+        allPanels[i].classList.remove('active');        
+      }
+      if (panel === 'home'){
+        document.getElementById('heading').style.visibility = 'visible';
+      } else {
+      to_be_opened.classList.add('active');
+      navigation.classList.add('navigation-active');
+      document.getElementById('heading').style.visibility = 'hidden';
+      }
+      
+    }
   </script>
 
 <script>
-    function toHome(){
-    let activePlanel = document.querySelector("active");
-    console.log('toHome Got Run')
-      activePlanel.classList.remove('active');
-      activePlanel.classList.add('inactive');
-      openNav.classList.remove('navigation-active');
-      openNav.classList.add('navigation-inactive')
-
+    function toHome() {      
+      document.getElementById('heading').style.visibility = 'visible';
+      let allPanels = document.getElementsByClassName('side-panel')      
+      for (let i=0; i < allPanels.length; i++) {        
+        allPanels[i].classList.remove('active');               
+      }
+      navigation.classList.remove('navigation-active');
     }
 
 </script>
