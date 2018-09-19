@@ -78,6 +78,7 @@ body {
 }
 .main-heading {
     padding-top: 10%;
+    transition: 0.5s;
 }
 
 .quru-image-server-tag {
