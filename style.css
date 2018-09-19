@@ -143,7 +143,7 @@ body {
 
 .panel .content {
     margin-left: 30px;
-    width: 50%;
+    width: 50%
 }
 
 .panel .content .heading {
@@ -227,4 +227,10 @@ body {
     border-radius: 4px;
     padding: 5px 10px 5px 10px;
     font-weight: 300;
+}
+
+@media(max-width:1150px) {
+    .panel .content {
+        width: 75%;
+    }
 }
