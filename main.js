@@ -1,3 +1,12 @@
+function SetupwhenReady(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+};
+SetupwhenReady(setUp);
+
 function setUp() {
     // set navigation event listener
     let nav = document.querySelector(".navigation");
@@ -6,7 +15,7 @@ function setUp() {
 
 function showPanel(e) {
     // get everything we need, nav, side panels ect.
-    let panel = e.target.dataset.panel;
+    let panel = e.target.dataset.panel;    
     let to_be_opened = document.getElementById(panel);
     let navigation = document.getElementById('navigation')
     let allPanels = document.getElementsByClassName('side-panel')
@@ -30,14 +39,29 @@ function showPanel(e) {
         navigation.classList.add('navigation-active');
         document.getElementById('heading').style.opacity = '0';
     }
-
 }
 
-function SetupwhenReady(fn) {
-    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-        fn();
-    } else {
-        document.addEventListener('DOMContentLoaded', fn);
+let headings = [
+    "Perfect detail at any scale",
+    "Conversions that don't ruffle feathers",
+    "I don't know if this is the offical title list",
+    "Resize images on-the-fly",
+    "Simple color conversion"
+]
+
+function updateHeading() {
+    let heading = document.getElementById('heading')
+    heading.innerHTML = headings[4];
+    i = 0;
+    setInterval(function() {         
+        if (i > 4) {
+            i = 0            
+            heading.innerHTML = headings[i];                    
+        } else {
+            heading.innerHTML = headings[i];            
+            i++
+        }       
     }
-};
-SetupwhenReady(setUp);
+     ,6000)
+}
+updateHeading();
