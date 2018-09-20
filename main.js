@@ -41,6 +41,7 @@ function showPanel(e) {
     }
 }
 
+// list of big facing headings
 let headings = [
     "Perfect detail at any scale",
     "Conversions that don't ruffle feathers",
@@ -62,6 +63,31 @@ function updateHeading() {
             i++
         }       
     }
-     ,6000)
+     ,8000)
 }
-updateHeading();
+// list of image urls
+var imageList = [
+        '/1.png',
+        '/2.png',
+        '/3.png',
+        '/4.png',
+        '/5.png'],
+base = 'img/'
+seconds = 8;
+imageList.forEach(function(img){
+    new Image().src = base + img; 
+    // caches images, avoiding white flash between background replacements
+});
+
+function backgroundSequence() {
+	window.clearTimeout();
+	var k = 0;
+	for (i = 0; i < imageList.length; i++) {
+		setTimeout(function(){ 
+			document.documentElement.style.background = "url(" + base + imageList[k] + ") no-repeat center center fixed";
+			document.documentElement.style.backgroundSize = "cover";
+		if ((k + 1) === imageList.length) { setTimeout(function() { backgroundSequence() }, (seconds * 1000))} else { k++; }			
+		}, (seconds * 1000) * i)	
+	}
+}
+backgroundSequence();

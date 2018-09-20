@@ -1,6 +1,10 @@
 html {
     margin: 0;
-    padding: 0;
+    padding: 0;  
+    background-size: cover;
+    background: url('img/1.png') no-repeat center center fixed;
+    background-blend-mode: darken;
+    transition: 3s;
 }
 
 body {
@@ -9,8 +13,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Open Sans', sans-serif;
-    /* overflow-x: hidden; */
-
+    background-color: rgba(0,0,0,0) !important;
 }
 
 .image-container {
@@ -72,7 +75,7 @@ body {
 .main-heading h1 {
     margin: 0 0 0 0;
     color: white;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 75px;    
     padding-left: 60px;
     text-shadow: 0 0 10px black;
@@ -111,7 +114,7 @@ body {
 }
 
 .dark-layer {
-    background: rgba(0, 0, 0, 0.20) no-repeat center center fixed;    
+    background: rgba(0, 0, 0, 0.25) no-repeat center center fixed;    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
