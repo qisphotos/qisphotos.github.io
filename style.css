@@ -1,29 +1,45 @@
-html {
-    margin: 0;
-    padding: 0;  
-    background-size: cover;
-    background: url('img/1.png') no-repeat center center fixed;
-    background-blend-mode: darken;
-    transition: 3s;
+html, body, .col-md-6, .row {
+    background: rgba(255, 255, 255, 0) !important;
+}
+
+#background_panel_1 {
+    background-image: url('img/1.png') 
+}
+#background_panel_2 {
+    background-image: url('img/2.png') 
+}
+#background_panel_3 {
+    background-image: url('img/3.png') 
+}
+#background_panel_4 {
+    background-image: url('img/4.png') 
+}
+#background_panel_5 {
+    background-image: url('img/5.png') 
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Open Sans', sans-serif;
-    background-color: rgba(0,0,0,0) !important;
 }
 
-.image-container {
-    background: url(img/2.png) no-repeat center center fixed; 
+.background-image {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+.dark-layer {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.25) no-repeat center center;    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
-    width: 100vw;
+    width: 100vw;    
 }
 
 .navigation {
@@ -48,7 +64,7 @@ body {
     height: 60px;
     border-radius: 4px 0 0 4px;
     margin-bottom: 5px;
-    padding-top: 23px;
+    padding-top: 21px;
     text-align: center;    
     padding-left: 10px;
     color: black;
@@ -80,7 +96,12 @@ body {
     padding-left: 60px;
     text-shadow: 0 0 10px black;
     font-family: 'Montserrat', sans-serif;
-    transition: 1s ease-in-out;
+    -moz-transition: opacity 2s ease-in;
+    -webkit-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+    transition: 2s;
 }
 
 .main-heading {
@@ -111,16 +132,6 @@ body {
 }
 .download-button:hover {
     background: maroon;
-}
-
-.dark-layer {
-    background: rgba(0, 0, 0, 0.25) no-repeat center center fixed;    
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
 }
 
 .panel {
@@ -169,8 +180,9 @@ body {
 }
 
 .panel .content .top-thing span {
-    color: #555;
+    color: #888;
     padding-left: 15px;
+    font-weight: 700;
 }
 
 .panel .content p {
@@ -196,20 +208,15 @@ body {
 }
 .social ul li {
     display: inline-block;
-    padding: 10px;
-    background: #222;    
+    padding: 10px 10px 5px 0;    
     transition: 0.3s;
     cursor: pointer;
 }
 .social ul li i{
-    color: lightgray;
-    border-radius: 4px;
-    font-weight: 900;
-    
-}
-.social ul li:hover {
-    background: #111;
-    color: white;
+    color: lightgrey;
+    background: #222;
+    padding: 3px 3px 3px 3px;
+    border-radius: 5px;
 }
 
 .rendered {
@@ -223,6 +230,15 @@ body {
     padding: 5px 10px 5px 10px;
     font-weight: 300;
 }
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
 
 @media(max-width:1150px) {
     .panel .content {

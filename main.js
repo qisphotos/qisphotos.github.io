@@ -15,7 +15,7 @@ function setUp() {
 
 function showPanel(e) {
     // get everything we need, nav, side panels ect.
-    let panel = e.target.dataset.panel;    
+    let panel = e.target.dataset.panel;
     let to_be_opened = document.getElementById(panel);
     let navigation = document.getElementById('navigation')
     let allPanels = document.getElementsByClassName('side-panel')
@@ -54,40 +54,72 @@ function updateHeading() {
     let heading = document.getElementById('heading')
     heading.innerHTML = headings[4];
     i = 0;
-    setInterval(function() {         
+    setInterval(function () {
         if (i > 4) {
-            i = 0            
-            heading.innerHTML = headings[i];                    
+            i = 0
+            heading.innerHTML = headings[i];
         } else {
-            heading.innerHTML = headings[i];            
+            heading.innerHTML = headings[i];
             i++
-        }       
+        }
     }
-     ,8000)
+        , 3000)
 }
+
 // list of image urls
-var imageList = [
-        '/1.png',
-        '/2.png',
-        '/3.png',
-        '/4.png',
-        '/5.png'],
-base = 'img/'
-seconds = 8;
-imageList.forEach(function(img){
-    new Image().src = base + img; 
+let imgtoggle = false;
+let k = 0;
+let imageList = [
+    "url('img/1.png')",
+    "url('img/2.png')",
+    "url('img/3.png')"]
+imageList.forEach(function (img) {
+    console.log('images have been cached')
+    new Image().src = img;
     // caches images, avoiding white flash between background replacements
 });
 
-function backgroundSequence() {
-	window.clearTimeout();
-	var k = 0;
-	for (i = 0; i < imageList.length; i++) {
-		setTimeout(function(){ 
-			document.documentElement.style.background = "url(" + base + imageList[k] + ") no-repeat center center fixed";
-			document.documentElement.style.backgroundSize = "cover";
-		if ((k + 1) === imageList.length) { setTimeout(function() { backgroundSequence() }, (seconds * 1000))} else { k++; }			
-		}, (seconds * 1000) * i)	
-	}
+// get 2 overlapping panels (position absolute/fixed, top 0, left 0)
+let fgPanel = document.getElementById('background_panel_1');
+let bgPanel = document.getElementById('background_panel_2');
+
+// This function will initialize loading the next image in background
+function nextImage() {
+    console.log('nextImage is running')
+    imgtoggle = !imgtoggle;
+  
+    k = (k + 1) % imageList.length;
+  
+    if (imgtoggle) {
+    fgPanel.style.backgroundImage = imageList[k];
+    fadeImage();
+    }
+    else {
+    bgPanel.style.backgroundImage = imageList[k];
+    fadeImage();
+  }
 }
-backgroundSequence();
+  
+  // This function will trigger the crossfade and then start the timer for the next switch
+  function fadeImage() {
+    console.log('fadeImage is running')
+    if (imgtoggle) {
+        fgPanel.classList.add('fade-out');
+        fgPanel.classList.remove('fade-in');
+        bgPanel.classList.add('fade-in');
+        bgPanel.classList.remove('fade-out');
+    }
+    else {
+        fgPanel.classList.add('fade-in');
+        fgPanel.classList.remove('fade-out');
+        bgPanel.classList.add('fade-out');
+        bgPanel.classList.remove('fade-in');
+    }
+    window.setTimeout(nextImage, 3000);
+  
+}
+//nextImage();
+//updateHeading();
+  
+  // Now load our very first image to start the slideshow
+  //fgPanel.style.backgroundImage = imageList[0];
