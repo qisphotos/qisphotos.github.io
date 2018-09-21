@@ -123,3 +123,12 @@ function nextImage() {
   
   // Now load our very first image to start the slideshow
   //fgPanel.style.backgroundImage = imageList[0];
+
+
+
+  function innerPanelView() {
+    document.getElementById('home_technical_data').style.display = 'block';
+    document.getElementById('home_product_information').style.display = 'none'; 
+    document.getElementById('technical-data-home').style.color = '#fff';
+    document.getElementById('product-information-home').style.color = '#444';
+  }

@@ -2,7 +2,6 @@ html {
     margin: 0;
     padding: 0;  
     background-size: cover;
-    background: url('img/1.png') no-repeat center center fixed;
     background-blend-mode: darken;
     transition: 3s;
 }
@@ -153,24 +152,48 @@ body {
     font-weight: 700;   
     padding-left: 30px;     
 }
-.panel .content span {
-    color: red;
-    font-size: 15px;
-    text-transform: uppercase;
-    padding-left: 30px; 
+
+.panel-inside-nav ul {
+    list-style: none;
+    margin-top: 12%;
 }
 
-.panel .content .top-thing p {
-    text-transform: uppercase;
-    font-size: 15px;
-    padding-left: 30px; 
-    color: lightgrey;
-    padding-top: 15%;
+.panel-inside-nav ul .pipe {
+    color: #444;
+    font-weight: 700;
 }
 
-.panel .content .top-thing span {
-    color: #555;
-    padding-left: 15px;
+.panel-inside-nav ul .technical-data {
+    color: #333;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.panel-inside-nav ul .technical-data span{
+    padding-right: 10px;
+}
+
+.panel-inside-nav ul li {
+    display: inline-block;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+.technical-data-main {
+    display: none;
+}
+
+.product-information-main span {
+    color: #de0000;
+    font-weight: 200;
+    margin-left: 30px;
+    text-transform: uppercase;
+}
+
+.panel-inside-nav ul .product-information {
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 .panel .content p {
