@@ -179,7 +179,8 @@ body {
 
 .panel .content {
     margin-left: 30px;
-    width: 50%
+    width: 50%;
+    margin-bottom: 60px;
 }
 
 .panel .content .heading {
