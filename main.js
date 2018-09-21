@@ -91,40 +91,6 @@ function updateHeading() {
     }
         , 3000)
 }
-
-// list of image urls
-let imgtoggle = false;
-let k = 0;
-let imageList = [
-    "url('img/1.png')",
-    "url('img/2.png')",
-    "url('img/3.png')"]
-imageList.forEach(function (img) {
-    console.log('images have been cached')
-    new Image().src = img;
-    // caches images, avoiding white flash between background replacements
-});
-
-// get 2 overlapping panels (position absolute/fixed, top 0, left 0)
-let fgPanel = document.getElementById('background_panel_1');
-let bgPanel = document.getElementById('background_panel_2');
-
-// This function will initialize loading the next image in background
-function nextImage() {
-    console.log('nextImage is running')
-    imgtoggle = !imgtoggle;
-  
-    k = (k + 1) % imageList.length;
-  
-    if (imgtoggle) {
-    fgPanel.style.backgroundImage = imageList[k];
-    fadeImage();
-    }
-    else {
-    bgPanel.style.backgroundImage = imageList[k];
-    fadeImage();
-  }
-}
   
   // This function will trigger the crossfade and then start the timer for the next switch
   function fadeImage() {
@@ -150,7 +116,9 @@ function nextImage() {
 
 // swtich inner sections of panels
 function innerPanelView(obj) {
+    //getting the obj data from the link clicked 
     let clicked = obj;
+    // getting the datainnerpanelcurrent node, the data attached is for the corisponding panel
     let panelToView = clicked.attributes.dataInnerPanelCurrent.nodeValue;
     let panelView = document.getElementById(panelToView);
     panelView.style.display = 'block';
