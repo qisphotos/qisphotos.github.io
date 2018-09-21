@@ -38,8 +38,34 @@ function showPanel(e) {
         to_be_opened.classList.add('active');
         navigation.classList.add('navigation-active');
         document.getElementById('heading').style.opacity = '0';
+        // bodyMenu();
+        }
     }
+
+function bodyMenu(){
+    document.addEventListener("click", closeNav);
 }
+
+function closeNav(e){
+    console.log('window click was fired')
+    console.log(e);
+    if (e.target.id !== 'navigation' || 'panels') {
+        document.getElementById('heading').style.opacity = '1';    
+        let allPanels = document.getElementById('panels');
+        for (let i = 0; i < allPanels.length; i++) {
+        
+        allPanels[i].classList.remove('active');
+    }
+        navigation.classList.remove('navigation-active');        
+        let mainNavUl = document.getElementById('mainNavUl');
+        (allPanels || mainNavUl).onclick = function(event) {
+        console.log('stop prop was fired')
+        event.stopImmediatePropagation();
+        } 
+    } else {}
+}
+
+
 
 // list of big facing headings
 let headings = [
@@ -126,9 +152,18 @@ function nextImage() {
 
 
 
-  function innerPanelView() {
-    document.getElementById('home_technical_data').style.display = 'block';
-    document.getElementById('home_product_information').style.display = 'none'; 
-    document.getElementById('technical-data-home').style.color = '#fff';
-    document.getElementById('product-information-home').style.color = '#444';
-  }
+function innerPanelView(obj) {
+    let clicked = obj;
+    let panelToView = clicked.attributes.dataInnerPanelCurrent.nodeValue;
+    let panelView = document.getElementById(panelToView);
+    panelView.style.display = 'block';
+    let panelCurrent = clicked.attributes.dataInnerPanelSwitch.nodeValue;
+    let panelHide = document.getElementById(panelCurrent);
+    panelHide.style.display = 'none';
+    let currentButtonID = clicked.attributes.id.nodeValue;
+    let currentButton = document.getElementById(currentButtonID);
+    currentButton.style.color = '#fff';
+    let otherButtonID = clicked.attributes.dataOppButton.nodeValue;
+    let otherButton = document.getElementById(otherButtonID);
+    otherButton.style.color = '#333';
+}

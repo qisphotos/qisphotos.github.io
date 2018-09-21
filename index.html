@@ -8,13 +8,15 @@
   <title>Quru Image Server</title>
 
   <!-- imports -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans|Poppins:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
 
   <!-- custom css -->
   <link rel="stylesheet" href="style.css">
-  
+
 
 
 </head>
@@ -29,7 +31,7 @@
           </div>
           <div class="main-heading">
             <h1 id="heading">
-                Perfect detail at any scale
+              Perfect detail at any scale
             </h1>
           </div>
           <div>
@@ -47,7 +49,7 @@
 
         <div class="col-md-6" style="padding-right:0; height: 100%;">
           <div id="navigation" class="navigation navigation-inactive" data-panel="navigation">
-            <ul data-panel="nav-ul">
+            <ul id="mainNavUl" data-panel="nav-ul">
               <li data-panel="home">
                 Home
               </li>
@@ -91,13 +93,22 @@
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul>
-                    <li id="product-information-home" class="product-information">Product Information</li>  
-                    <li class="pipe">|</li> 
-                    <li onclick="innerPanelView()" id="technical-data-home" class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                  </ul>    
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-image-resizing"
+                      id="product-information-button-image-resizing" dataInnerPanelCurrent="product-information-image-resizing"
+                      dataInnerPanelSwitch="technical-data-image-resizing" class="product-information">
+                      Product Information
+                    </li>
+                    <li class="pipe">|</li>
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-button-image-resizing" id="product-information-technical-button-image-resizing"
+                      dataInnerPanelCurrent="technical-data-image-resizing" dataInnerPanelSwitch="product-information-image-resizing"
+                      class="technical-data">
+                      <span>Technical Data</span>
+                      <i class="fas fa-cog"></i>
+                    </li>
+                  </ul>
                   </p>
                 </div>
-                <div class="product-information-main" id="home_product_information">
+                <div class="product-information-main" id="product-information-image-resizing">
                   <div class="heading">
                     <h1>
                       Image Resizing Panel
@@ -115,17 +126,17 @@
 
                   <span>Try the online demo</span>
                 </div>
-                <div class="technical-data-main" id="home_technical_data">
-                    <div class="heading">
-                      <h1>
-                        Image Resizing Panel - Technical Data
-                      </h1>
-                    </div>
-  
-                    <p>
-                      This is some technical data
-                    </p>
+                <div class="technical-data-main" id="technical-data-image-resizing">
+                  <div class="heading">
+                    <h1>
+                      Image Resizing Panel - Technical Data
+                    </h1>
                   </div>
+
+                  <p>
+                    This is some technical data
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -133,12 +144,21 @@
               <div class="content">
                 <div class="panel-inside-nav">
                   <ul>
-                    <li class="product-information">Product Information</li>  
-                    <li class="pipe">|</li> 
-                    <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                  </ul> 
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-image-conversion"
+                      id="product-information-button-image-conversion" dataInnerPanelCurrent="product-information-image-conversion"
+                      dataInnerPanelSwitch="technical-data-image-conversion" class="product-information">
+                      Product Information
+                    </li>
+                    <li class="pipe">|</li>
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-button-image-conversion" id="product-information-technical-button-image-conversion"
+                      dataInnerPanelCurrent="technical-data-image-conversion" dataInnerPanelSwitch="product-information-image-conversion"
+                      class="technical-data">
+                      <span>Technical Data</span>
+                      <i class="fas fa-cog"></i>
+                    </li>
+                  </ul>
                 </div>
-                <div class="product-information-main">
+                <div class="product-information-main" id="product-information-image-conversion">
                   <div class="heading">
                     <h1>
                       Image Conversion Panel - and some more text
@@ -152,6 +172,19 @@
                     ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
                     Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                  </p>
+
+                  <span>Try the online demo</span>
+                </div>
+                <div class="technical-data-main" id="technical-data-image-conversion">
+                  <div class="heading">
+                    <h1>
+                      Image Conversion Panel Technical Data
+                    </h1>
+                  </div>
+
+                  <p>
+                    This is the technical data section
                   </p>
 
                   <span>Try the online demo</span>
@@ -163,219 +196,250 @@
               <div class="content">
                 <div class="panel-inside-nav">
                   <ul>
-                    <li class="product-information">Product Information</li>  
-                    <li class="pipe">|</li> 
-                    <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                  </ul> 
-                </ul>
-                <div class="product-information-main">
-                  <div class="heading">
-                    <h1>
-                      Watermarking & Protection
-                    </h1>
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-watermarking-and-protection"
+                      id="product-information-button-watermarking-and-protection" dataInnerPanelCurrent="product-information-watermarking-and-protection"
+                      dataInnerPanelSwitch="technical-data-watermarking-and-protection" class="product-information">
+                      Product Information
+                    </li>
+                    <li class="pipe">|</li>
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-button-watermarking-and-protection"
+                      id="product-information-technical-button-watermarking-and-protection" dataInnerPanelCurrent="technical-data-watermarking-and-protection"
+                      dataInnerPanelSwitch="product-information-watermarking-and-protection" class="technical-data">
+                      <span>Technical Data</span>
+                      <i class="fas fa-cog"></i>
+                    </li>
+                  </ul>
+                </div>
+                  <div class="product-information-main" id="product-information-watermarking-and-protection">
+                    <div class="heading">
+                      <h1>
+                        Watermarking & Protection
+                      </h1>
+                    </div>
+
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Reprehenderit nihil, veniam cupiditate fugit,
+                      natus excepturi numquam aliquam sint at facilis id rem dolor similique,
+                      ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
+                      Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                    </p>
+
+                    <span>Try the online demo</span>
                   </div>
+                  <div class="technical-data-main" id="technical-data-watermarking-and-protection">
+                    <div class="heading">
+                      <h1>
+                        Watermarking & Protection Technical
+                      </h1>
+                    </div>
 
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Reprehenderit nihil, veniam cupiditate fugit,
-                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                  </p>
+                    <p>
+                      This is the technical data section
+                    </p>
 
-                  <span>Try the online demo</span>
-                </div>  
-              </div>
-            </div>
-
-            <div id="image-conversion-panel" class="side-panel panel image-conversion-panel">
-              <div class="content">
-                <div class="panel-inside-nav">
-                  <ul>
-                    <li class="product-information">Product Information</li>  
-                    <li class="pipe">|</li> 
-                    <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                  </ul> 
-                </ul>
-                <div class="product-information-main">
-                  <div class="heading">
-                    <h1>
-                      Image Conversion Panel - and some more text
-                    </h1>
+                    <span>Try the online demo</span>
                   </div>
-
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Reprehenderit nihil, veniam cupiditate fugit,
-                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                  </p>
-
-                  <span>Try the online demo</span>
                 </div>
               </div>
-            </div>
 
-            <div id="image-analytics-panel" class="side-panel panel image-analytics-panel">
-              <div class="content">
-                <div class="panel-inside-nav">
-                  <ul>
-                    <li class="product-information">Product Information</li>  
-                    <li class="pipe">|</li> 
-                    <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                  </ul> 
-                </ul>
-                <div class="product-information-main"> 
-                  <div class="heading">
-                    <h1>
-                      Image Analytics Panel
-                    </h1>
+              <div id="image-analytics-panel" class="side-panel panel image-analytics-panel">
+                <div class="content">
+                  <div class="panel-inside-nav">
+                    <ul>
+                      <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-image-analytics"
+                        id="product-information-button-image-analytics" dataInnerPanelCurrent="product-information-image-analytics"
+                        dataInnerPanelSwitch="technical-data-image-analytics" class="product-information">
+                        Product Information
+                      </li>
+                      <li class="pipe">|</li>
+                      <li onclick="innerPanelView(this)" dataOppButton="product-information-button-image-analytics" id="product-information-technical-button-image-analytics"
+                        dataInnerPanelCurrent="technical-data-image-analytics" dataInnerPanelSwitch="product-information-image-analytics"
+                        class="technical-data">
+                        <span>Technical Data</span>
+                        <i class="fas fa-cog"></i>
+                      </li>
+                    </ul>
+                    <div class="product-information-main" id="product-information-image-analytics">
+                      <div class="heading">
+                        <h1>
+                          Image Analytics Panel
+                        </h1>
+                      </div>
+
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Reprehenderit nihil, veniam cupiditate fugit,
+                        natus excepturi numquam aliquam sint at facilis id rem dolor similique,
+                        ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
+                        Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                      </p>
+
+                      <span>Try the online demo</span>
+                    </div>
+                    <div class="technical-data-main" id="technical-data-image-analytics">
+                      <div class="heading">
+                        <h1>
+                          Image Analytics Panel - Technical
+                        </h1>
+                      </div>
+
+                      <p>
+                        another panel for our technical spec
+                      </p>
+
+                      <span>Try the online demo</span>
+                    </div>
                   </div>
-
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Reprehenderit nihil, veniam cupiditate fugit,
-                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                  </p>
-
-                  <span>Try the online demo</span>
                 </div>
-              </div>
-            </div>
 
-            <div id="pricing-panel" class="side-panel panel pricing-panel">
-              <div class="content">
-                <div class="panel-inside-nav">
-                  <ul>
-                    <li class="product-information">Product Information</li>  
-                    <li class="pipe">|</li> 
-                    <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                  </ul> 
-                </ul>
-                <div class="product-information-main">
-                  <div class="heading">
-                    <h1>
-                      Pricing
-                    </h1>
+                <div id="pricing-panel" class="side-panel panel pricing-panel">
+                  <div class="content" style="margin-top: 15%">
+                    <div class="panel-inside-nav">
+                      <div class="product-information-main">
+                        <div class="heading">
+                          <h1>
+                            Pricing
+                          </h1>
+                        </div>
+
+                        <p>
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                          Reprehenderit nihil, veniam cupiditate fugit,
+                          natus excepturi numquam aliquam sint at facilis id rem dolor similique,
+                          ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
+                          Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                        </p>
+
+                        <span>Try the online demo</span>
+                      </div>
+                    </div>
                   </div>
 
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Reprehenderit nihil, veniam cupiditate fugit,
-                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                  </p>
+                  <div id="case-studies-panel" class="side-panel panel case-studies-panel">
+                    <div class="content" style="margin-top: 15%">
+                        <div class="product-information-main">
+                          <div class="heading">
+                            <h1>
+                              Case Studies
+                            </h1>
+                          </div>
 
-                  <span>Try the online demo</span>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Reprehenderit nihil, veniam cupiditate fugit,
+                            natus excepturi numquam aliquam sint at facilis id rem dolor similique,
+                            ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit.
+                            Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
+                            Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                          </p>
+
+                          
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="about-us-panel" class="side-panel panel about-us-panel">
+                      <div class="content">
+                          <div class="panel-inside-nav">
+                              <ul>
+                                <li onclick="innerPanelView(this)" 
+                                    dataOppButton="product-information-technical-button-about-us"
+                                    id="product-information-button-about-us" 
+                                    dataInnerPanelCurrent="product-information-about-us"
+                                    dataInnerPanelSwitch="technical-data-about-us" 
+                                    class="product-information">
+                                    About Quru
+                                </li>
+                                <li class="pipe">|</li>
+                                <li onclick="innerPanelView(this)" 
+                                    dataOppButton="product-information-button-about-us"
+                                    id="product-information-technical-button-about-us" 
+                                    dataInnerPanelCurrent="technical-data-about-us"
+                                    dataInnerPanelSwitch="product-information-about-us" 
+                                    class="technical-data">
+                                    <span>Customer Testimonials</span>
+                                    <i class="fas fa-cog"></i>
+                                </li>
+                              </ul>
+                            </div>
+                          <div class="product-information-main" id="product-information-about-us">
+                            <div class="heading">
+                              <h1>
+                                About us
+                              </h1>
+                            </div>
+
+                            <p>
+                              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                              Reprehenderit nihil, veniam cupiditate fugit,
+                              natus excepturi numquam aliquam sint at facilis id rem dolor similique,
+                              ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing
+                              elit.
+                              Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
+                              Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                            </p>
+
+                            
+                          </div>
+                          <div class="technical-data-main" id="technical-data-about-us">
+                              <div class="heading">
+                                <h1>
+                                Customer Testimonials
+                                </h1>
+                              </div>
+  
+                              <p>                                
+                                Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                              </p>
+  
+                              
+                            </div>
+                        </div>
+                      </div>
+
+                      <div id="extra-features-panel" class="side-panel panel extra-features-panel">
+                        <div class="content">
+                          <div class="panel-inside-nav">
+                            <ul>
+                              <li class="product-information">Product Information</li>
+                              <li class="pipe">|</li>
+                              <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
+                            </ul>
+                            </ul>
+                            <div class="product-information-main">
+                              <div class="heading">
+                                <h1>
+                                  Extra Features
+                                </h1>
+                              </div>
+
+                              <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Reprehenderit nihil, veniam cupiditate fugit,
+                                natus excepturi numquam aliquam sint at facilis id rem dolor similique,
+                                ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing
+                                elit.
+                                Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
+                                Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                              </p>
+
+                              <span>Try the online demo</span>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div id="case-studies-panel" class="side-panel panel case-studies-panel">
-              <div class="content">
-                <div class="panel-inside-nav">
-                  <ul>
-                    <li class="product-information">Product Information</li>  
-                    <li class="pipe">|</li> 
-                    <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                  </ul> 
-                </ul>
-                <div class="product-information-main">
-                  <div class="heading">
-                    <h1>
-                      Case Studies
-                    </h1>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Reprehenderit nihil, veniam cupiditate fugit,
-                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                  </p>
-
-                  <span>Try the online demo</span>
-                </div>
-              </div>
-            </div>
-
-            <div id="about-us-panel" class="side-panel panel about-us-panel">
-              <div class="content">
-                <div class="panel-inside-nav">
-                  <ul>
-                    <li class="product-information">Product Information</li>  
-                    <li class="pipe">|</li> 
-                    <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                  </ul> 
-                </ul>
-                <div class="product-information-main">
-                  <div class="heading">
-                    <h1>
-                      About us
-                    </h1>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Reprehenderit nihil, veniam cupiditate fugit,
-                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                  </p>
-
-                  <span>Try the online demo</span>
-                </div>
-              </div>
-            </div>
-
-            <div id="extra-features-panel" class="side-panel panel extra-features-panel">
-              <div class="content">
-                <div class="panel-inside-nav">
-                  <ul>
-                    <li class="product-information">Product Information</li>  
-                    <li class="pipe">|</li> 
-                    <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                  </ul> 
-                </ul>
-                <div class="product-information-main">
-                  <div class="heading">
-                    <h1>
-                      Extra Features
-                    </h1>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Reprehenderit nihil, veniam cupiditate fugit,
-                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                  </p>
-
-                  <span>Try the online demo</span>
-                 </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
 
 
-  <script src="main.js"></script>
+                <script src="main.js"></script>
 </body>
 
 </html>
