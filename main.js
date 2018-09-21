@@ -146,12 +146,9 @@ function nextImage() {
 }
 //nextImage();
 //updateHeading();
-  
-  // Now load our very first image to start the slideshow
-  //fgPanel.style.backgroundImage = imageList[0];
 
 
-
+// swtich inner sections of panels
 function innerPanelView(obj) {
     let clicked = obj;
     let panelToView = clicked.attributes.dataInnerPanelCurrent.nodeValue;
