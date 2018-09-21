@@ -25,7 +25,7 @@ function showPanel(e) {
     }
     // if the user has clicked on home, move the nav and hide panels
     // also make the heading visible again
-    if (panel === 'home') {
+    if (panel === 'home' || panel === 'nav-ul') {
         document.getElementById('heading').style.opacity = '1';
         let allPanels = document.getElementsByClassName('side-panel')
         for (let i = 0; i < allPanels.length; i++) {
