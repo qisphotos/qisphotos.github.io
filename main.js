@@ -52,6 +52,7 @@ function hideAll(e) {
         allPanels[i].classList.remove('active');
     }
     nav.classList.remove('navigation-active');
+    e.stopPropagation(); // I don't think this works yet
 }
 
 
