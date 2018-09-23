@@ -19,6 +19,7 @@ function showPanel(e) {
     let to_be_opened = document.getElementById(panel);
     let navigation = document.getElementById('navigation')
     let allPanels = document.getElementsByClassName('side-panel')
+    
     // loop through the panels and remove the active class
     for (let i = 0; i < allPanels.length; i++) {
         allPanels[i].classList.remove('active');
@@ -38,33 +39,37 @@ function showPanel(e) {
         to_be_opened.classList.add('active');
         navigation.classList.add('navigation-active');
         document.getElementById('heading').style.opacity = '0';
-        // bodyMenu();
-        }
     }
-
-function bodyMenu(){
-    document.addEventListener("click", closeNav);
+    let leftMainPanel = document.getElementById('leftMainPanel')
+    leftMainPanel.addEventListener("click", hideAll);
 }
 
-function closeNav(e){
-    console.log('window click was fired')
-    console.log(e);
-    if (e.target.id !== 'navigation' || 'panels') {
-        document.getElementById('heading').style.opacity = '1';    
-        let allPanels = document.getElementById('panels');
-        for (let i = 0; i < allPanels.length; i++) {
-        
+function hideAll(e) {
+    console.log('this was run')
+    let nav = document.querySelector('.navigation');
+    let allPanels = document.getElementsByClassName('side-panel')
+    for (let i = 0; i < allPanels.length; i++) {
         allPanels[i].classList.remove('active');
     }
-        navigation.classList.remove('navigation-active');        
-        let mainNavUl = document.getElementById('mainNavUl');
-        (allPanels || mainNavUl).onclick = function(event) {
-        console.log('stop prop was fired')
-        event.stopImmediatePropagation();
-        } 
-    } else {}
+    nav.classList.remove('navigation-active');
 }
 
+
+window.onload = function(){
+	var popup = document.getElementById('popup');
+    var overlay = document.getElementById('backgroundOverlay');
+    var openButton = document.getElementById('openOverlay');
+    document.onclick = function(e){
+        if(e.target.id == 'backgroundOverlay'){
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+        if(e.target === openButton){
+         	popup.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+    };
+};
 
 
 // list of big facing headings
@@ -91,28 +96,6 @@ function updateHeading() {
     }
         , 3000)
 }
-  
-  // This function will trigger the crossfade and then start the timer for the next switch
-  function fadeImage() {
-    console.log('fadeImage is running')
-    if (imgtoggle) {
-        fgPanel.classList.add('fade-out');
-        fgPanel.classList.remove('fade-in');
-        bgPanel.classList.add('fade-in');
-        bgPanel.classList.remove('fade-out');
-    }
-    else {
-        fgPanel.classList.add('fade-in');
-        fgPanel.classList.remove('fade-out');
-        bgPanel.classList.add('fade-out');
-        bgPanel.classList.remove('fade-in');
-    }
-    window.setTimeout(nextImage, 3000);
-  
-}
-//nextImage();
-//updateHeading();
-
 
 // swtich inner sections of panels
 function innerPanelView(obj) {

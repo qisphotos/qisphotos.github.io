@@ -136,6 +136,10 @@ body {
 
 .left-main-panel {
     padding-top: 10vh;
+    height: 100vh;
+}
+.right-main-panel {
+    height: 100vh;
 }
 
 .download-button {
