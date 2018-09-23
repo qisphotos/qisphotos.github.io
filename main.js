@@ -18,7 +18,7 @@ function showPanel(e) {
     let panel = e.target.dataset.panel;
     let to_be_opened = document.getElementById(panel);
     let navigation = document.getElementById('navigation')
-    let allPanels = document.getElementsByClassName('side-panel')
+    let allPanels = document.getElementsByClassName('side-panel');
     
     // loop through the panels and remove the active class
     for (let i = 0; i < allPanels.length; i++) {

@@ -19,9 +19,12 @@ body {
     position: relative;
     z-index: -1;
     margin: 0;
-    padding: 0;
-
+    padding: 0; 
 }
+.backgrounds li:nth-child() {
+    animation-play-state: running;
+}
+
 .backgrounds li{
     position: absolute;
 }
@@ -35,15 +38,19 @@ body {
 
 .backgrounds li:nth-child(4) {
     animation: xfade 16s 0s infinite;
+    animation-play-state: running;
   }
 .backgrounds li:nth-child(3) {
     animation: xfade 16s 4s infinite;
+    animation-play-state: running;
   }
 .backgrounds li:nth-child(2) {
     animation: xfade 16s 8s infinite;
+    animation-play-state: running;
   }
 .backgrounds li:nth-child(1) {
     animation: xfade 16s 12s infinite;
+    animation-play-state: running;
   }
   @keyframes xfade{
     17% {
@@ -56,16 +63,6 @@ body {
       opacity:0;
     }
   }
-
-.image-container {
-    background: url(img/1.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-}
 
 .navigation {
     text-align: right;
