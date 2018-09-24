@@ -3,6 +3,7 @@ html {
     padding: 0;  
     background-size: cover;
     background-blend-mode: darken;
+    height: 100%;
 }
 
 body {
@@ -20,13 +21,8 @@ body {
     z-index: -1;
     margin: 0;
     padding: 0; 
-}
-.backgrounds li:nth-child() {
-    animation-play-state: running;
-}
 
-.backgrounds li{
-    position: absolute;
+
 }
 
 .backgrounds li img {
@@ -34,9 +30,14 @@ body {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
 }
-
-.backgrounds li:nth-child(4) {
+/* CSS transition for backgrounds /*
+/* .backgrounds li:nth-child(4) {
     animation: xfade 16s 0s infinite;
     animation-play-state: running;
   }
@@ -62,7 +63,7 @@ body {
     92% {
       opacity:0;
     }
-}
+} */
 
 .navigation {
     text-align: right;
@@ -83,10 +84,10 @@ body {
 
 .navigation ul li {
     background: #efefef;
-    height: 60px;
+    height: 64px;
     border-radius: 4px 0 0 4px;
     margin-bottom: 5px;
-    padding-top: 20px;
+    padding-top: 24px;
     text-align: center;    
     padding-left: 10px;
     color: black;
@@ -102,8 +103,6 @@ body {
 }
 
 .navigation ul li:hover  {
-    background: #222;
-    color: white;
     text-decoration: none;
     cursor: pointer;
     border-right: solid 10px #de0000;
@@ -114,9 +113,9 @@ body {
     margin: 0 0 0 0;
     color: white;
     font-weight: 600;
-    font-size: 75px;    
+    font-size: 120px;    
     padding-left: 60px;
-    /* text-shadow: 0 0 10px black; */
+    text-shadow: 0 0 5px black;
     font-family: 'Montserrat', sans-serif;
     -webkit-transition: opacity .5s ease-in-out;
     -moz-transition: opacity .5s ease-in-out;
@@ -132,8 +131,8 @@ body {
 }
 
 .quru-image-server-tag img {
-    width: 300px;
-    height: auto;
+    height: 64px;
+    width: auto;
 }
 
 .left-main-panel {
@@ -167,7 +166,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 }
 
@@ -277,7 +276,7 @@ body {
 
 .social ul {
     list-style: none;
-    padding-top: 10%;
+    padding-top: 25px;
     padding-left: 60px;
 }
 .social ul li {
@@ -316,6 +315,28 @@ body {
     text-transform: none;
 }
 
+.download-icons {
+    color: black;    
+    margin-top: 62px;
+    padding-left: 0;
+}
+.download-icons li {
+    padding: 3px 2px 3px 2px;
+    display: inline;
+    background: white;
+    border-radius: 5px;
+    margin: 3px;
+    transition: 0.3s;
+}
+.download-icons li:hover {
+    color: white;
+    background: #de0000;
+    float:right;
+}
+.download-icons-con {
+    opacity: 0;
+    transition: 0.3s;
+}
 
 @media(max-width:1150px) {
     .panel .content {
@@ -323,7 +344,7 @@ body {
     }
 }
 
-@media(max-height: 670px) {
+@media(max-height: 850px) {
     .navigation ul li {
         height: 45px;
         padding-top: 15px;

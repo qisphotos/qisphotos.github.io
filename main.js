@@ -3,7 +3,7 @@ let headings = [
 	"Perfect detail at any scale",
 	"Conversions that don't ruffle feathers",
 	"Resize images on-the-fly",
-	"Simple color conversion"
+	"Simple colour conversion"
 ]
 function updateHeading() {
 	let heading = document.getElementById('heading')
@@ -16,20 +16,44 @@ function updateHeading() {
 			setTimeout(function(){
 				heading.innerHTML = headings[i];
 			heading.style.opacity = 1;
-			},1000); 
+			}, 500); 
 			i = 0;
 		} else {
 			heading.style.opacity = 0;
 			setTimeout(function(){
 				heading.innerHTML = headings[i];
 			heading.style.opacity = 1;
-			},1000); 
+			}, 500); 
 			i++
 		}
-	}
-		, 3000)
+	}	,5000)
 }
 updateHeading();
+
+function changeBackground(){
+	let backgrounds = document.getElementsByClassName('background-image');
+	let i = 3;
+	setInterval(function () {
+		if (i > 0) {
+			backgrounds[i].style.opacity = 0;			
+				setTimeout(function(){
+					backgrounds[i].style.opacity = 1;
+				}, 1000);
+				i = i - 1;
+			} else {				
+				setTimeout(function(){
+					i = 3;	
+					backgrounds[i].style.opacity = 1;	
+					backgrounds[0].style.opacity = 1;
+					backgrounds[1].style.opacity = 1;
+					backgrounds[2].style.opacity = 1;
+					backgrounds[3].style.opacity = 1;					
+				}, 1000);
+				
+			}
+		 } ,5000)
+}
+changeBackground();
 
 function SetupwhenReady(fn) {
 	if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
@@ -107,4 +131,16 @@ function innerPanelView(obj) {
 	let otherButtonID = clicked.attributes.dataOppButton.nodeValue;
 	let otherButton = document.getElementById(otherButtonID);
 	otherButton.style.color = '#333';
+}
+
+function tryItNow(){
+	let icons = document.getElementById('try_it_now_icons');
+	let status = icons.style.opacity;
+	console.log(icons)
+	console.log(icons.style.opacity)
+	if (status == 0) {
+		icons.style.opacity = 1;
+	} else {
+		icons.style.opacity = 0;
+	}
 }
