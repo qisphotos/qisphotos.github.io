@@ -62,7 +62,8 @@ body {
     92% {
       opacity:0;
     }
-  }
+}
+
 
 .navigation {
     text-align: right;
@@ -101,6 +102,13 @@ body {
     transition: 0.5s;
 }
 
+@media(max-height: 670px) {
+    .navigation ul li {
+        height: 45px;
+        padding-top: 15px;
+    }
+}
+
 .navigation ul li:hover  {
     background: #222;
     color: white;
@@ -116,9 +124,9 @@ body {
     font-weight: 600;
     font-size: 75px;    
     padding-left: 60px;
-    text-shadow: 0 0 10px black;
+    /* text-shadow: 0 0 10px black; */
     font-family: 'Montserrat', sans-serif;
-    transition: 1s ease-in-out;
+    transition: opactiy 1s ease-in-out;
 }
 
 .main-heading {

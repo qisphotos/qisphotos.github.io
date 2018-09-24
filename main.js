@@ -61,26 +61,28 @@ function hideAll(e) {
 let headings = [
     "Perfect detail at any scale",
     "Conversions that don't ruffle feathers",
-    "I don't know if this is the offical title list",
     "Resize images on-the-fly",
     "Simple color conversion"
 ]
 
 function updateHeading() {
-    let heading = document.getElementById('heading')
-    heading.innerHTML = headings[4];
-    i = 0;
+    let heading = document.getElementById('heading')    
+    heading.innerHTML = headings[0]
+    i = 1;
     setInterval(function () {
-        if (i > 4) {
-            i = 0
+        if (i > 2) {
             heading.innerHTML = headings[i];
+            i = 0;
+            console.log(i)
         } else {
             heading.innerHTML = headings[i];
             i++
+            console.log(i)
         }
     }
-        , 3000)
+        ,4000)
 }
+updateHeading();
 
 // swtich inner sections of panels
 function innerPanelView(obj) {
