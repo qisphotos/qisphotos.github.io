@@ -64,7 +64,6 @@ body {
     }
 }
 
-
 .navigation {
     text-align: right;
     margin-top: 8%;
@@ -126,7 +125,12 @@ body {
     padding-left: 60px;
     /* text-shadow: 0 0 10px black; */
     font-family: 'Montserrat', sans-serif;
-    transition: opactiy 1s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    opacity: 0;
 }
 
 .main-heading {
