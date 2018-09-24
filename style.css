@@ -354,3 +354,9 @@ body {
         padding-top: 15px;
     }
 }
+
+@media(max-height: 1441px) {
+    .main-heading h1 {
+        font-size: 80px;
+    }
+}
