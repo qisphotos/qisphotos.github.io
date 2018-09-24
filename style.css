@@ -101,13 +101,6 @@ body {
     transition: 0.5s;
 }
 
-@media(max-height: 670px) {
-    .navigation ul li {
-        height: 45px;
-        padding-top: 15px;
-    }
-}
-
 .navigation ul li:hover  {
     background: #222;
     color: white;
@@ -189,6 +182,7 @@ body {
     transition: 0.5s;
     overflow-y: auto;
     padding-bottom: 60px;
+    margin-left: 5px;
 }
 
 .panel .content {
@@ -269,7 +263,7 @@ body {
     padding-left: 30px;
     font-weight: 200;
     font-size: 13pt;
-    margin-bottom: 50px;
+    margin-bottom: 0.5em;
     width: 50%;
 }
 
@@ -317,8 +311,21 @@ body {
     font-weight: 300;
 }
 
+.image-analytics-ul li{
+    list-style-type: circle;
+    text-transform: none;
+}
+
+
 @media(max-width:1150px) {
     .panel .content {
         width: 75%;
+    }
+}
+
+@media(max-height: 670px) {
+    .navigation ul li {
+        height: 45px;
+        padding-top: 15px;
     }
 }
