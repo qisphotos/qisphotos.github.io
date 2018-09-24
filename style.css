@@ -313,10 +313,10 @@ body {
     padding: 5px 10px 5px 10px;
     font-weight: 300;
 }
-
 .image-analytics-ul li{
-    list-style-type: circle;
-    text-transform: none;
+    list-style-type: circle !important;
+    text-transform : none !important;
+    display: list-item !important;
 }
 
 .download-icons {
