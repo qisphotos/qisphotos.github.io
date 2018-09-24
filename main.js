@@ -46,32 +46,16 @@ function showPanel(e) {
 
 function hideAll(e) {
     console.log('this was run')
+    let heading = document.getElementById('heading');
     let nav = document.querySelector('.navigation');
     let allPanels = document.getElementsByClassName('side-panel')
     for (let i = 0; i < allPanels.length; i++) {
         allPanels[i].classList.remove('active');
     }
+    heading.style.opacity = '1';
     nav.classList.remove('navigation-active');
     e.stopPropagation(); // I don't think this works yet
 }
-
-
-window.onload = function(){
-	var popup = document.getElementById('popup');
-    var overlay = document.getElementById('backgroundOverlay');
-    var openButton = document.getElementById('openOverlay');
-    document.onclick = function(e){
-        if(e.target.id == 'backgroundOverlay'){
-            popup.style.display = 'none';
-            overlay.style.display = 'none';
-        }
-        if(e.target === openButton){
-         	popup.style.display = 'block';
-            overlay.style.display = 'block';
-        }
-    };
-};
-
 
 // list of big facing headings
 let headings = [
