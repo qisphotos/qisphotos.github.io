@@ -73,6 +73,9 @@ function setUp() {
 function showPanel(e) {
 	// get everything we need, nav, side panels ect.
 	let panel = e.target.dataset.panel;
+	let menu_tag = e.target.id;
+	let li_ele = document.getElementById(menu_tag);
+	let all_menu_li = document.getElementsByClassName('menu-option')
 	let to_be_opened = document.getElementById(panel);
 	let navigation = document.getElementById('navigation')
 	let allPanels = document.getElementsByClassName('side-panel');
@@ -90,12 +93,22 @@ function showPanel(e) {
 			allPanels[i].classList.remove('active');
 		}
 		navigation.classList.remove('navigation-active');
+
+		let all_menu_li = document.getElementsByClassName('menu-option')
+		for (let i = 0; i < all_menu_li.length; i++) {
+			all_menu_li[i].classList.remove('li_active');
+		}
+		document.getElementById('menu_li_home').classList.add('li_active')
 	} else {
 		// otherwise, open the panel requested, activate the nav with it 
 		// and hide the heading on the left.
 		to_be_opened.classList.add('active');
 		navigation.classList.add('navigation-active');
 		document.getElementById('main_heading').style.opacity = '0';
+		for (let i = 0; i < all_menu_li.length; i++) {
+			all_menu_li[i].classList.remove('li_active');
+		}
+		li_ele.classList.add('li_active');
 	}
 	let leftMainPanel = document.getElementById('leftMainPanel')
 	leftMainPanel.addEventListener("click", hideAll);
@@ -103,6 +116,7 @@ function showPanel(e) {
 
 function hideAll(e) {
 	console.log('this was run')
+	let all_menu_li = document.getElementsByClassName('menu-option')
 	let heading = document.getElementById('main_heading');
 	let nav = document.querySelector('.navigation');
 	let allPanels = document.getElementsByClassName('side-panel')
@@ -111,6 +125,10 @@ function hideAll(e) {
 	}
 	heading.style.opacity = '1';
 	nav.classList.remove('navigation-active');
+	for (let i = 0; i < all_menu_li.length; i++) {
+		all_menu_li[i].classList.remove('li_active');
+	}
+	document.getElementById('menu_li_home').classList.add('li_active')
 	e.stopPropagation(); // I don't think this works yet
 }
 

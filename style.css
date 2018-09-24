@@ -82,7 +82,7 @@ body {
     list-style-type: none;   
 }
 
-.navigation ul li {
+.navigation ul .menu-option {
     background: #efefef;
     height: 64px;
     border-radius: 4px 0 0 4px;
@@ -108,6 +108,10 @@ body {
     border-right: solid 10px #de0000;
 }
 
+.li_active {
+    color: white !important;
+    background: black !important;
+}
 
 .main-heading h1 {
     margin: 0 0 0 0;
