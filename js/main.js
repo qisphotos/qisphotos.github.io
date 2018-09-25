@@ -21,14 +21,14 @@ function updateHeading() {
 				setTimeout(function(){
 					heading.innerHTML = headings[i];
 				heading.style.opacity = 1;
-				}, 1000); 
+				}, 500); 
 				i = 0;
 			} else {
 				heading.style.opacity = 0;
 				setTimeout(function(){
 					heading.innerHTML = headings[i];
 				heading.style.opacity = 1;
-				}, 1000); 
+				}, 500); 
 				i++
 			}
 		}	,8000)
