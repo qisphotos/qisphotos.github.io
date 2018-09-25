@@ -159,9 +159,6 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
-.download-button:hover {
-    background: maroon;
-}
 
 .dark-layer {
     background: rgba(0, 0, 0, 0.25) no-repeat center center fixed;    
@@ -189,47 +186,51 @@ body {
 
 .panel .content {
     margin-left: 30px;
-    width: 50%;
+    width: 75%;
     margin-bottom: 60px;
 }
 
 .panel .content .heading {
-    width: 50%;
+    width: 75%;
     margin-top: 12%;
     margin-bottom: 40px;
 }
 
 .panel .content .heading h1{
     color: #de0000;
-    size: 40px; 
-    font-weight: 700;   
+    font-size: 48px; 
+    font-weight: 500;   
     padding-left: 30px;     
 }
 
-.panel-inside-nav ul {
+.panel-nav-ul {
     list-style: none;
     margin-top: 12%;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.panel-inside-nav ul .pipe {
-    color: #444;
+.panel-nav-ul .pipe {
+    color: #666;
     font-weight: 700;
 }
 
-.panel-inside-nav ul .technical-data {
-    color: #333;
-    font-weight: 700;
+.panel-nav-ul .technical-data {
+    font-weight: 500;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    color: #666;    
 }
 
-.panel-inside-nav ul .technical-data span{
+.panel-nav-ul .technical-data span{
     padding-right: 10px;
 }
 
-.panel-inside-nav ul li {
+.panel-nav-ul li {
     display: inline-block;
     padding-right: 20px;
     text-transform: uppercase;
+    font-size: 12px;
 }
 .technical-data {
     display: none;
@@ -248,6 +249,10 @@ body {
     display: block;
 }
 
+.product-information-main .heading h1 {
+    width: 65%;
+}
+
 .product-information-main span {
     color: #de0000;
     font-weight: 200;
@@ -257,16 +262,18 @@ body {
 
 .panel-inside-nav ul .product-information {
     color: white;
-    font-weight: 300;
+    font-weight: 500;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .panel .content p {
     padding-left: 30px;
     font-weight: 200;
-    font-size: 13pt;
+    font-size: 16px;
     margin-bottom: 0.5em;
-    width: 50%;
+    width: 75%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .active {
@@ -301,7 +308,7 @@ body {
     color: white;
 }
 
-.rendered {
+.rende #de0000 {
     margin-left: 60px;
     color: lightgray;
     background: #222;
@@ -340,6 +347,70 @@ body {
     opacity: 0;
     transition: 0.3s;
 }
+
+.ext-features-content {
+    display: none;
+}
+
+.extra-features-content {
+    font-weight: 200;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.extra-features-nav {
+    margin-top: 40px;
+}
+
+.extra-features-ul {
+    list-style-type: none;    
+    padding-left: 30px;
+}
+
+.extra-features-ul li {
+    text-transform: uppercase;
+    color: gray;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.extra-features-list-ul {
+    padding-left: 25px;
+    width: 75%;
+}
+
+.extra-features-li-active {
+    color: #de0000 !important;
+}
+
+.extra-features-list {
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+.extra-features-list-el {
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.extra-features-list-el::before {
+    content: "•";
+    color:  #de0000;
+    font-size: 20px;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -10px;
+    
+}
+
+.extra-features-list-title {
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 @media(max-width:1150px) {
     .panel .content {

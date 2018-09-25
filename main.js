@@ -5,55 +5,61 @@ let headings = [
 	"Resize images on-the-fly",
 	"Simple colour conversion"
 ]
+
+// pause boolean for background and title rotation
+let pause = false; 
+
 function updateHeading() {
 	let heading = document.getElementById('heading')
 	heading.innerHTML = headings[0];
 	heading.style.opacity = 1;
 	i = 1;
-	setInterval(function () {
-		if (i > 2) {
-			heading.style.opacity = 0;
-			setTimeout(function(){
-				heading.innerHTML = headings[i];
-			heading.style.opacity = 1;
-			}, 500); 
-			i = 0;
-		} else {
-			heading.style.opacity = 0;
-			setTimeout(function(){
-				heading.innerHTML = headings[i];
-			heading.style.opacity = 1;
-			}, 500); 
-			i++
-		}
-	}	,5000)
+	if (!pause) {
+		setInterval(function () {
+			if (i > 2) {
+				heading.style.opacity = 0;
+				setTimeout(function(){
+					heading.innerHTML = headings[i];
+				heading.style.opacity = 1;
+				}, 500); 
+				i = 0;
+			} else {
+				heading.style.opacity = 0;
+				setTimeout(function(){
+					heading.innerHTML = headings[i];
+				heading.style.opacity = 1;
+				}, 500); 
+				i++
+			}
+		}	,8000)
+	}
 }
-updateHeading();
 
 function changeBackground(){
 	let backgrounds = document.getElementsByClassName('background-image');
 	let i = 3;
-	setInterval(function () {
-		if (i > 0) {
-			backgrounds[i].style.opacity = 0;			
-				setTimeout(function(){
-					backgrounds[i].style.opacity = 1;
-				}, 1000);
-				i = i - 1;
-			} else {				
-				setTimeout(function(){
-					i = 3;	
-					backgrounds[i].style.opacity = 1;	
-					backgrounds[0].style.opacity = 1;
-					backgrounds[1].style.opacity = 1;
-					backgrounds[2].style.opacity = 1;
-					backgrounds[3].style.opacity = 1;					
-				}, 1000);
-				
-			}
-		 } ,5000)
+	if (!pause) {
+		setInterval(function () {
+			if (i > 0) {
+				backgrounds[i].style.opacity = 0;			
+					setTimeout(function(){
+						backgrounds[i].style.opacity = 1;
+					}, 1000);
+					i = i - 1;
+				} else {				
+					setTimeout(function(){
+						i = 3;	
+						backgrounds[i].style.opacity = 1;	
+						backgrounds[0].style.opacity = 1;
+						backgrounds[1].style.opacity = 1;
+						backgrounds[2].style.opacity = 1;
+						backgrounds[3].style.opacity = 1;					
+					}, 1000);
+					
+				}
+			} ,8000)
+	}
 }
-changeBackground();
 
 function SetupwhenReady(fn) {
 	if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
@@ -62,7 +68,10 @@ function SetupwhenReady(fn) {
 		document.addEventListener('DOMContentLoaded', fn);
 	}
 };
+
 SetupwhenReady(setUp);
+changeBackground();
+updateHeading();
 
 function setUp() {
 	// set navigation event listener
@@ -98,10 +107,16 @@ function showPanel(e) {
 		for (let i = 0; i < all_menu_li.length; i++) {
 			all_menu_li[i].classList.remove('li_active');
 		}
-		document.getElementById('menu_li_home').classList.add('li_active')
+		document.getElementById('menu_li_home').classList.add('li_active');
+		pause = false;
+		changeBackground();
+		updateHeading();
 	} else {
 		// otherwise, open the panel requested, activate the nav with it 
 		// and hide the heading on the left.
+		pause = true;
+		changeBackground();
+		updateHeading();
 		to_be_opened.classList.add('active');
 		navigation.classList.add('navigation-active');
 		document.getElementById('main_heading').style.opacity = '0';
@@ -128,7 +143,10 @@ function hideAll(e) {
 	for (let i = 0; i < all_menu_li.length; i++) {
 		all_menu_li[i].classList.remove('li_active');
 	}
-	document.getElementById('menu_li_home').classList.add('li_active')
+	document.getElementById('menu_li_home').classList.add('li_active');
+	pause = false;
+	changeBackground();
+	updateHeading();
 	e.stopPropagation(); // I don't think this works yet
 }
 
@@ -148,7 +166,7 @@ function innerPanelView(obj) {
 	currentButton.style.color = '#fff';
 	let otherButtonID = clicked.attributes.dataOppButton.nodeValue;
 	let otherButton = document.getElementById(otherButtonID);
-	otherButton.style.color = '#333';
+	otherButton.style.color = '#666';
 }
 
 function tryItNow(){
@@ -161,4 +179,15 @@ function tryItNow(){
 	} else {
 		icons.style.opacity = 0;
 	}
+}
+
+function externalFeaturesNav(link) {
+	let allTheFeatures = document.getElementsByClassName('ext-features-content');
+	for (i = 0; i < allTheFeatures.length; i++)	 {
+		console.log('loop being run')
+		allTheFeatures[i].style.display = 'none';
+		console.log(allTheFeatures[i])
+	}
+	let openFeature = document.getElementById(link);
+	openFeature.style.display = 'block';
 }
