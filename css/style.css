@@ -15,6 +15,13 @@ body {
     background-color: rgba(0,0,0,0) !important;
 }
 
+.main {
+    display: block;
+}
+.paralax {
+    display: none;
+}
+
 .backgrounds {
     list-style: none;
     position: relative;
