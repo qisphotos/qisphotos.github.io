@@ -31,7 +31,7 @@ function updateHeading() {
 				}, 500); 
 				i++
 			}
-		}	,8000)
+		}	,8000);
 	}
 }
 
@@ -44,7 +44,7 @@ function changeBackground(){
 				backgrounds[i].style.opacity = 0;			
 					setTimeout(function(){
 						backgrounds[i].style.opacity = 1;
-					}, 1000);
+					}, 500);
 					i = i - 1;
 				} else {				
 					setTimeout(function(){
@@ -54,10 +54,10 @@ function changeBackground(){
 						backgrounds[1].style.opacity = 1;
 						backgrounds[2].style.opacity = 1;
 						backgrounds[3].style.opacity = 1;					
-					}, 1000);
+					}, 500);
 					
 				}
-			} ,8000)
+			} ,8000);
 	}
 }
 
