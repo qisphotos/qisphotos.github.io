@@ -238,11 +238,11 @@ body {
 }
 .technical-data-main {
     display: none;
-    -webkit-transition: opacity .3s ease-in-out;
-    -moz-transition: opacity .3s ease-in-out;
-    -ms-transition: opacity .3s ease-in-out;
-    -o-transition: opacity .3s ease-in-out;
-    transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -ms-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
     opacity: 0;
 }
 .technical-data-main span {
@@ -254,11 +254,11 @@ body {
 
 .product-information-main {
     display: block;
-    -webkit-transition: opacity .3s ease-in-out;
-    -moz-transition: opacity .3s ease-in-out;
-    -ms-transition: opacity .3s ease-in-out;
-    -o-transition: opacity .3s ease-in-out;
-    transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -ms-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
 }
 
 .product-information-main .heading h1 {
@@ -332,7 +332,7 @@ body {
     font-weight: 300;
 }
 .image-analytics-ul li{
-    list-style-type: circle !important;
+    list-style-type: disc !important;
     text-transform : none !important;
     display: list-item !important;
 }
@@ -393,6 +393,7 @@ body {
 
 .extra-features-li-active {
     color: #de0000 !important;
+    font-weight: 500 !important;
 }
 
 .extra-features-list {
@@ -401,26 +402,27 @@ body {
 }
 
 .extra-features-list-el {
-    list-style: none;
-    padding-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px
+    list-style-type: disc;
+    color: #de0000;
+    margin-left: 20px;    
 }
 
-.extra-features-list-el::before {
-    content: "•";
-    color:  #de0000;
-    font-size: 20px;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -10px;
-    
+.extra-features-list-el span {
+    color: white;
+    text-transform: inherit;
+    padding-left: 0;
+    margin-left: 0; 
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
 }
 
 .extra-features-list-title {
     list-style-type: none;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 16px;  
+    font-family: 'Open Sans', sans-serif;
 }
 
 

@@ -21,14 +21,14 @@ function updateHeading() {
 				setTimeout(function(){
 					heading.innerHTML = headings[i];
 				heading.style.opacity = 1;
-				}, 500); 
+				}, 1000); 
 				i = 0;
 			} else {
 				heading.style.opacity = 0;
 				setTimeout(function(){
 					heading.innerHTML = headings[i];
 				heading.style.opacity = 1;
-				}, 500); 
+				}, 1000); 
 				i++
 			}
 		}	,8000)
@@ -109,14 +109,10 @@ function showPanel(e) {
 		}
 		document.getElementById('menu_li_home').classList.add('li_active');
 		pause = false;
-		changeBackground();
-		updateHeading();
 	} else {
 		// otherwise, open the panel requested, activate the nav with it 
 		// and hide the heading on the left.
 		pause = true;
-		changeBackground();
-		updateHeading();
 		to_be_opened.classList.add('active');
 		navigation.classList.add('navigation-active');
 		document.getElementById('main_heading').style.opacity = '0';
@@ -144,9 +140,6 @@ function hideAll(e) {
 		all_menu_li[i].classList.remove('li_active');
 	}
 	document.getElementById('menu_li_home').classList.add('li_active');
-	pause = false;
-	changeBackground();
-	updateHeading();
 	e.stopPropagation(); // I don't think this works yet
 }
 
@@ -159,7 +152,7 @@ function innerPanelView(obj) {
 	let panelView = document.getElementById(panelToView);	
 	panelView.style.opacity = 0;
 	panelView.style.display = 'block';
-	setTimeout(function() {panelView.style.opacity = 1;}, 300)
+	setTimeout(function() {panelView.style.opacity = 1;}, 200)
 	let panelCurrent = clicked.attributes.dataInnerPanelSwitch.nodeValue;
 	let panelHide = document.getElementById(panelCurrent);	
 	panelHide.style.display = 'none';
