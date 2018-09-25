@@ -181,13 +181,19 @@ function tryItNow(){
 	}
 }
 
-function externalFeaturesNav(link) {
+function externalFeaturesNav(relate, link) {
 	let allTheFeatures = document.getElementsByClassName('ext-features-content');
+	let allTheMenuItems = document.getElementsByClassName('extra-features-ul-li');
 	for (i = 0; i < allTheFeatures.length; i++)	 {
-		console.log('loop being run')
 		allTheFeatures[i].style.display = 'none';
 		console.log(allTheFeatures[i])
 	}
-	let openFeature = document.getElementById(link);
+	for (i = 0; i < allTheMenuItems.length; i++)	 {
+		allTheMenuItems[i].classList.remove('extra-features-li-active');
+	}
+	let activeLink = document.getElementById(link);
+	activeLink.classList.add('extra-features-li-active');
+
+	let openFeature = document.getElementById(relate);
 	openFeature.style.display = 'block';
 }
