@@ -99,10 +99,11 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     display: inline-block;    
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
 }
 
 .navigation ul li:hover  {
+    transition: 0.5s ease-in-out;
     text-decoration: none;
     cursor: pointer;
     border-right: solid 10px #de0000;
@@ -237,6 +238,12 @@ body {
 }
 .technical-data-main {
     display: none;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
 }
 .technical-data-main span {
     color: #de0000;
@@ -247,6 +254,11 @@ body {
 
 .product-information-main {
     display: block;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
 }
 
 .product-information-main .heading h1 {

@@ -156,10 +156,12 @@ function innerPanelView(obj) {
 	let clicked = obj;
 	// getting the datainnerpanelcurrent node, the data attached is for the corisponding panel
 	let panelToView = clicked.attributes.dataInnerPanelCurrent.nodeValue;
-	let panelView = document.getElementById(panelToView);
+	let panelView = document.getElementById(panelToView);	
+	panelView.style.opacity = 0;
 	panelView.style.display = 'block';
+	setTimeout(function() {panelView.style.opacity = 1;}, 300)
 	let panelCurrent = clicked.attributes.dataInnerPanelSwitch.nodeValue;
-	let panelHide = document.getElementById(panelCurrent);
+	let panelHide = document.getElementById(panelCurrent);	
 	panelHide.style.display = 'none';
 	let currentButtonID = clicked.attributes.id.nodeValue;
 	let currentButton = document.getElementById(currentButtonID);
