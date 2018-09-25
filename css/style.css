@@ -193,7 +193,6 @@ body {
 .panel .content .heading {
     width: 75%;
     margin-top: 20px;
-    margin-bottom: 40px;
 }
 
 .panel .content .heading h1{
@@ -213,7 +212,7 @@ body {
 
 .panel-nav-ul .pipe {
     color: #666;
-    font-weight: 700;
+    font-weight: 700;§
 }
 
 .panel-nav-ul .technical-data {
@@ -251,7 +250,7 @@ body {
 }
 
 .product-information-main .heading h1 {
-    width: 65%;
+    width: 75%;
 }
 
 .product-information-main span {
