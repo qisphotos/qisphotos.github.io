@@ -130,7 +130,6 @@ body {
 }
 
 .main-heading {
-    padding-top: 10%;
     transition: 0.5s;
 }
 
@@ -355,8 +354,23 @@ body {
     }
 }
 
-@media(max-height: 1441px) {
+@media(max-width: 1441px) {
+    
     .main-heading h1 {
-        font-size: 80px;
+        font-size: 70px;
+    }
+    .navigation ul .menu-option {
+        height: 50px;
+        padding-top: 16px;
+    }
+}
+
+@media(max-height: 850px) {
+    .main-heading h1 {
+        font-size: 70px;
+    }
+    .navigation ul .menu-option {
+        height: 50px;
+        padding-top: 16px;
     }
 }
