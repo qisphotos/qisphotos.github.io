@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta author="Matt Fozard">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quru Image Server</title>
+
+  <!-- imports -->
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,500,700,300|Poppins:200,300,400,700,900"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/para.css">
+
+  <style>
+    .toolbar {
+      margin-top: 10vh;
+    }
+    .toolbar-button {
+      color: white;
+      background: #de0000;
+      margin-left: 15px;
+      border-radius: 4px;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: 12px;
+      border: none;
+      cursor: pointer;
+    }
+    .wait-icon {
+      width: 12em;
+      position: fixed;
+      left: calc(50vw - 6em);
+      top: 45vh;
+      background-color: white;
+      color: black;
+      border-radius: 4px;
+      padding: 10px;
+      text-align: center;
+      display: none;
+    }
+    .dark-layer .wait-icon {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <ul id="backgrounds" class="backgrounds">
+      <li><img id="bg_image" class="background-image" src="https://images.quru.com/image?src=/web/splash/fish.png&width=1920&format=jpg&quality=80" alt=""></li>
+    </ul>
+
+    <div id="bg_mask" class=""> <!-- JS toggles class 'dark-layer' -->
+      <div class="row" style="margin-left: 0; margin-right: 0;">
+        <div id="leftMainPanel" data-panel="leftMainPanel" class="col-md-6 left-main-panel" style="padding-left:0;">
+          <div class="quru-image-server-tag">
+            <a href=".."><img src="../img/QIS-logo.png" alt="quru image server logo"></a>
+          </div>
+          <div class="toolbar">
+            <button class="toolbar-button" onclick="ToolboxUI.zoomIn()">In</button>
+            <button class="toolbar-button" onclick="ToolboxUI.zoomOut()">Out</button>
+            <button class="toolbar-button" onclick="ToolboxUI.rotate()">Rot</button>
+            <button class="toolbar-button" onclick="ToolboxUI.flip()">Flip</button>
+            <button class="toolbar-button" onclick="ToolboxUI.watermark()">Wmark</button>
+          </div>
+          <div id="wait_icon" class="wait-icon">
+            Requesting image...
+          </div>
+        </div>
+
+        <div class="col-md-6 right-main-panel" style="padding-right:0; height: 100%;">
+          <div id="navigation" class="navigation navigation-inactive" data-panel="navigation">
+            <ul id="mainNavUl" data-panel="nav-ul">
+              <a href="..">
+                <li id="menu_li_home" class="menu-option" data-panel="home">
+                Home
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://images.quru.com/static/js/common_view.min.js"></script>
+  <script src="../js/qis.js"></script>
+</body>
+</html>
