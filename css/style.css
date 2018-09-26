@@ -27,9 +27,7 @@ body {
     position: relative;
     z-index: -1;
     margin: 0;
-    padding: 0; 
-
-
+    padding: 0;
 }
 
 .backgrounds li img {
@@ -43,34 +41,6 @@ body {
     -o-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 }
-/* CSS transition for backgrounds /*
-/* .backgrounds li:nth-child(4) {
-    animation: xfade 16s 0s infinite;
-    animation-play-state: running;
-  }
-.backgrounds li:nth-child(3) {
-    animation: xfade 16s 4s infinite;
-    animation-play-state: running;
-  }
-.backgrounds li:nth-child(2) {
-    animation: xfade 16s 8s infinite;
-    animation-play-state: running;
-  }
-.backgrounds li:nth-child(1) {
-    animation: xfade 16s 12s infinite;
-    animation-play-state: running;
-  }
-  @keyframes xfade{
-    17% {
-      opacity:1;
-    }
-    25% {
-      opacity:0;
-    }
-    92% {
-      opacity:0;
-    }
-} */
 
 .navigation {
     text-align: right;
@@ -381,12 +351,12 @@ body {
     margin-top: 40px;
 }
 
-.extra-features-ul {
+.extra-features > ul {
     list-style-type: none;    
     padding-left: 30px;
 }
 
-.extra-features-ul li {
+.extra-features > ul > li {
     text-transform: uppercase;
     color: gray;
     font-family: 'Open Sans', sans-serif;
@@ -394,7 +364,7 @@ body {
     cursor: pointer;
 }
 
-.extra-features-list-ul {
+.extra-features-list > ul {
     padding-left: 25px;
     width: 75%;
 }
@@ -409,13 +379,14 @@ body {
     padding-left: 5px;
 }
 
-.extra-features-list-el {
+.extra-features-list > ul > li {
     list-style-type: disc;
     color: #de0000;
-    margin-left: 20px;    
+    margin-left: 10px;    
+    font-size: 12px;
 }
 
-.extra-features-list-el span {
+.extra-features-list ul > li > span {
     color: white;
     text-transform: inherit;
     padding-left: 0;
@@ -425,13 +396,77 @@ body {
     font-weight: 200;
 }
 
-.extra-features-list-title {
+.extra-features-list > ul > li.title {
     list-style-type: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
     font-size: 16px;  
+    color:white;
     font-family: 'Open Sans', sans-serif;
 }
+
+.onload {
+    background: #888;
+    z-index: 99;
+    width: 100%;
+    height: 110vh; 
+    padding-top: 20%;
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    position: fixed;
+    opacity: 1;
+}
+.onload h1 {
+    text-align: center;
+    font-size: 120px;
+    color: lightgray;
+    text-shadow: 0 0 50px #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-pop-up-top {
+	-webkit-animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 maroon, 0 2px 0 maroon, 0 3px 0 maroon, 0 4px 0 maroon, 0 5px 0 maroon, 0 6px 0 maroon, 0 7px 0 maroon, 0 8px 0 maroon, 0 9px 0 maroon, 0 50px 30px rgba(0, 0, 0, 0.8);
+    }
+  }
+  @keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 maroon, 0 2px 0 maroon, 0 3px 0 maroon, 0 4px 0 maroon, 0 5px 0 maroon, 0 6px 0 maroon, 0 7px 0 maroon, 0 8px 0 maroon, 0 9px 0 maroon, 0 50px 30px rgba(0, 0, 0, 0.8);
+    }
+  }
+  
 
 
 @media(max-width:1150px) {
@@ -465,5 +500,12 @@ body {
     .navigation ul .menu-option {
         height: 50px;
         padding-top: 16px;
+    }
+}
+
+/* Letter box */
+@media(max-height:575px) and (max-width:1329px) and (min-width:1000px) {
+    .navigation {
+        display: none;
     }
 }
