@@ -171,18 +171,18 @@ function tryItNow() {
 }
 
 function externalFeaturesNav(relate, link) {
-	let allTheFeatures = document.getElementsByClassName('ext-features-content');
-	let allTheMenuItems = document.getElementsByClassName('extra-features-ul-li');
+	let allTheFeatures = document.getElementsByClassName('all-features');
+	let allTheMenuItems = document.getElementsByClassName('all-nav-items');
 	let i = 0;
 	for (i = 0; i < allTheFeatures.length; i++) {
 		allTheFeatures[i].style.display = 'none';
 		}
 	let a = 0;
 	for (a = 0; a < allTheMenuItems.length; a++) {
-		allTheMenuItems[a].classList.remove('extra-features-li-active');
+		allTheMenuItems[a].classList.remove('nav-active');
 	}
 	let activeLink = document.getElementById(link);
-	activeLink.classList.add('extra-features-li-active');
+	activeLink.classList.add('nav-active');
 
 	let openFeature = document.getElementById(relate);
 	openFeature.style.display = 'block';

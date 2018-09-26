@@ -362,12 +362,11 @@ body {
     padding-left: 0;
 }
 
-.extra-features > ul {
+.extra-features-nav > ul {
     list-style-type: none;    
-    padding-left: 30px;
 }
 
-.extra-features > ul > li {
+.extra-features-nav > ul > li {
     text-transform: uppercase;
     color: gray;
     font-family: 'Open Sans', sans-serif;
