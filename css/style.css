@@ -345,10 +345,21 @@ body {
 .extra-features-content {
     font-weight: 200;
     font-family: 'Poppins', 'sans-serif';
+    
 }
 
-.extra-features-nav {
-    margin-top: 40px;
+.extra-features-nav ul > li > span{
+    color: #777;
+    font-weight: 300;
+}
+.nav-active {
+    color: #de0000 !important;
+    font-weight: 500 !important;
+}
+
+.extra-features-nav > ul {
+    list-style-type: none;    
+    padding-left: 0;
 }
 
 .extra-features > ul {
@@ -367,11 +378,6 @@ body {
 .extra-features-list > ul {
     padding-left: 25px;
     width: 75%;
-}
-
-.extra-features-li-active {
-    color: #de0000 !important;
-    font-weight: 500 !important;
 }
 
 .extra-features-list {
