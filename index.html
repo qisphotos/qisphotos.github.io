@@ -3,102 +3,113 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta author="Mohsin Hanid">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Quru Image Server</title>
 
   <!-- imports -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans|Poppins:300,400" rel="stylesheet">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,500,700,300|Poppins:200,300,400,700,900"
+    rel="stylesheet">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
 
   <!-- custom css -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/para.css">
 
 
 
 </head>
 
 <body>
-  <ul class="backgrounds">
-    <li><img src="img/1.png" alt=""></li>
-    <li><img src="img/2.png" alt=""></li>
-    <li><img src="img/3.png" alt=""></li>
-    <li><img src="img/4.png" alt=""></li>
-  </ul>
-  
+  <div class="main">
+    <ul id="backgrounds" class="backgrounds">
+      <li><img class="background-image" src="img/1.png" alt=""></li>
+      <li><img class="background-image" src="img/2.png" alt=""></li>
+      <li><img class="background-image" src="img/3.png" alt=""></li>
+      <li><img class="background-image" src="img/4.png" alt=""></li>
+    </ul>
+
     <div class="dark-layer">
       <div class="row" style="margin-left: 0; margin-right: 0;">
-        <div class="col-md-6" style="padding-left:0;">
+        <div id="leftMainPanel" data-panel="leftMainPanel" class="col-md-6 left-main-panel" style="padding-left:0;">
           <div class="quru-image-server-tag">
             <img src="img/QIS-logo.png" alt="quru image server logo">
           </div>
-          <div id="heading" class="main-heading">
-            <h1>
-              Perfect detail at any scale
-            </h1>
+          <div id="main_heading" class="main-heading">
+            <h1 id="heading"></h1>
           </div>
-          <div>
-            <button class="download-button">Download</button>
+          <div class="download">
+            <button class="download-button">Try it now</button>
+            <!-- <div id="try_it_now_icons" class="col-lg-4 download-icons-con">
+                    <ul class="download-icons">
+                        <li>Icon</li>
+                        <li>Icon</li>
+                        <li>Icon</li>
+                        <li>Icon</li>
+                        <li>Icon</li>
+                      </ul>
+                </div> -->
           </div>
           <div class="social">
-            <ul>
-              <li alt="link to instagram"><i class="fab fa-instagram fa-2x"></i></li>
-              <li alt="link to github"><i class="fab fa-github fa-2x"></i></li>
+            <ul class="socail-list-ul">
+              <li class="socail-list-ul-li" alt="link to instagram"><i class="fab fa-instagram fa-2x"></i></li>
+              <li class="socail-list-ul-li" alt="link to github"><i class="fab fa-github fa-2x"></i></li>
             </ul>
             <p id="rendered" class="rendered">Image rendered in 2.35 seconds from a 64MG Raw Format</p>
-
           </div>
         </div>
 
-        <div class="col-md-6" style="padding-right:0; height: 100%;">
+        <div class="col-md-6 right-main-panel" style="padding-right:0; height: 100%;">
           <div id="navigation" class="navigation navigation-inactive" data-panel="navigation">
             <ul id="mainNavUl" data-panel="nav-ul">
-              <li data-panel="home">
+              <li id="menu_li_home" class="menu-option li_active" data-panel="home">
                 Home
               </li>
               <br>
-              <li data-panel="image-resizing-panel">
+              <li class="menu-option" id="image-resizing-menu-tag" data-panel="image-resizing-panel">
                 Image Resizing
               </li>
               <br>
-              <li data-panel="image-conversion-panel">
+              <li class="menu-option" id="image-conversion-menu-tag" data-panel="image-conversion-panel">
                 Image Conversion
               </li>
               <br>
-              <li data-panel="watermarking-and-protection-panel">
+              <li class="menu-option" id="watermarking-and-protection-menu-tag" data-panel="watermarking-and-protection-panel">
                 Watermarking & protection
               </li>
               <br>
-              <li data-panel="image-analytics-panel">
+              <li class="menu-option" id="image-analytics-menu-tag" data-panel="image-analytics-panel">
                 Image analytics
               </li>
               <br>
-              <li data-panel="pricing-panel">
-                Pricing
-              </li>
-              <br>
-              <li data-panel="case-studies-panel">
-                Case studies
-              </li>
-              <br>
-              <li data-panel="about-us-panel">
-                About us
-              </li>
-              <br>
-              <li data-panel="extra-features-panel">
+              <li class="menu-option" id="extra-features-menu-tag" data-panel="extra-features-panel">
                 Extra Features
               </li>
               <br>
+              <li class="menu-option" id="pricing-menu-tag" data-panel="pricing-panel">
+                Pricing
+              </li>
+              <br>
+              <li class="menu-option" id="case-studies-menu-tag" data-panel="case-studies-panel">
+                Case studies
+              </li>
+              <br>
+              <li class="menu-option" id="about-us-menu-tag" data-panel="about-us-panel">
+                About us
+              </li>
             </ul>
           </div>
           <div id="panels">
             <div id="image-resizing-panel" class="side-panel panel image-resizing-panel">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
-                  <ul>
+                  <ul class="panel-nav-ul">
                     <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-image-resizing"
                       id="product-information-button-image-resizing" dataInnerPanelCurrent="product-information-image-resizing"
                       dataInnerPanelSwitch="technical-data-image-resizing" class="product-information">
@@ -117,17 +128,23 @@
                 <div class="product-information-main" id="product-information-image-resizing">
                   <div class="heading">
                     <h1>
-                      Image Resizing Panel
+                      The perfect image at any size
                     </h1>
                   </div>
 
                   <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Reprehenderit nihil, veniam cupiditate fugit,
-                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                    Manage your digital assets more efficiently and give website visitors greater confidence in your
+                    brand. Let customers zoom in to images so they can see the full details that will help sell your
+                    products, with minimal hands-on management.
+                  </p>
+                  <p>
+                    Administrating a large number of images is challenging. The mix of formats, shapes and resolutions
+                    can be expensive. By dynamically resizing images in real time, as people view and adjust them, you
+                    deliver the perfect size image for your audience.
+                  </p>
+                  <p>
+                    Whatever device and screen size your website visitors are using, they’ll get a perfect, detailed
+                    experience every time.
                   </p>
 
                   <span>Try the online demo</span>
@@ -149,7 +166,7 @@
             <div id="image-conversion-panel" class="side-panel panel image-conversion-panel">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
-                  <ul>
+                  <ul class="panel-nav-ul">
                     <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-image-conversion"
                       id="product-information-button-image-conversion" dataInnerPanelCurrent="product-information-image-conversion"
                       dataInnerPanelSwitch="technical-data-image-conversion" class="product-information">
@@ -167,17 +184,24 @@
                 <div class="product-information-main" id="product-information-image-conversion">
                   <div class="heading">
                     <h1>
-                      Image Conversion Panel - and some more text
+                      Automatic image conversion
                     </h1>
                   </div>
 
                   <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Reprehenderit nihil, veniam cupiditate fugit,
-                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                    Save considerable time and effort for your team. Converting hundreds of product images is a huge
+                    drain on your business. With QIS, just upload your images in whatever format you have, and we do
+                    the
+                    rest. Forget manual conversions, QIS does it for you.
+                  </p>
+                  <p>
+                    QIS currently supports a large number of differing file types and we are continually adding new
+                    formats. We ensure they are compatible with standard web practices and other systems.
+                  </p>
+                  <p>
+                    Stop wasting time and creating images to upload individually. With QIS, you are future proofing
+                    your
+                    digital assets whatever image formats you use.
                   </p>
 
                   <span>Try the online demo</span>
@@ -201,7 +225,7 @@
             <div id="watermarking-and-protection-panel" class="side-panel panel watermarking-and-protection-panel">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
-                  <ul>
+                  <ul class="panel-nav-ul">
                     <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-watermarking-and-protection"
                       id="product-information-button-watermarking-and-protection" dataInnerPanelCurrent="product-information-watermarking-and-protection"
                       dataInnerPanelSwitch="technical-data-watermarking-and-protection" class="product-information">
@@ -216,236 +240,385 @@
                     </li>
                   </ul>
                 </div>
-                  <div class="product-information-main" id="product-information-watermarking-and-protection">
-                    <div class="heading">
-                      <h1>
-                        Watermarking & Protection
-                      </h1>
-                    </div>
-
-                    <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Reprehenderit nihil, veniam cupiditate fugit,
-                      natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                      ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                      Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                    </p>
-
-                    <span>Try the online demo</span>
+                <div class="product-information-main" id="product-information-watermarking-and-protection">
+                  <div class="heading">
+                    <h1>
+                      Apply watermarking in an instant
+                    </h1>
                   </div>
-                  <div class="technical-data-main" id="technical-data-watermarking-and-protection">
-                    <div class="heading">
-                      <h1>
-                        Watermarking & Protection Technical
-                      </h1>
+
+                  <p>
+                    Protect your digital assets, manage pricing and create flash sales more easily. Gain more control
+                    and
+                    save time by batch applying watermarks on your product photos rather than individually updating.
+                  </p>
+                  <p>
+                    Ensure images are protected. If you use the server to deliver product images to distributors and
+                    retailers you can easily control pricing information. Protect your brand and at the same time
+                    leverage pricing strategies.
+                  </p>
+                  <p>
+                    Quickly change pricing watermarks anywhere your images are being displayed with dynamic price
+                    overlay. Amend the price on a sale item across your entire digital estate with just one update.
+                  </p>
+
+                  <span>Try the online demo</span>
+                </div>
+                <div class="technical-data-main" id="technical-data-watermarking-and-protection">
+                  <div class="heading">
+                    <h1>
+                      Watermarking & Protection Technical
+                    </h1>
+                  </div>
+
+                  <p>
+                    This is the technical data section
+                  </p>
+
+                  <span>Try the online demo</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="image-analytics-panel" class="side-panel panel image-analytics-panel">
+              <div class="col-md-6 content">
+                <div class="panel-inside-nav">
+                  <ul class="panel-nav-ul">
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-image-analytics"
+                      id="product-information-button-image-analytics" dataInnerPanelCurrent="product-information-image-analytics"
+                      dataInnerPanelSwitch="technical-data-image-analytics" class="product-information">
+                      Product Information
+                    </li>
+                    <li class="pipe">|</li>
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-button-image-analytics" id="product-information-technical-button-image-analytics"
+                      dataInnerPanelCurrent="technical-data-image-analytics" dataInnerPanelSwitch="product-information-image-analytics"
+                      class="technical-data">
+                      <span>Technical Data</span>
+                      <i class="fas fa-cog"></i>
+                    </li>
+                  </ul>
+                </div>
+                <div class="product-information-main" id="product-information-image-analytics">
+                  <div class="heading">
+                    <h1>
+                      Analytics that supercharge your marketin
+                    </h1>
+                  </div>
+
+                  <p>
+                    Understand how your products are being viewed by clients and customers to get better results from
+                    your marketing. Prioritise and refine products and pricing that you display to leverage sales,
+                    downloads and requests for information.
+                  </p>
+                  <p>
+                    Give your marketing team the advantage of absolute visibility. Understand which images are trending
+                    across multiple pages and sites and know which are most popular at any time. Our powerful image
+                    analysis includes:
+                  </p>
+                  <div class="extra-features-list">
+                    <ul class="extra-features-list-ul">
+                      <li class="extra-features-list-el"><span>Integrated reporting of image traffic</span></li>
+                      <li class="extra-features-list-el"><span>Viewing overall image traffic on site</span></li>
+                      <li class="extra-features-list-el"><span>Viewing individual traffic on site</span></li>
+                      <li class="extra-features-list-el"><span>Tracking number of requests hourly try the online demo</span></li>
+                    </ul>
+                  </div>
+                  </p>
+
+                  <span>Try the online demo</span>
+                </div>
+                <div class="technical-data-main" id="technical-data-image-analytics">
+                  <div class="heading">
+                    <h1>
+                      Image Analytics Panel - Technical
+                    </h1>
+                  </div>
+
+                  <p>
+                    another panel for our technical spec
+                  </p>
+
+                  <span>Try the online demo</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="pricing-panel" class="side-panel panel pricing-panel">
+              <div class="content col-md-6" style="margin-top: 8%">
+                <div class="product-information-main">
+                  <div class="heading">
+                    <h1>
+                      The perfect solution at the best price
+                    </h1>
+                  </div>
+
+                  <p>
+                    QIS is the most economical option for your business with the easiest implementation. Manage over 5
+                    million images with no additional software. There are no licenses or usage costs for volumes beyond
+                    the traditional low traffic solutions.
+                  </p>
+
+                  <p>
+                    It’s simple for your website developers and marketing team to start using and maintain.
+                  </p>
+
+                  <div class="extra-features-list">
+                    <ul class="extra-features-list-ul">
+                      <li class="extra-features-list-title">With QIS you get:</li>
+                      <li class="extra-features-list-el"><span>Integrated reporting of image traffic</span></li>
+                      <li class="extra-features-list-el"><span>Viewing overall image traffic on site</span></li>
+                      <li class="extra-features-list-el"><span>Viewing individual traffic on site</span></li>
+                      <li class="extra-features-list-el"><span>Tracking number of requests hourly</span></li>
+                    </ul>
+
+                  </div>
+
+
+                  <p>
+                    QIS is the only image server that will allow scale delivery at an affordable cost. It is designed
+                    to
+                    use across as many web servers as you need in multiple locations and countries.
+                  </p>
+
+                  <p>
+                    Serve all your images from a fully functioning image server for £2,000 per annum. Talk to us now
+                    on
+                    +44 20 7160 2888.
+                  </p>
+
+
+                  <span>Try the online demo</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="case-studies-panel" class="side-panel panel case-studies-panel">
+              <div class="content col-md-6" style="margin-top: 8%">
+                <div class="product-information-main">
+                  <div class="heading">
+                    <h1>
+                      Case Studies
+                    </h1>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Reprehenderit nihil, veniam cupiditate fugit,
+                    natus excepturi numquam aliquam sint at facilis id rem dolor similique,
+                    ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit.
+                    Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
+                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                  </p>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div id="about-us-panel" class="side-panel panel about-us-panel">
+              <div class="col-md-6 content">
+                <div class="panel-inside-nav">
+                  <ul class="panel-nav-ul">
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-about-us" id="product-information-button-about-us"
+                      dataInnerPanelCurrent="product-information-about-us" dataInnerPanelSwitch="technical-data-about-us"
+                      class="product-information">
+                      About Quru
+                    </li>
+                    <li class="pipe">|</li>
+                    <li onclick="innerPanelView(this)" dataOppButton="product-information-button-about-us" id="product-information-technical-button-about-us"
+                      dataInnerPanelCurrent="technical-data-about-us" dataInnerPanelSwitch="product-information-about-us"
+                      class="technical-data">
+                      <span>Customer Testimonials</span>
+                      <i class="fas fa-comment-alt"></i>
+                    </li>
+                  </ul>
+                </div>
+                <div class="product-information-main" id="product-information-about-us" style="margin-top:40px;">
+                  <div class="heading">
+                    <h1>
+                      The only choice for the most demanding brands
+                    </h1>
+                  </div>
+
+                  <p>
+                    The Quru Image Server (QIS - pronounced ‘kiss’) ensures you deliver the best brand image experience
+                    to your customers every time, on any device. We’re the service of choice for brands with thousands
+                    of images that need to be adaptable.
+                  </p>
+                  <p>
+                    All your images are stored and delivered from one place meaning that, no matter where they are
+                    seen, they remain 100% consistent when viewed or downloaded. And you can manage this with
+                    simplicity, speed and ease.
+                  </p>
+                  <p>
+                    Each image is adapted for multiple use. Full colour high-res images, ready for high quality
+                    printing can adapt down to a thumbnail for use on a smartphone instantly. No manual resizing and
+                    storing multiple versions of the same image.
+                  </p>
+                  <p>
+                    Find out how QIS can support your business by talking to us now on +44 20 7160 2888.
+                  </p>
+
+
+                </div>
+                <div class="technical-data-main" id="technical-data-about-us">
+                  <div class="heading">
+                    <h1>
+                      Customer Testimonials
+                    </h1>
+                  </div>
+
+                  <p>
+                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                  </p>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div id="extra-features-panel" class="side-panel panel extra-features-panel">
+              <div class="col-md-6 content">
+                <div class="product-information-main">
+                  <div class="extra-features-content">
+                    <div class="extra-features-nav">
+                      <ul class="extra-features-ul">
+                        <li id="link_one" class="extra-features-ul-li" onclick="externalFeaturesNav('external_features_one', 'link_one')">run
+                          everything through the api</li>
+                        <li id="link_two" class="extra-features-ul-li extra-features-li-active" onclick="externalFeaturesNav('external_features_two', 'link_two')">manage
+                          effects in the image library browser</li>
+                        <li id="link_three" class="extra-features-ul-li" onclick="externalFeaturesNav('external_features_three', 'link_three')">add
+                          viewing features directly to your website</li>
+                        <li id="link_four" class="extra-features-ul-li" onclick="externalFeaturesNav('external_features_four', 'link_four')">no
+                          lock-in and no limts</li>
+                        <li id="link_five" class="extra-features-ul-li" onclick="externalFeaturesNav('external_features_five', 'link_five')">all
+                          in one solution</li>
+                      </ul>
+                    </div>
+                    <div id="external_features_one" class="ext-features-content">
+                      <p class="extra-features-text-block">Run everything through the api</p>
+                    </div>
+                    <div id="external_features_three" class="ext-features-content">
+                      <p class="extra-features-text-block">add viewing features directly to your website</p>
+                    </div>
+                    <div id="external_features_four" class="ext-features-content">
+                      <p class="extra-features-text-block">no lock-in and no limits</p>
+                    </div>
+                    <div id="external_features_five" class="ext-features-content">
+                      <p class="extra-features-text-block">all in one solution </p>
                     </div>
 
-                    <p>
-                      This is the technical data section
-                    </p>
+                    <div id="external_features_two" class="ext-features-content" style="display: block;">
+                      <p class="extra-features-text-block">
+                        Imaging operations can be combined together and saved as templates. QIS supports the
+                        Python-Pillow
+                        library and ImageMagick package for its core image processing engine. Available operations
+                        include:
+                      </p>
 
-                    <span>Try the online demo</span>
+                      <div class="extra-features-list">
+                        <ul class="extra-features-list-ul">
+                          <li class="extra-features-list-el"><span>Rotation</span></li>
+                          <li class="extra-features-list-el"><span>Resizing</span></li>
+                          <li class="extra-features-list-el"><span>Cropping and tiling</span></li>
+                          <li class="extra-features-list-el"><span>Vertical and horizontal flip</span></li>
+                          <li class="extra-features-list-el"><span>Image format conversion</span></li>
+                          <li class="extra-features-list-el"><span>Stripping of image metadata to reduce file size</span></li>
+                          <li class="extra-features-list-title"><strong>Enhancements in the Premium Edition include:</strong></li>
+                          <li class="extra-features-list-el"><span>Sharpen and blur</span></li>
+                          <li class="extra-features-list-el"><span>Overlays and watermarking</span></li>
+                          <li class="extra-features-list-el"><span>Image colorspace conversion</span></li>
+                          <li class="extra-features-list-el"><span>PDF conversion to and from images</span></li>
+                          <li class="extra-features-list-el"><span>Colour profile conversion and removal for print
+                              publishing</span></li>
+                          <li class="extra-features-list-title"><strong>File types</strong></li>
+                          <li class="extra-features-list-title">
+                            The Standard Edition supports file types: gif, jpg, png,
+                            tif. In the Premium edition, supported file types vary depending on your version of
+                            ImageMagick, but the following are enabled by default:
+                          </li>
+                          <li class="extra-features-list-el"><span>General image formats: bmp, dcm, gif, jpg, png, ppm,
+                              psd, svg, tga, tif, xcf </span></li>
+                          <li class="extra-features-list-el"><span>RAW image formats: arw, cr2, mrw, nef, nrw, orf,
+                              rw2, raw, raf, x3f</span></li>
+                          <li class="extra-features-list-el"><span>PDF / Postscript formats: eps, epsi, epsf, pdf, ps</span></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div id="image-analytics-panel" class="side-panel panel image-analytics-panel">
-                <div class="col-md-6 content">
-                  <div class="panel-inside-nav">
-                    <ul>
-                      <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-image-analytics"
-                        id="product-information-button-image-analytics" dataInnerPanelCurrent="product-information-image-analytics"
-                        dataInnerPanelSwitch="technical-data-image-analytics" class="product-information">
-                        Product Information
-                      </li>
-                      <li class="pipe">|</li>
-                      <li onclick="innerPanelView(this)" dataOppButton="product-information-button-image-analytics" id="product-information-technical-button-image-analytics"
-                        dataInnerPanelCurrent="technical-data-image-analytics" dataInnerPanelSwitch="product-information-image-analytics"
-                        class="technical-data">
-                        <span>Technical Data</span>
-                        <i class="fas fa-cog"></i>
-                      </li>
-                    </ul>
-                    <div class="product-information-main" id="product-information-image-analytics">
-                      <div class="heading">
-                        <h1>
-                          Image Analytics Panel
-                        </h1>
-                      </div>
-
-                      <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Reprehenderit nihil, veniam cupiditate fugit,
-                        natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                        ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                        Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                      </p>
-
-                      <span>Try the online demo</span>
-                    </div>
-                    <div class="technical-data-main" id="technical-data-image-analytics">
-                      <div class="heading">
-                        <h1>
-                          Image Analytics Panel - Technical
-                        </h1>
-                      </div>
-
-                      <p>
-                        another panel for our technical spec
-                      </p>
-
-                      <span>Try the online demo</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="pricing-panel" class="side-panel panel pricing-panel">
-                  <div class="content" style="margin-top: 15%">
-                    <div class="panel-inside-nav">
-                      <div class="product-information-main">
-                        <div class="heading">
-                          <h1>
-                            Pricing
-                          </h1>
-                        </div>
-
-                        <p>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                          Reprehenderit nihil, veniam cupiditate fugit,
-                          natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                          ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                          Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                        </p>
-
-                        <span>Try the online demo</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div id="case-studies-panel" class="side-panel panel case-studies-panel">
-                    <div class="content" style="margin-top: 15%">
-                        <div class="product-information-main">
-                          <div class="heading">
-                            <h1>
-                              Case Studies
-                            </h1>
-                          </div>
-
-                          <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Reprehenderit nihil, veniam cupiditate fugit,
-                            natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                            ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit.
-                            Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                            Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                          </p>
-
-                          
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="about-us-panel" class="side-panel panel about-us-panel">
-                      <div class="col-md-6 content">
-                          <div class="panel-inside-nav">
-                              <ul>
-                                <li onclick="innerPanelView(this)" 
-                                    dataOppButton="product-information-technical-button-about-us"
-                                    id="product-information-button-about-us" 
-                                    dataInnerPanelCurrent="product-information-about-us"
-                                    dataInnerPanelSwitch="technical-data-about-us" 
-                                    class="product-information">
-                                    About Quru
-                                </li>
-                                <li class="pipe">|</li>
-                                <li onclick="innerPanelView(this)" 
-                                    dataOppButton="product-information-button-about-us"
-                                    id="product-information-technical-button-about-us" 
-                                    dataInnerPanelCurrent="technical-data-about-us"
-                                    dataInnerPanelSwitch="product-information-about-us" 
-                                    class="technical-data">
-                                    <span>Customer Testimonials</span>
-                                    <i class="fas fa-cog"></i>
-                                </li>
-                              </ul>
-                            </div>
-                          <div class="product-information-main" id="product-information-about-us">
-                            <div class="heading">
-                              <h1>
-                                About us
-                              </h1>
-                            </div>
-
-                            <p>
-                              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                              Reprehenderit nihil, veniam cupiditate fugit,
-                              natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                              ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing
-                              elit.
-                              Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                              Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                            </p>
-
-                            
-                          </div>
-                          <div class="technical-data-main" id="technical-data-about-us">
-                              <div class="heading">
-                                <h1>
-                                Customer Testimonials
-                                </h1>
-                              </div>
-  
-                              <p>                                
-                                Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                              </p>
-  
-                              
-                            </div>
-                        </div>
-                      </div>
-
-                      <div id="extra-features-panel" class="side-panel panel extra-features-panel">
-                        <div class="col-md-6 content">
-                          <div class="panel-inside-nav">
-                            <ul>
-                              <li class="product-information">Product Information</li>
-                              <li class="pipe">|</li>
-                              <li class="technical-data"><span>Technical Data</span> <i class="fas fa-cog"></i></li>
-                            </ul>
-                            </ul>
-                            <div class="product-information-main">
-                              <div class="heading">
-                                <h1>
-                                  Extra Features
-                                </h1>
-                              </div>
-
-                              <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Reprehenderit nihil, veniam cupiditate fugit,
-                                natus excepturi numquam aliquam sint at facilis id rem dolor similique,
-                                ad pariatur sunt libero neque eum? Lorem ipsum dolor, sit amet consectetur adipisicing
-                                elit.
-                                Necessitatibus in quos ex ratione! Ipsa culpa corrupti rerum omnis consectetur fugit.
-                                Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                              </p>
-
-                              <span>Try the online demo</span>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </div>
 
 
-                <script src="main.js"></script>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paralax">
+    <div class="background_1">
+      <div class="sheet">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 title">
+              <h1>Automatic image conversion</h1>
+            </div>
+            <div class="col-md-12 content">
+              <p>
+                Save considerable time and effort for your team. Converting hundreds of product images is a huge drain on
+                your business. With QIS, just upload your images in whatever format you have, and we do the rest. Forget
+                manual conversions, QIS does it for you.
+              </p>
+              <p>
+                QIS currently supports a large number of differing file types and we are continually adding new formats.
+                We ensure they are compatible with standard web practices and other systems.
+              </p>    
+              <p>
+                Stop wasting time and creating images to upload individually. With QIS, you are future proofing your
+                digital assets whatever image formats you use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background_2">
+      <div class="sheet">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 title">
+              <h1>The perfect image at any size</h1>
+            </div>
+              <div class="col-md-12 content">
+                <p>
+                  Manage your digital assets more efficiently and give website visitors greater confidence in your brand.
+                  Let customers zoom in to images so they can see the full details that will help sell your products, with
+                  minimal hands-on management.
+                </p>
+                <p>
+                  Administrating a large number of images is challenging. The mix of formats, shapes and resolutions can be
+                  expensive. By dynamically resizing images in real time, as people view and adjust them, you deliver the
+                  perfect size image for your audience.
+                </p>
+                <p>
+                  Whatever device and screen size your website visitors are using, they’ll get a perfect, detailed
+                  experience every time.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
