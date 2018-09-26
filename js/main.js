@@ -173,13 +173,13 @@ function tryItNow() {
 function externalFeaturesNav(relate, link) {
 	let allTheFeatures = document.getElementsByClassName('ext-features-content');
 	let allTheMenuItems = document.getElementsByClassName('extra-features-ul-li');
-	let i = 0
+	let i = 0;
 	for (i = 0; i < allTheFeatures.length; i++) {
 		allTheFeatures[i].style.display = 'none';
 		}
 	let a = 0;
 	for (a = 0; a < allTheMenuItems.length; a++) {
-		allTheMenuItems[i].classList.remove('extra-features-li-active');
+		allTheMenuItems[a].classList.remove('extra-features-li-active');
 	}
 	let activeLink = document.getElementById(link);
 	activeLink.classList.add('extra-features-li-active');
