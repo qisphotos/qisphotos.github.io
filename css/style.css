@@ -116,11 +116,28 @@ body {
     width: auto;
 }
 
+.custom-button {
+    float: right;
+    background: rgba(255,255,255,0.25);
+    color: white;
+    margin: 20px;
+    border-radius: 50px;
+    transition: 0.5s;
+    display: none;
+    z-index: 99;;
+}
+.custom-button:hover {
+    float: right;
+    background: white;
+    color: black;
+    border-radius: 50px;
+}
+
 .left-main-panel {
     padding-top: 10vh;
     height: 100vh;
 }
-.right-main-panel {
+.right-main-§ {
     height: 100vh;
 }
 
@@ -471,14 +488,6 @@ body {
       text-shadow: 0 1px 0 maroon, 0 2px 0 maroon, 0 3px 0 maroon, 0 4px 0 maroon, 0 5px 0 maroon, 0 6px 0 maroon, 0 7px 0 maroon, 0 8px 0 maroon, 0 9px 0 maroon, 0 50px 30px rgba(0, 0, 0, 0.8);
     }
   }
-  
-
-
-@media(max-width:1150px) {
-    .panel .content {
-        width: 75%;
-    }
-}
 
 @media(max-height: 850px) {
     .navigation ul li {
@@ -511,6 +520,97 @@ body {
 /* Letter box */
 @media(max-height:575px) and (max-width:1329px) and (min-width:1000px) {
     .navigation {
+        margin-top: 0;
+    }
+    .navigation ul .menu-option {
+        padding: 1px 3px 1px 3px;
+        margin: 0 0 1px 0;
+        line-height: 45px;
+        height: 11.1%;        
+    }
+
+    .main-heading h1 {
+        font-size: 46px;
+        padding-top: 10px;
+    }
+
+}
+
+/* Mobile */
+@media(max-width:650px) {
+    .main-heading {
         display: none;
+    }   
+    .navigation ul .menu-option {
+        background-color: rgba(255,255,255,0.85);
+        height: 30px;
+        padding: 6.5px 2px 2px 2px;        
+        font-weight: 900;
+    }
+    .quru-image-server-tag img {
+        width: 100%;
+        height: auto;
+    }
+    .navigation {
+        margin-top: 40%;
+    }
+    .download {
+        margin-top: 60%;
+    }
+    .download-button {
+        margin-left: 10px;
+    }
+    .socail-list-ul-li {
+        padding-left: 0;
+        margin-left: 10px;
+    }
+    .rendered {
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 100%;
+    }
+    .active {
+        left: 0%;
+    }
+    .panel {
+        width: 100%;
+        margin-left: 0;
+    }
+    .panel .content {
+        margin-left: 0;
+        width: 100%;
+    }
+    .panel .content p {
+        width: 100%;
+    }
+    .panel .content .heading h1 {
+        font-size: 28px;
+        width: 100%;
+        padding-left: 0;
+    }
+    .product-information-main .heading h1 {
+        width: 100%;
+    }
+    .custom-button {
+        display: block;
+    }
+    .extra-features-nav ul > li > span {
+        font-size: 12px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .panel .content p {
+        padding-left: 0;
+    }
+    .extra-features-list > ul {
+        padding-left: 0;
+    }
+    .panel {
+        background: rgba(0, 0, 0, 0.80)
+    }
+    .panel-nav-ul {
+        padding-left: 0;
+        background-color: rgba(255,255,255,0.15);
+        padding: 5px 5px 5px 5px;
     }
 }

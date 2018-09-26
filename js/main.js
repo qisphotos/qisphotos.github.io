@@ -136,7 +136,19 @@ function hideAll(e) {
 		all_menu_li[i].classList.remove('li_active');
 	}
 	document.getElementById('menu_li_home').classList.add('li_active');
-	e.stopPropagation(); // I don't think this works yet
+}
+
+function buttonClosePanel() {
+	let nav = document.querySelector('.navigation');
+	let allPanels = document.getElementsByClassName('side-panel')
+	for (let i = 0; i < allPanels.length; i++) {
+		allPanels[i].classList.remove('active');
+	}
+	nav.classList.remove('navigation-active');
+	for (let i = 0; i < all_menu_li.length; i++) {
+		all_menu_li[i].classList.remove('li_active');
+	}
+	document.getElementById('menu_li_home').classList.add('li_active');
 }
 
 // swtich inner sections of panels
