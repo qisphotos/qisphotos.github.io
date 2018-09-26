@@ -292,6 +292,10 @@ body {
     list-style: none;
 }
 
+.cog {
+    width: 25px;
+} 
+
 .social ul {
     list-style: none;
     padding-top: 25px;
