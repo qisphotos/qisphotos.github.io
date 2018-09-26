@@ -93,6 +93,7 @@ body {
 
 .main-heading h1 {
     margin: 0 0 0 0;
+    display: block;
     color: white;
     font-weight: 600;
     font-size: 120px;    

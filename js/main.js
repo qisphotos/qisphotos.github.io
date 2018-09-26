@@ -136,10 +136,12 @@ function hideAll(e) {
 		all_menu_li[i].classList.remove('li_active');
 	}
 	document.getElementById('menu_li_home').classList.add('li_active');
+	e.stopPropagation(); // I don't think this works yet
 }
 
 function buttonClosePanel() {
 	let nav = document.querySelector('.navigation');
+	let all_menu_li = document.getElementsByClassName('menu-option')
 	let allPanels = document.getElementsByClassName('side-panel')
 	for (let i = 0; i < allPanels.length; i++) {
 		allPanels[i].classList.remove('active');
