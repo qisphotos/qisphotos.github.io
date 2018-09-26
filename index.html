@@ -12,7 +12,7 @@
   <!-- Bootstrap  -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Google Fonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,500,700,300|Poppins:200,300,400,700,900"
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:200,400,500,700,300|Poppins:200,300,400,700,900"
     rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -20,20 +20,27 @@
 
   <!-- custom css -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/para.css">
+  <!-- <link rel="stylesheet" href="css/para.css"> -->
 
 
 
 </head>
 
 <body>
-  <div class="main">
+  <!-- <div id="onload" class="onload">
+    <h1 class="text-pop-up-top">QIS</h1>
+  </div> -->
+  <div id="main" class="main">
     <ul id="backgrounds" class="backgrounds">
       <li><img class="background-image" src="img/1.jpg" alt=""></li>
       <li><img class="background-image" src="img/2.jpg" alt=""></li>
       <li><img class="background-image" src="img/3.jpg" alt=""></li>
       <li><img class="background-image" src="img/4.jpg" alt=""></li>
     </ul>
+
+    <div class="letter-box-backgrounds">
+      
+    </div>
 
     <div class="dark-layer">
       <div class="row" style="margin-left: 0; margin-right: 0;">
@@ -126,6 +133,7 @@
                   </p>
                 </div>
                 <div class="product-information-main" id="product-information-image-resizing">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       The perfect image at any size
@@ -150,6 +158,7 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-resizing">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Image Resizing Panel - Technical Data
@@ -182,6 +191,7 @@
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-image-conversion">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Automatic image conversion
@@ -207,6 +217,7 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-conversion">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Image Conversion Panel Technical Data
@@ -241,6 +252,7 @@
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-watermarking-and-protection">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Apply watermarking in an instant
@@ -265,6 +277,7 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-watermarking-and-protection">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Watermarking & Protection Technical
@@ -299,6 +312,7 @@
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-image-analytics">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Analytics that supercharge your marketin
@@ -316,11 +330,11 @@
                     analysis includes:
                   </p>
                   <div class="extra-features-list">
-                    <ul class="extra-features-list-ul">
-                      <li class="extra-features-list-el"><span>Integrated reporting of image traffic</span></li>
-                      <li class="extra-features-list-el"><span>Viewing overall image traffic on site</span></li>
-                      <li class="extra-features-list-el"><span>Viewing individual traffic on site</span></li>
-                      <li class="extra-features-list-el"><span>Tracking number of requests hourly try the online demo</span></li>
+                    <ul>
+                      <li><span>Integrated reporting of image traffic</span></li>
+                      <li><span>Viewing overall image traffic on site</span></li>
+                      <li><span>Viewing individual traffic on site</span></li>
+                      <li><span>Tracking number of requests hourly try the online demo</span></li>
                     </ul>
                   </div>
                   </p>
@@ -328,6 +342,7 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-analytics">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Image Analytics Panel - Technical
@@ -346,6 +361,7 @@
             <div id="pricing-panel" class="side-panel panel pricing-panel">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       The perfect solution at the best price
@@ -363,12 +379,12 @@
                   </p>
 
                   <div class="extra-features-list">
-                    <ul class="extra-features-list-ul">
-                      <li class="extra-features-list-title">With QIS you get:</li>
-                      <li class="extra-features-list-el"><span>Integrated reporting of image traffic</span></li>
-                      <li class="extra-features-list-el"><span>Viewing overall image traffic on site</span></li>
-                      <li class="extra-features-list-el"><span>Viewing individual traffic on site</span></li>
-                      <li class="extra-features-list-el"><span>Tracking number of requests hourly</span></li>
+                    <ul>
+                      <li class="title">With QIS you get:</li>
+                      <li><span>Integrated reporting of image traffic</span></li>
+                      <li><span>Viewing overall image traffic on site</span></li>
+                      <li><span>Viewing individual traffic on site</span></li>
+                      <li><span>Tracking number of requests hourly</span></li>
                     </ul>
 
                   </div>
@@ -395,6 +411,7 @@
             <div id="case-studies-panel" class="side-panel panel case-studies-panel">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Case Studies
@@ -435,6 +452,7 @@
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-about-us" style="margin-top:40px;">
+                      <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       The only choice for the most demanding brands
@@ -463,6 +481,7 @@
 
                 </div>
                 <div class="technical-data-main" id="technical-data-about-us">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Customer Testimonials
@@ -481,35 +500,67 @@
             <div id="extra-features-panel" class="side-panel panel extra-features-panel">
               <div class="col-md-6 content">
                 <div class="product-information-main">
+                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="extra-features-content">
                     <div class="extra-features-nav">
-                      <ul class="extra-features-ul">
-                        <li id="link_one" class="extra-features-ul-li" onclick="externalFeaturesNav('external_features_one', 'link_one')">run
-                          everything through the api</li>
-                        <li id="link_two" class="extra-features-ul-li extra-features-li-active" onclick="externalFeaturesNav('external_features_two', 'link_two')">manage
-                          effects in the image library browser</li>
-                        <li id="link_three" class="extra-features-ul-li" onclick="externalFeaturesNav('external_features_three', 'link_three')">add
-                          viewing features directly to your website</li>
-                        <li id="link_four" class="extra-features-ul-li" onclick="externalFeaturesNav('external_features_four', 'link_four')">no
-                          lock-in and no limts</li>
-                        <li id="link_five" class="extra-features-ul-li" onclick="externalFeaturesNav('external_features_five', 'link_five')">all
-                          in one solution</li>
+                      <ul>
+                        <li>
+                          <span 
+                              id="link_one" 
+                              onclick="externalFeaturesNav('external_features_one', 'link_one')" 
+                              class="all-nav-items"> 
+                              run everything through the api
+                          </span>
+                        </li>
+                        <li>
+                          <span 
+                              id="link_two" 
+                              onclick="externalFeaturesNav('external_features_two', 'link_two')" 
+                              class="all-nav-items nav-active">
+                              manage effects in the image library browser
+                          </span>
+                        </li>
+                        <li>
+                          <span 
+                              id="link_three" 
+                              onclick="externalFeaturesNav('external_features_three', 'link_three')" 
+                              class="all-nav-items"> 
+                              add viewing features directly to your website
+                          </span>
+                        </li>
+                        <li>
+                          <span 
+                              id="link_four" 
+                              onclick="externalFeaturesNav('external_features_four', 'link_four')" 
+                              class="all-nav-items"> 
+                              no lock-in and no limts
+                          </span>
+                        </li>
+                        <li>
+                          <span 
+                              id="link_five" 
+                              onclick="externalFeaturesNav('external_features_five', 'link_five')" 
+                              class="all-nav-items"> 
+                              all in one solution
+                          </span>
+                        </li>
                       </ul>
                     </div>
-                    <div id="external_features_one" class="ext-features-content">
-                      <p class="extra-features-text-block">Run everything through the api</p>
+
+                    <div id="external_features_one" class="all-features">
+                      <p>Run everything through the api</p>
                     </div>
-                    <div id="external_features_three" class="ext-features-content">
-                      <p class="extra-features-text-block">add viewing features directly to your website</p>
+                    <div id="external_features_three" class="all-features">
+                      <p>add viewing features directly to your website</p>
                     </div>
-                    <div id="external_features_four" class="ext-features-content">
-                      <p class="extra-features-text-block">no lock-in and no limits</p>
+                    <div id="external_features_four" class="all-features">
+                      <p>no lock-in and no limits</p>
                     </div>
-                    <div id="external_features_five" class="ext-features-content">
-                      <p class="extra-features-text-block">all in one solution </p>
+                    <div id="external_features_five" class="all-features">
+                      <p>all in one solution </p>
                     </div>
 
-                    <div id="external_features_two" class="ext-features-content" style="display: block;">
+                    <div id="external_features_two" class="all-features" style="display: block;">
                       <p class="extra-features-text-block">
                         Imaging operations can be combined together and saved as templates. QIS supports the
                         Python-Pillow
@@ -518,31 +569,31 @@
                       </p>
 
                       <div class="extra-features-list">
-                        <ul class="extra-features-list-ul">
-                          <li class="extra-features-list-el"><span>Rotation</span></li>
-                          <li class="extra-features-list-el"><span>Resizing</span></li>
-                          <li class="extra-features-list-el"><span>Cropping and tiling</span></li>
-                          <li class="extra-features-list-el"><span>Vertical and horizontal flip</span></li>
-                          <li class="extra-features-list-el"><span>Image format conversion</span></li>
-                          <li class="extra-features-list-el"><span>Stripping of image metadata to reduce file size</span></li>
-                          <li class="extra-features-list-title"><strong>Enhancements in the Premium Edition include:</strong></li>
-                          <li class="extra-features-list-el"><span>Sharpen and blur</span></li>
-                          <li class="extra-features-list-el"><span>Overlays and watermarking</span></li>
-                          <li class="extra-features-list-el"><span>Image colorspace conversion</span></li>
-                          <li class="extra-features-list-el"><span>PDF conversion to and from images</span></li>
-                          <li class="extra-features-list-el"><span>Colour profile conversion and removal for print
+                        <ul>
+                          <li><span>Rotation</span></li>
+                          <li><span>Resizing</span></li>
+                          <li><span>Cropping and tiling</span></li>
+                          <li><span>Vertical and horizontal flip</span></li>
+                          <li><span>Image format conversion</span></li>
+                          <li><span>Stripping of image metadata to reduce file size</span></li>
+                          <li class="title"><strong>Enhancements in the Premium Edition include:</strong></li>
+                          <li><span>Sharpen and blur</span></li>
+                          <li><span>Overlays and watermarking</span></li>
+                          <li><span>Image colorspace conversion</span></li>
+                          <li><span>PDF conversion to and from images</span></li>
+                          <li><span>Colour profile conversion and removal for print
                               publishing</span></li>
-                          <li class="extra-features-list-title"><strong>File types</strong></li>
-                          <li class="extra-features-list-title">
+                          <li class="title"><strong>File types</strong></li>
+                          <li class="title">
                             The Standard Edition supports file types: gif, jpg, png,
                             tif. In the Premium edition, supported file types vary depending on your version of
                             ImageMagick, but the following are enabled by default:
                           </li>
-                          <li class="extra-features-list-el"><span>General image formats: bmp, dcm, gif, jpg, png, ppm,
+                          <li><span>General image formats: bmp, dcm, gif, jpg, png, ppm,
                               psd, svg, tga, tif, xcf </span></li>
-                          <li class="extra-features-list-el"><span>RAW image formats: arw, cr2, mrw, nef, nrw, orf,
+                          <li><span>RAW image formats: arw, cr2, mrw, nef, nrw, orf,
                               rw2, raw, raf, x3f</span></li>
-                          <li class="extra-features-list-el"><span>PDF / Postscript formats: eps, epsi, epsf, pdf, ps</span></li>
+                          <li><span>PDF / Postscript formats: eps, epsi, epsf, pdf, ps</span></li>
                         </ul>
                       </div>
                     </div>
