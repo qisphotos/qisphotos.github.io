@@ -6,7 +6,7 @@
 
 'use strict';
 
-/* QIS demo back end, adjusts the 'src' of img_el based on the functions called */
+/* QIS demo back end, adjusts the 'src' of img_el based on the toolbox functions called */
 
 function QISToolbox(img_el, w, h, fill, event_map) {
     // Updates the image this.el for the latest toolbox state
@@ -62,27 +62,30 @@ function QISToolbox(img_el, w, h, fill, event_map) {
         this.overlayPath = '';
         this.updateImage();
     };
-
+    // Zoom in (1) or out (-1) between levels 0 to 3
     this.zoom = function(delta) {
         this.zoomLevel = Math.max(Math.min(this.zoomLevel + delta, 3), 0);
         this.updateImage();
     };
+    // Rotate clockwise by an angle (on top of the last call)
     this.rotate = function(delta) {
         this.angle += delta;
         if (this.angle >= 360) this.angle -= 360;
         if (this.angle <= -360) this.angle += 360;
         this.updateImage();
     };
+    // Flip horizontally - toggles
     this.toggleFlip = function() {
         this.flipped = !this.flipped;
         this.updateImage();
     };
+    // Apply a watermark - toggles
     this.toggleWatermark = function(img_path) {
         this.overlayPath = this.overlayPath ? '' : img_path;
         this.updateImage();
     };
 
-    // Rounds up a value to the nearest number
+    // Rounds up a value to a nearest round number (e.g. nearest 100)
     this._roundUp = function(val, nearest) {
         let rem = val % nearest;
         if (rem !== 0)
@@ -91,16 +94,16 @@ function QISToolbox(img_el, w, h, fill, event_map) {
             return val;
     }
 
-    // Set the class state
+    // Setup - set the class state
     this.el = img_el;
     this.dimension = this._roundUp(w > h ? w : h, 100);
     this.fill = fill || 'white';
     this.events = event_map || {};
-    // Parse the image URL
+    // Setup - parse the image URL
     let qsIdx = this.el.src.indexOf('?');
     this.imageBaseURL = this.el.src.substring(0, qsIdx);
     this.imageSpec = QU.QueryStringToObject(this.el.src.substring(qsIdx + 1), false);
-    // Set initial tools state
+    // Setup - set the initial tools state
     this.reset();
 }
 
@@ -120,12 +123,16 @@ ToolboxUI.showLoading = function(show) {
     let mask = QU.id('bg_mask');
     QU.elSetClass(mask, 'dark-layer', show);
 };
-ToolboxUI.zoomIn = function() { this.toolbox.zoom(1); }
-ToolboxUI.zoomOut = function() { this.toolbox.zoom(-1); }
-ToolboxUI.rotate = function() { this.toolbox.rotate(90); }
-ToolboxUI.flip = function() { this.toolbox.toggleFlip(); }
-ToolboxUI.watermark = function() { this.toolbox.toggleWatermark('/web/splash/sample-white.svg'); }
-ToolboxUI.reset = function() { this.toolbox.reset(); }
+ToolboxUI.zoomIn = function()       { this.toolbox.zoom(1); }
+ToolboxUI.zoomOut = function()      { this.toolbox.zoom(-1); }
+ToolboxUI.rotate = function()       { this.toolbox.rotate(90); }
+ToolboxUI.flip = function()         { this.toolbox.toggleFlip(); }
+ToolboxUI.watermark = function()    { this.toolbox.toggleWatermark('/web/splash/sample-white.svg'); }
+ToolboxUI.reset = function()        { this.toolbox.reset(); }
+ToolboxUI.view = function(download) {
+    window.open(this.toolbox.getImageURL() +
+               (download ? '&attach=1' : ''));
+}
 
 /* Page setup */
 
