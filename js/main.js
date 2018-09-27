@@ -2,8 +2,8 @@
 
 // list of big facing headings
 let headings = [
-	"Perfect detail at any scale",
 	"Simple colour conversion",
+	"Perfect detail at any scale",
 	"Conversions that don't ruffle feathers",
 	"Resize images on-the-fly"
 ]
@@ -13,7 +13,7 @@ let pause = false;
 
 function updateHeading() {
 	let heading = document.getElementById('heading')
-	heading.innerHTML = headings[0];
+	heading.innerHTML = headings[1];
 	heading.style.opacity = 1;
 	let hIndex = 1;
 	setInterval(function () {
