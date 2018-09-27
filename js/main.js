@@ -3,9 +3,9 @@
 // list of big facing headings
 let headings = [
 	"Perfect detail at any scale",
+	"Simple colour conversion",
 	"Conversions that don't ruffle feathers",
-	"Resize images on-the-fly",
-	"Simple colour conversion"
+	"Resize images on-the-fly"
 ]
 
 // pause boolean for background and title rotation
