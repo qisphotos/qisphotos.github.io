@@ -12,7 +12,7 @@
   <!-- Bootstrap  -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Google Fonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:200,400,500,700,300|Poppins:200,300,400,700,900"
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700|Open+Sans:200,400,500,700,300|Poppins:200,300,400,700,900"
     rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -27,9 +27,15 @@
 </head>
 
 <body>
-  <!-- <div id="onload" class="onload">
-    <h1 class="text-pop-up-top">QIS</h1>
-  </div> -->
+
+    <!--
+      <div id="onload" class="onload">
+        <div class="startup-sheet">
+          <h1 class="text-pop-up-top">QIS</h1>
+        </div>
+      </div>
+    -->
+
   <div id="main" class="main">
     <ul id="backgrounds" class="backgrounds">
       <li><img class="background-image" src="img/1.jpg" alt=""></li>
@@ -46,7 +52,7 @@
       <div class="row" style="margin-left: 0; margin-right: 0;">
         <div id="leftMainPanel" data-panel="leftMainPanel" class="col-md-6 left-main-panel" style="padding-left:0;">
           <div class="quru-image-server-tag">
-            <img src="img/QIS-logo.png" alt="quru image server logo">
+            <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo" alt="quru image server logo">
           </div>
           <div id="main_heading" class="main-heading">
             <h1 id="heading"></h1>
@@ -110,6 +116,7 @@
               <li class="menu-option" id="about-us-menu-tag" data-panel="about-us-panel">
                 About us
               </li>
+              <br>
             </ul>
           </div>
           <div id="panels">
@@ -127,13 +134,13 @@
                       dataInnerPanelCurrent="technical-data-image-resizing" dataInnerPanelSwitch="product-information-image-resizing"
                       class="technical-data">
                       <span>Technical Data</span>
-                      <span><img class="cog" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
                     </li>
                   </ul>
                   </p>
                 </div>
                 <div class="product-information-main" id="product-information-image-resizing">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       The perfect image at any size
@@ -158,7 +165,7 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-resizing">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Image Resizing Panel - Technical Data
@@ -186,12 +193,12 @@
                       dataInnerPanelCurrent="technical-data-image-conversion" dataInnerPanelSwitch="product-information-image-conversion"
                       class="technical-data">
                       <span>Technical Data</span>
-                      <span><img class="cog" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
                     </li>
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-image-conversion">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Automatic image conversion
@@ -217,7 +224,7 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-conversion">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Image Conversion Panel Technical Data
@@ -247,12 +254,12 @@
                       id="product-information-technical-button-watermarking-and-protection" dataInnerPanelCurrent="technical-data-watermarking-and-protection"
                       dataInnerPanelSwitch="product-information-watermarking-and-protection" class="technical-data">
                       <span>Technical Data</span>
-                      <span><img class="cog" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
                     </li>
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-watermarking-and-protection">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Apply watermarking in an instant
@@ -277,7 +284,7 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-watermarking-and-protection">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Watermarking & Protection Technical
@@ -307,12 +314,12 @@
                       dataInnerPanelCurrent="technical-data-image-analytics" dataInnerPanelSwitch="product-information-image-analytics"
                       class="technical-data">
                       <span>Technical Data</span>
-                      <span><img class="cog" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
                     </li>
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-image-analytics">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Analytics that supercharge your marketin
@@ -342,7 +349,7 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-analytics">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Image Analytics Panel - Technical
@@ -361,7 +368,7 @@
             <div id="pricing-panel" class="side-panel panel pricing-panel">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       The perfect solution at the best price
@@ -411,7 +418,7 @@
             <div id="case-studies-panel" class="side-panel panel case-studies-panel">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Case Studies
@@ -447,12 +454,12 @@
                       dataInnerPanelCurrent="technical-data-about-us" dataInnerPanelSwitch="product-information-about-us"
                       class="technical-data">
                       <span>Customer Testimonials</span>
-                      <i class="fas fa-comment-alt"></i>
+                      <img src="img/SVGs/icon-testimonials.svg" class="svg-icon" alt="speech bubble">
                     </li>
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-about-us" style="margin-top:40px;">
-                      <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                      <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       The only choice for the most demanding brands
@@ -481,7 +488,7 @@
 
                 </div>
                 <div class="technical-data-main" id="technical-data-about-us">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Customer Testimonials
@@ -499,8 +506,8 @@
 
             <div id="extra-features-panel" class="side-panel panel extra-features-panel">
               <div class="col-md-6 content">
+                <button style="margin-right: 0px; margin-top: 40px;" onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                 <div class="product-information-main">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="extra-features-content">
                     <div class="extra-features-nav">
                       <ul>

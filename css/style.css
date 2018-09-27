@@ -58,6 +58,13 @@ body {
 .navigation ul {
     list-style-type: none;   
 }
+.navigation ul li {
+    transition: 0.3s ease-in-out;
+}
+
+.navigation ul li:hover {
+    border-right: solid 10px #de0000;
+}
 
 .navigation ul .menu-option {
     background: #efefef;
@@ -79,16 +86,15 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.navigation ul li:hover  {
-    transition: 0.5s ease-in-out;
+.navigation ul .menu-option:hover  {
     text-decoration: none;
-    cursor: pointer;
-    border-right: solid 10px #de0000;
+    cursor: pointer;    
 }
 
 .li_active {
     color: white !important;
     background: black !important;
+    cursor: pointer;    
 }
 
 .main-heading h1 {
@@ -112,6 +118,10 @@ body {
     transition: 0.5s;
 }
 
+.startup-sheet {
+    background: rgba(255, 255, 255, 0.30);
+}
+
 .quru-image-server-tag img {
     height: 64px;
     width: auto;
@@ -119,19 +129,24 @@ body {
 
 .custom-button {
     float: right;
-    background: rgba(255,255,255,0.25);
+    background: rgba(0,0,0,0);
     color: white;
-    margin: 20px;
-    border-radius: 50px;
-    transition: 0.5s;
+    padding-top: 5px;
+    font-size: 40px;
+    transition: 0.3s;
     display: none;
-    z-index: 99;;
+    z-index: 99;
+    font-weight: 100;
+    text-align: center;
+    z-index: 99;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-family: 'Montserrat', sans-serif;    
 }
+
 .custom-button:hover {
-    float: right;
-    background: white;
-    color: black;
-    border-radius: 50px;
+    text-shadow: 0 0 50px white;
 }
 
 .left-main-panel {
@@ -292,9 +307,20 @@ body {
     list-style: none;
 }
 
-.cog {
+.svg-icon {
     width: 25px;
+    margin-bottom: 5px;
 } 
+
+.social {
+    position: absolute;
+    bottom: 0;
+}
+
+.download {
+    position: absolute;
+    bottom: 125px;
+}
 
 .social ul {
     list-style: none;
@@ -360,14 +386,10 @@ body {
     transition: 0.3s;
 }
 
-.ext-features-content {
-    display: none;
-}
-
 .extra-features-content {
     font-weight: 200;
     font-family: 'Poppins', 'sans-serif';
-    
+    padding-top: 15px;    
 }
 
 .extra-features-nav ul > li > span{
@@ -431,6 +453,11 @@ body {
     font-size: 16px;  
     color:white;
     font-family: 'Open Sans', sans-serif;
+}
+
+.qis-logo {
+    padding: 15px 30px 15px 60px;
+    background: #222;
 }
 
 .onload {
@@ -523,9 +550,9 @@ body {
 }
 
 /* Letter box */
-@media(max-height:575px) and (max-width:1329px) and (min-width:1000px) {
+@media(max-height:575px) and (max-width:1329px) and (min-width:651px) {
     .navigation {
-        margin-top: 0;
+        margin-top: 5%;
     }
     .navigation ul .menu-option {
         padding: 1px 3px 1px 3px;
@@ -535,10 +562,44 @@ body {
     }
 
     .main-heading h1 {
-        font-size: 46px;
+        font-size: 48px;
         padding-top: 10px;
+        max-height: 300px;
+        width: 75%;
     }
 
+}
+@media(max-height:782px) and (min-height:576px) {
+    .main-heading h1 {
+        font-size: 65px;
+    }
+}
+
+@media(max-width:890px) and (min-width:651px) {
+    .panel .content {
+        margin-left: -25px;
+        width: 65%;
+    }
+    .panel .content .heading h1 {
+        font-size: 32px;
+    }
+    .panel-nav-ul li {
+        padding-right: 2px;
+        font-size: 8pt;
+    }
+    .pipe {
+        padding-right: 2px;
+    }
+    .download-button {
+        margin-left: 15px;
+    }
+    .social ul {
+        padding-left: 15px;
+    }
+    .rendered {
+        margin-left: 15px;
+        width: 75%;
+    }
 }
 
 /* Mobile */
@@ -562,9 +623,14 @@ body {
     }
     .download {
         margin-top: 60%;
+        margin-bottom: 10px;
     }
     .download-button {
         margin-left: 10px;
+    }
+    .svg-icon {
+        width: 20px;
+        height: auto;
     }
     .socail-list-ul-li {
         padding-left: 0;
@@ -573,7 +639,7 @@ body {
     .rendered {
         margin-left: 10px;
         margin-right: 10px;
-        width: 100%;
+        width: 90%;
     }
     .active {
         left: 0%;
@@ -593,7 +659,7 @@ body {
         width: 100%;
     }
     .panel .content .heading h1 {
-        font-size: 28px;
+        font-size: 38px;
         width: 100%;
         padding-left: 0;
     }
@@ -615,14 +681,21 @@ body {
         padding-left: 0;
     }
     .panel {
-        background: rgba(0, 0, 0, 0.80)
+        background: rgba(0, 0, 0, 0.90)
     }
     .panel-nav-ul {
         padding-left: 0;
-        background-color: rgba(255,255,255,0.15);
+        background-color: rgba(255,255,255,0.05);
         padding: 5px 5px 5px 5px;
     }
     .left-main-panel {
         padding-top: 0;
+    }
+    .panel-nav-ul li {
+        padding-right: 2px;
+        font-size: 8pt;
+    }
+    .pipe {
+        padding-right: 2px;
     }
 }

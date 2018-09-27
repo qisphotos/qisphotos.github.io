@@ -71,7 +71,7 @@ updateHeading();
 
 function setUp() {
 	// set navigation event listener
-	let nav = document.querySelector(".navigation");
+	let nav = document.getElementById("mainNavUl");
 	nav.addEventListener("click", showPanel);
 }
 
@@ -152,6 +152,16 @@ function buttonClosePanel() {
 	}
 	document.getElementById('menu_li_home').classList.add('li_active');
 }
+
+// Press Escape to close panel and nav
+document.onkeydown = function escPress(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+		buttonClosePanel();
+    }
+}
+
+
 
 // swtich inner sections of panels
 function innerPanelView(obj) {
