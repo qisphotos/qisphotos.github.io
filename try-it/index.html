@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="../css/para.css">
 
   <style>
+    /* Temporary styles */
     .toolbar {
       margin-top: 10vh;
     }
@@ -37,6 +38,11 @@
       border: none;
       cursor: pointer;
     }
+    .rendered {
+      margin-top: 10vh;
+      margin-left: 15px;
+    }
+    /* Temporary (but possibly usable) styles */
     .wait-icon {
       width: 12em;
       position: fixed;
@@ -47,10 +53,10 @@
       border-radius: 4px;
       padding: 10px;
       text-align: center;
-      display: none;
+      display: none;          /* Hide wait message by default */
     }
     .dark-layer .wait-icon {
-      display: block;
+      display: block;         /* Show wait message when dark-layer is enabled */
     }
   </style>
 </head>
@@ -76,6 +82,7 @@
             <button class="toolbar-button" onclick="ToolboxUI.reset()">Reset</button>
             <button class="toolbar-button" onclick="ToolboxUI.view()">View image</button>
           </div>
+          <p id="rendered" class="rendered">Default image loading, please wait for device-sized image</p>
           <div id="wait_icon" class="wait-icon">
             Requesting image...
           </div>

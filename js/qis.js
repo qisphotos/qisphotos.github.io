@@ -163,7 +163,7 @@ function QISToolbox(img_el, w, h, fill, event_map) {
                 }
             }
         } catch(e) { }
-        
+
         return stats;
     };
 
@@ -256,7 +256,25 @@ ToolboxUI.showLoading = function(show) {
 };
 ToolboxUI.showImageStats = function(stats) {
     // Note: stats dict may be empty on error
-    // TODO write me
+    let info = QU.id('rendered');
+    if (!('image_spec' in stats)) {
+        info.innerText = 'Sorry, that image didn\'t load';
+    }
+    else {
+        if (stats.cached_locally) {
+            info.innerText = stats.type_new + ' image returned from your browser\'s local cache';
+        }
+        else if (stats.cached_server) {
+            info.innerText = stats.type_new + ' image returned in ' +
+                stats.server_time_millis + ' milliseconds from the QIS server\'s cache ' +
+                '(from ' + stats.type_original + ' original)';
+        }
+        else {
+            info.innerText = stats.type_new + ' image generated in ' +
+                stats.server_time_millis + ' milliseconds from the ' +
+                stats.type_original + ' original';
+        }
+    }
 };
 ToolboxUI.zoomIn = function()       { this.toolbox.zoom(1); }
 ToolboxUI.zoomOut = function()      { this.toolbox.zoom(-1); }
