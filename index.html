@@ -21,20 +21,17 @@
   <!-- custom css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="css/para.css"> -->
-
-
-
 </head>
 
 <body>
 
-    <!--
-      <div id="onload" class="onload">
+    
+      <!-- <div id="onload" class="onload">
         <div class="startup-sheet">
           <h1 class="text-pop-up-top">QIS</h1>
         </div>
-      </div>
-    -->
+      </div> -->
+   
 
   <div id="main" class="main">
     <ul id="backgrounds" class="backgrounds">
@@ -59,15 +56,6 @@
           </div>
           <div class="download">
             <button class="download-button">Try it now</button>
-            <!-- <div id="try_it_now_icons" class="col-lg-4 download-icons-con">
-                    <ul class="download-icons">
-                        <li>Icon</li>
-                        <li>Icon</li>
-                        <li>Icon</li>
-                        <li>Icon</li>
-                        <li>Icon</li>
-                      </ul>
-                </div> -->
           </div>
           <div class="social">
             <ul class="socail-list-ul">
@@ -121,6 +109,8 @@
           </div>
           <div id="panels">
             <div id="image-resizing-panel" class="side-panel panel image-resizing-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -139,8 +129,7 @@
                   </ul>
                   </p>
                 </div>
-                <div class="product-information-main" id="product-information-image-resizing">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <div class="product-information-main" id="product-information-image-resizing">                   
                   <div class="heading">
                     <h1>
                       The perfect image at any size
@@ -165,7 +154,6 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-resizing">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Image Resizing Panel - Technical Data
@@ -180,6 +168,8 @@
             </div>
 
             <div id="image-conversion-panel" class="side-panel panel image-conversion-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -198,7 +188,6 @@
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-image-conversion">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Automatic image conversion
@@ -224,7 +213,6 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-conversion">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Image Conversion Panel Technical Data
@@ -241,6 +229,8 @@
             </div>
 
             <div id="watermarking-and-protection-panel" class="side-panel panel watermarking-and-protection-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -259,7 +249,6 @@
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-watermarking-and-protection">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Apply watermarking in an instant
@@ -284,7 +273,6 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-watermarking-and-protection">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Watermarking & Protection Technical
@@ -301,6 +289,8 @@
             </div>
 
             <div id="image-analytics-panel" class="side-panel panel image-analytics-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -319,7 +309,6 @@
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-image-analytics">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Analytics that supercharge your marketin
@@ -349,7 +338,6 @@
                   <span>Try the online demo</span>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-analytics">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Image Analytics Panel - Technical
@@ -366,9 +354,10 @@
             </div>
 
             <div id="pricing-panel" class="side-panel panel pricing-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       The perfect solution at the best price
@@ -418,7 +407,6 @@
             <div id="case-studies-panel" class="side-panel panel case-studies-panel">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Case Studies
@@ -441,6 +429,8 @@
             </div>
 
             <div id="about-us-panel" class="side-panel panel about-us-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -459,7 +449,6 @@
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-about-us" style="margin-top:40px;">
-                      <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       The only choice for the most demanding brands
@@ -488,7 +477,6 @@
 
                 </div>
                 <div class="technical-data-main" id="technical-data-about-us">
-                    <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                   <div class="heading">
                     <h1>
                       Customer Testimonials
@@ -505,8 +493,9 @@
             </div>
 
             <div id="extra-features-panel" class="side-panel panel extra-features-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
-                <button style="margin-right: 0px; margin-top: 40px;" onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                 <div class="product-information-main">
                   <div class="extra-features-content">
                     <div class="extra-features-nav">

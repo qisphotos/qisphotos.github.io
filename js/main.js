@@ -210,7 +210,7 @@ function externalFeaturesNav(relate, link) {
 	openFeature.style.display = 'block';
 }
 
-// START UP ANIMATION FADE AWAY AFTER DOCUMENT HAS LOADED BEHIND IT
+//START UP ANIMATION FADE AWAY AFTER DOCUMENT HAS LOADED BEHIND IT
 // function hideStartScreen() { 
 // 	let screen = document.getElementById('onload');	
 // 	let main = document.getElementById('main');
@@ -218,13 +218,8 @@ function externalFeaturesNav(relate, link) {
 // 		setTimeout(function(){
 // 			screen.style.opacity = 0;						
 // 		}, 2100); 
+// 		setTimeout(function() {
+// 			screen.style.display = 'none'
+// 		}, 3000);
 // }
-
-// HIDING BACKGROUNDS UNTIL FIRST IMAGE HAS LOADED
-// function hideBackgroundsUntilPageLoads() {
-// 	let backgrounds = document.getElementsByClassName('background-image');
-// 	backgrounds[0].style.opacity = 1;
-// 	backgrounds[1].style.opacity = 1;
-// 	backgrounds[2].style.opacity = 1;
-// 	backgrounds[3].style.opacity = 1;
-// };
+// hideStartScreen();
