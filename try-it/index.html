@@ -66,7 +66,7 @@
     }
     .animated{
       animation: FadeIn 1s linear;
-        animation-fill-mode: both;
+      animation-fill-mode: both;
     }
 
     @keyframes FadeIn { 
@@ -87,7 +87,12 @@
 <body>
   <div class="main">
     <ul id="backgrounds" class="backgrounds">
-      <li><img id="bg_image" class="background-image" src="https://images.quru.com/image?src=/web/splash/fish.png&width=1920&format=jpg&quality=80" alt=""></li>
+      <li>
+        <img id="bg_image"
+             class="background-image images-all-loaded" 
+             src="https://images.quru.com/image?src=/web/splash/fish.png&width=1920&format=jpg&quality=80" 
+             alt="">
+      </li>
     </ul>
 
     <div id="bg_mask" class=""> <!-- JS toggles class 'dark-layer' -->

@@ -315,6 +315,10 @@ body {
     margin-bottom: 20px;
 }
 
+.demo-link:hover {
+    text-decoration: none;
+}
+
 .active {
     left: 50%;
 }
