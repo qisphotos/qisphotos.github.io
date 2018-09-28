@@ -319,6 +319,10 @@ body {
     text-decoration: none;
 }
 
+.all-features {
+    display: none;
+}
+
 .active {
     left: 50%;
 }
@@ -575,11 +579,6 @@ body {
         padding: 6px 5px 5px 10px;
         font-weight: 400;
     }
-    .quru-image-server-tag img {
-        width: 100%;
-        height: auto;
-        margin-top: 10px;
-    }
     .qis-logo-inpanel {
         width: 270px;
         height: auto;        
@@ -666,5 +665,8 @@ body {
     }
     .pipe {
         padding-right: 2px;
+    }
+    .product-information-main span {
+        margin-left:0;
     }
 }

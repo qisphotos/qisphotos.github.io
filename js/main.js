@@ -194,7 +194,7 @@ function tryItNow() {
 }
 
 function externalFeaturesNav(relate, link) {
-	let allTheFeatures = document.getElementsByClassName('all-features');
+	let allTheFeatures = document.querySelectorAll('.all-features');
 	let allTheMenuItems = document.getElementsByClassName('all-nav-items');	
 	for (let i = 0; i < allTheFeatures.length; i++) {
 		allTheFeatures[i].style.display = 'none';

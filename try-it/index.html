@@ -37,6 +37,10 @@
       border: none;
       margin-bottom: 10px;
       cursor: pointer;
+      transition: 0.3s;
+    }
+    .toolbar-button:focus {
+      outline: none;
     }
     .rendered {
       position: absolute;
@@ -63,6 +67,9 @@
       width:30px;
       margin-top: 5px;
       color:#333;
+    }
+    .toolbar-button:hover {
+      box-shadow: 0 0 7px #efefee;
     }
     .animated{
       animation: FadeIn 1s linear;
