@@ -25,7 +25,9 @@
   <style>
     /* Temporary styles */
     .toolbar {
-      margin-top: 10vh;
+      position: absolute;
+      bottom: 100px;
+      margin-left: 5px;
     }
     .toolbar-button {
       background: white;
@@ -33,6 +35,7 @@
       border-radius: 4px;
       height: 40px;
       border: none;
+      margin-bottom: 10px;
       cursor: pointer;
     }
     .rendered {
@@ -61,6 +64,23 @@
       margin-top: 5px;
       color:#333;
     }
+    .animated{
+      animation: FadeIn 1s linear;
+        animation-fill-mode: both;
+    }
+
+    @keyframes FadeIn { 
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+      }	100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+    }
   </style>
 </head>
 
@@ -76,7 +96,7 @@
           <div class="quru-image-server-tag">
             <a href=".."><img src="../img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo" alt="quru image server logo"></a>
           </div>
-          <div class="toolbar">
+          <div class="toolbar animated">
             <button class="toolbar-button" onclick="ToolboxUI.zoomIn()"><img class="svg-icon" src="../img/SVGs/icon-zoomin.svg" alt="zoom in"></button>
             <button class="toolbar-button" onclick="ToolboxUI.zoomOut()"><img class="svg-icon" src="../img/SVGs/icon-zoomout.svg" alt="zoom out"></button>
             <button class="toolbar-button" onclick="ToolboxUI.rotate()"><img class="svg-icon" src="../img/SVGs/icon-rotate-right.svg" alt="rotate image"></button>
