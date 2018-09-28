@@ -35,6 +35,8 @@ function updateHeading() {
 	}, 8000);
 }
 
+
+
 function changeBackground() {
 	let backgrounds = document.getElementsByClassName('background-image');
 	let bgIndex = 3;
@@ -66,9 +68,6 @@ function SetupwhenReady(fn) {
 };
 
 SetupwhenReady(setUp);
-changeBackground();
-updateHeading();
-
 function setUp() {
 	// set navigation event listener
 	let nav = document.getElementById("mainNavUl");
@@ -210,16 +209,16 @@ function externalFeaturesNav(relate, link) {
 	openFeature.style.display = 'block';
 }
 
-//START UP ANIMATION FADE AWAY AFTER DOCUMENT HAS LOADED BEHIND IT
-// function hideStartScreen() { 
-// 	let screen = document.getElementById('onload');	
-// 	let main = document.getElementById('main');
-// 	screen.style.opacity = 1;
-// 		setTimeout(function(){
-// 			screen.style.opacity = 0;						
-// 		}, 2100); 
-// 		setTimeout(function() {
-// 			screen.style.display = 'none'
-// 		}, 3000);
-// }
-// hideStartScreen();
+window.onload = function hideOnLoad() {
+	let images = document.querySelectorAll('.background-image');
+	let fish = images[3];	
+		if (fish.complete === true) {
+				images[0].style.display = 'block';
+				images[1].style.display = 'block';
+				images[2].style.display = 'block';	
+			}	else {
+				hideOnLoad();
+			}
+	changeBackground();
+	updateHeading();
+}
