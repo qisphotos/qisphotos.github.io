@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta author="Matt Fozard">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quru Image Server</title>
+
+  <!-- imports -->
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,500,700,300|Poppins:200,300,400,700,900"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/para.css">
+
+  <style>
+    /* Temporary styles */
+    .toolbar {
+      position: absolute;
+      bottom: 100px;
+      margin-left: 5px;
+    }
+    .toolbar-button {
+      background: white;
+      margin-left: 15px;
+      border-radius: 4px;
+      height: 40px;
+      border: none;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .toolbar-button:focus {
+      outline: none;
+    }
+    .rendered {
+      position: absolute;
+      bottom: 0;
+      margin-left: 20px;
+    }
+    /* Temporary (but possibly usable) styles */
+    .wait-icon {
+      width: 12em;
+      position: fixed;
+      left: calc(50vw - 6em);
+      top: 45vh;
+      background-color: white;
+      color: black;
+      border-radius: 4px;
+      padding: 10px;
+      text-align: center;
+      display: none;          /* Hide wait message by default */
+    }
+    .dark-layer .wait-icon {
+      display: block;         /* Show wait message when dark-layer is enabled */
+    }
+    .svg-icon {
+      width:30px;
+      margin-top: 5px;
+      color:#333;
+    }
+    .toolbar-button:hover {
+      box-shadow: 0 0 7px #efefee;
+    }
+    .animated{
+      animation: FadeIn 1s linear;
+      animation-fill-mode: both;
+    }
+
+    @keyframes FadeIn { 
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+      }	100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <ul id="backgrounds" class="backgrounds">
+      <li>
+        <img id="bg_image"
+             class="background-image images-all-loaded" 
+             src="https://images.quru.com/image?src=/web/splash/fish.png&width=1920&format=jpg&quality=80" 
+             alt="">
+      </li>
+    </ul>
+
+    <div id="bg_mask" class=""> <!-- JS toggles class 'dark-layer' -->
+      <div class="row" style="margin-left: 0; margin-right: 0;">
+        <div id="leftMainPanel" data-panel="leftMainPanel" class="col-md-6 left-main-panel" style="padding-left:0;">
+          <div class="quru-image-server-tag">
+            <a href=".."><img src="../img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo" alt="quru image server logo"></a>
+          </div>
+          <div class="toolbar animated">
+            <button class="toolbar-button" onclick="ToolboxUI.zoomIn()"><img class="svg-icon" src="../img/SVGs/icon-zoomin.svg" alt="zoom in"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.zoomOut()"><img class="svg-icon" src="../img/SVGs/icon-zoomout.svg" alt="zoom out"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.rotate()"><img class="svg-icon" src="../img/SVGs/icon-rotate-right.svg" alt="rotate image"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.flip()"><img class="svg-icon" src="../img/SVGs/icon-flip-left.svg" alt="flip"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.watermark()"><img class="svg-icon" src="../img/SVGs/icon-watermark.svg" alt="add sample watermark to image"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.reset()"><i class="fas fa-sync-alt svg-icon" alt="reset image"></i></button>
+            <button class="toolbar-button" onclick="ToolboxUI.view()"><i class="far fa-eye svg-icon" alt="view new image"></i></button>
+          </div>
+          <p id="rendered" class="rendered">Default image loading, please wait for device-sized image</p>
+          <div id="wait_icon" class="wait-icon">
+            Requesting image...
+          </div>
+        </div>
+
+        <div class="col-md-6 right-main-panel" style="padding-right:0; height: 100%;">
+          <div id="navigation" class="navigation navigation-inactive" data-panel="navigation">
+            <ul id="mainNavUl" data-panel="nav-ul">
+              <a href="..">
+                <li id="menu_li_home" class="menu-option" data-panel="home">
+                Home
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://images.quru.com/static/js/common_view.min.js"></script>
+  <script src="../js/qis.js"></script>
+</body>
+</html>

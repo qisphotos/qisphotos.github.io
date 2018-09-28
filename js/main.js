@@ -2,10 +2,10 @@
 
 // list of big facing headings
 let headings = [
+	"Simple colour conversion",
 	"Perfect detail at any scale",
 	"Conversions that don't ruffle feathers",
-	"Resize images on-the-fly",
-	"Simple colour conversion"
+	"Resize images on-the-fly"
 ]
 
 // pause boolean for background and title rotation
@@ -13,7 +13,7 @@ let pause = false;
 
 function updateHeading() {
 	let heading = document.getElementById('heading')
-	heading.innerHTML = headings[0];
+	heading.innerHTML = headings[1];
 	heading.style.opacity = 1;
 	let hIndex = 1;
 	setInterval(function () {
@@ -34,6 +34,8 @@ function updateHeading() {
 		}
 	}, 8000);
 }
+
+
 
 function changeBackground() {
 	let backgrounds = document.getElementsByClassName('background-image');
@@ -66,12 +68,9 @@ function SetupwhenReady(fn) {
 };
 
 SetupwhenReady(setUp);
-changeBackground();
-updateHeading();
-
 function setUp() {
 	// set navigation event listener
-	let nav = document.querySelector(".navigation");
+	let nav = document.getElementById("mainNavUl");
 	nav.addEventListener("click", showPanel);
 }
 
@@ -136,10 +135,12 @@ function hideAll(e) {
 		all_menu_li[i].classList.remove('li_active');
 	}
 	document.getElementById('menu_li_home').classList.add('li_active');
+	e.stopPropagation(); // I don't think this works yet
 }
 
 function buttonClosePanel() {
 	let nav = document.querySelector('.navigation');
+	let all_menu_li = document.getElementsByClassName('menu-option')
 	let allPanels = document.getElementsByClassName('side-panel')
 	for (let i = 0; i < allPanels.length; i++) {
 		allPanels[i].classList.remove('active');
@@ -150,6 +151,16 @@ function buttonClosePanel() {
 	}
 	document.getElementById('menu_li_home').classList.add('li_active');
 }
+
+// Press Escape to close panel and nav
+document.onkeydown = function escPress(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+		buttonClosePanel();
+    }
+}
+
+
 
 // swtich inner sections of panels
 function innerPanelView(obj) {
@@ -183,7 +194,7 @@ function tryItNow() {
 }
 
 function externalFeaturesNav(relate, link) {
-	let allTheFeatures = document.getElementsByClassName('all-features');
+	let allTheFeatures = document.querySelectorAll('.all-features');
 	let allTheMenuItems = document.getElementsByClassName('all-nav-items');	
 	for (let i = 0; i < allTheFeatures.length; i++) {
 		allTheFeatures[i].style.display = 'none';
@@ -198,21 +209,13 @@ function externalFeaturesNav(relate, link) {
 	openFeature.style.display = 'block';
 }
 
-// START UP ANIMATION FADE AWAY AFTER DOCUMENT HAS LOADED BEHIND IT
-// function hideStartScreen() { 
-// 	let screen = document.getElementById('onload');	
-// 	let main = document.getElementById('main');
-// 	screen.style.opacity = 1;
-// 		setTimeout(function(){
-// 			screen.style.opacity = 0;						
-// 		}, 2100); 
-// }
-
-// HIDING BACKGROUNDS UNTIL FIRST IMAGE HAS LOADED
-// function hideBackgroundsUntilPageLoads() {
-// 	let backgrounds = document.getElementsByClassName('background-image');
-// 	backgrounds[0].style.opacity = 1;
-// 	backgrounds[1].style.opacity = 1;
-// 	backgrounds[2].style.opacity = 1;
-// 	backgrounds[3].style.opacity = 1;
-// };
+window.onload = function hideOnLoad() {
+	let images = document.querySelectorAll('.background-image');
+	let firstImage = images[3];	
+		if (firstImage.complete === true) {
+			for (let i = 0; i < images.length; i++)	{
+				images[i].classList.add('images-all-loaded'); }
+			}
+	changeBackground();
+	updateHeading();
+}

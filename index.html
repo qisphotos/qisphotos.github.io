@@ -12,7 +12,7 @@
   <!-- Bootstrap  -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Google Fonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:200,400,500,700,300|Poppins:200,300,400,700,900"
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700|Open+Sans:200,400,500,700,300|Poppins:200,300,400,700,900"
     rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -21,21 +21,16 @@
   <!-- custom css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="css/para.css"> -->
-
-
-
 </head>
 
 <body>
-  <!-- <div id="onload" class="onload">
-    <h1 class="text-pop-up-top">QIS</h1>
-  </div> -->
+
   <div id="main" class="main">
     <ul id="backgrounds" class="backgrounds">
       <li><img class="background-image" src="img/1.jpg" alt=""></li>
       <li><img class="background-image" src="img/2.jpg" alt=""></li>
       <li><img class="background-image" src="img/3.jpg" alt=""></li>
-      <li><img class="background-image" src="img/4.jpg" alt=""></li>
+      <li><img class="background-image first-image" src="img/4.jpg"></li>
     </ul>
 
     <div class="letter-box-backgrounds">
@@ -46,22 +41,15 @@
       <div class="row" style="margin-left: 0; margin-right: 0;">
         <div id="leftMainPanel" data-panel="leftMainPanel" class="col-md-6 left-main-panel" style="padding-left:0;">
           <div class="quru-image-server-tag">
-            <img src="img/QIS-logo.png" alt="quru image server logo">
+            <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo" alt="quru image server logo">
           </div>
           <div id="main_heading" class="main-heading">
             <h1 id="heading"></h1>
           </div>
           <div class="download">
-            <button class="download-button">Try it now</button>
-            <!-- <div id="try_it_now_icons" class="col-lg-4 download-icons-con">
-                    <ul class="download-icons">
-                        <li>Icon</li>
-                        <li>Icon</li>
-                        <li>Icon</li>
-                        <li>Icon</li>
-                        <li>Icon</li>
-                      </ul>
-                </div> -->
+            <a href="try-it/">
+              <button class="download-button">Try it now</button>
+            </a>
           </div>
           <div class="social">
             <ul class="socail-list-ul">
@@ -110,10 +98,13 @@
               <li class="menu-option" id="about-us-menu-tag" data-panel="about-us-panel">
                 About us
               </li>
+              <br>
             </ul>
           </div>
           <div id="panels">
             <div id="image-resizing-panel" class="side-panel panel image-resizing-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -127,13 +118,12 @@
                       dataInnerPanelCurrent="technical-data-image-resizing" dataInnerPanelSwitch="product-information-image-resizing"
                       class="technical-data">
                       <span>Technical Data</span>
-                      <i class="fas fa-cog"></i>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
                     </li>
                   </ul>
                   </p>
                 </div>
-                <div class="product-information-main" id="product-information-image-resizing">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
+                <div class="product-information-main" id="product-information-image-resizing">                   
                   <div class="heading">
                     <h1>
                       The perfect image at any size
@@ -154,11 +144,11 @@
                     Whatever device and screen size your website visitors are using, they’ll get a perfect, detailed
                     experience every time.
                   </p>
-
-                  <span>Try the online demo</span>
+                  <a class="demo-link" href="try-it/">
+                    <span>Try the online demo</span>
+                  </a>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-resizing">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Image Resizing Panel - Technical Data
@@ -173,6 +163,8 @@
             </div>
 
             <div id="image-conversion-panel" class="side-panel panel image-conversion-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -186,12 +178,11 @@
                       dataInnerPanelCurrent="technical-data-image-conversion" dataInnerPanelSwitch="product-information-image-conversion"
                       class="technical-data">
                       <span>Technical Data</span>
-                      <i class="fas fa-cog"></i>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
                     </li>
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-image-conversion">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Automatic image conversion
@@ -213,11 +204,11 @@
                     your
                     digital assets whatever image formats you use.
                   </p>
-
-                  <span>Try the online demo</span>
+                  <a class="demo-link" href="try-it/">
+                    <span>Try the online demo</span>
+                  </a>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-conversion">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Image Conversion Panel Technical Data
@@ -227,13 +218,16 @@
                   <p>
                     This is the technical data section
                   </p>
-
-                  <span>Try the online demo</span>
+                  <a class="demo-link" href="try-it/">
+                    <span>Try the online demo</span>
+                  </a>
                 </div>
               </div>
             </div>
 
             <div id="watermarking-and-protection-panel" class="side-panel panel watermarking-and-protection-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -247,12 +241,11 @@
                       id="product-information-technical-button-watermarking-and-protection" dataInnerPanelCurrent="technical-data-watermarking-and-protection"
                       dataInnerPanelSwitch="product-information-watermarking-and-protection" class="technical-data">
                       <span>Technical Data</span>
-                      <i class="fas fa-cog"></i>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
                     </li>
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-watermarking-and-protection">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Apply watermarking in an instant
@@ -273,11 +266,11 @@
                     Quickly change pricing watermarks anywhere your images are being displayed with dynamic price
                     overlay. Amend the price on a sale item across your entire digital estate with just one update.
                   </p>
-
-                  <span>Try the online demo</span>
+                  <a class="demo-link" href="try-it/">
+                    <span>Try the online demo</span>
+                  </a>
                 </div>
                 <div class="technical-data-main" id="technical-data-watermarking-and-protection">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Watermarking & Protection Technical
@@ -287,13 +280,16 @@
                   <p>
                     This is the technical data section
                   </p>
-
-                  <span>Try the online demo</span>
+                  <a class="demo-link" href="try-it/">
+                    <span>Try the online demo</span>
+                  </a>
                 </div>
               </div>
             </div>
 
             <div id="image-analytics-panel" class="side-panel panel image-analytics-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -307,15 +303,14 @@
                       dataInnerPanelCurrent="technical-data-image-analytics" dataInnerPanelSwitch="product-information-image-analytics"
                       class="technical-data">
                       <span>Technical Data</span>
-                      <i class="fas fa-cog"></i>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
                     </li>
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-image-analytics">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
-                      Analytics that supercharge your marketin
+                      Analytics that supercharge your marketing
                     </h1>
                   </div>
 
@@ -338,11 +333,11 @@
                     </ul>
                   </div>
                   </p>
-
-                  <span>Try the online demo</span>
+                  <a class="demo-link" href="try-it/">
+                    <span>Try the online demo</span>
+                  </a>
                 </div>
                 <div class="technical-data-main" id="technical-data-image-analytics">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Image Analytics Panel - Technical
@@ -352,16 +347,18 @@
                   <p>
                     another panel for our technical spec
                   </p>
-
-                  <span>Try the online demo</span>
+                  <a class="demo-link" href="try-it/">
+                    <span>Try the online demo</span>
+                  </a>
                 </div>
               </div>
             </div>
 
             <div id="pricing-panel" class="side-panel panel pricing-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       The perfect solution at the best price
@@ -402,8 +399,9 @@
                     +44 20 7160 2888.
                   </p>
 
-
-                  <span>Try the online demo</span>
+                  <a class="demo-link" href="try-it/">
+                    <span>Try the online demo</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -411,7 +409,6 @@
             <div id="case-studies-panel" class="side-panel panel case-studies-panel">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Case Studies
@@ -434,6 +431,8 @@
             </div>
 
             <div id="about-us-panel" class="side-panel panel about-us-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -447,12 +446,11 @@
                       dataInnerPanelCurrent="technical-data-about-us" dataInnerPanelSwitch="product-information-about-us"
                       class="technical-data">
                       <span>Customer Testimonials</span>
-                      <i class="fas fa-comment-alt"></i>
+                      <img src="img/SVGs/icon-testimonials.svg" class="svg-icon" alt="speech bubble">
                     </li>
                   </ul>
                 </div>
                 <div class="product-information-main" id="product-information-about-us" style="margin-top:40px;">
-                      <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       The only choice for the most demanding brands
@@ -481,7 +479,6 @@
 
                 </div>
                 <div class="technical-data-main" id="technical-data-about-us">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="heading">
                     <h1>
                       Customer Testimonials
@@ -498,9 +495,10 @@
             </div>
 
             <div id="extra-features-panel" class="side-panel panel extra-features-panel">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="product-information-main">
-                    <button onclick="buttonClosePanel()" class="btn custom-button">X</button>
                   <div class="extra-features-content">
                     <div class="extra-features-nav">
                       <ul>
@@ -670,6 +668,7 @@
 
 
   <script src="js/main.js"></script>
+  <script src="js/qis.js"></script>
 </body>
 
 </html>
