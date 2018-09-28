@@ -28,19 +28,17 @@
       margin-top: 10vh;
     }
     .toolbar-button {
-      color: white;
-      background: #de0000;
+      background: white;
       margin-left: 15px;
       border-radius: 4px;
-      padding: 10px;
-      text-transform: uppercase;
-      font-size: 12px;
+      height: 40px;
       border: none;
       cursor: pointer;
     }
     .rendered {
-      margin-top: 10vh;
-      margin-left: 15px;
+      position: absolute;
+      bottom: 0;
+      margin-left: 20px;
     }
     /* Temporary (but possibly usable) styles */
     .wait-icon {
@@ -58,6 +56,11 @@
     .dark-layer .wait-icon {
       display: block;         /* Show wait message when dark-layer is enabled */
     }
+    .svg-icon {
+      width:30px;
+      margin-top: 5px;
+      color:#333;
+    }
   </style>
 </head>
 
@@ -71,16 +74,16 @@
       <div class="row" style="margin-left: 0; margin-right: 0;">
         <div id="leftMainPanel" data-panel="leftMainPanel" class="col-md-6 left-main-panel" style="padding-left:0;">
           <div class="quru-image-server-tag">
-            <a href=".."><img src="../img/QIS-logo.png" alt="quru image server logo"></a>
+            <a href=".."><img src="../img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo" alt="quru image server logo"></a>
           </div>
           <div class="toolbar">
-            <button class="toolbar-button" onclick="ToolboxUI.zoomIn()">In</button>
-            <button class="toolbar-button" onclick="ToolboxUI.zoomOut()">Out</button>
-            <button class="toolbar-button" onclick="ToolboxUI.rotate()">Rot</button>
-            <button class="toolbar-button" onclick="ToolboxUI.flip()">Flip</button>
-            <button class="toolbar-button" onclick="ToolboxUI.watermark()">Wmark</button>
-            <button class="toolbar-button" onclick="ToolboxUI.reset()">Reset</button>
-            <button class="toolbar-button" onclick="ToolboxUI.view()">View image</button>
+            <button class="toolbar-button" onclick="ToolboxUI.zoomIn()"><img class="svg-icon" src="../img/SVGs/icon-zoomin.svg" alt="zoom in"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.zoomOut()"><img class="svg-icon" src="../img/SVGs/icon-zoomout.svg" alt="zoom out"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.rotate()"><img class="svg-icon" src="../img/SVGs/icon-rotate-right.svg" alt="rotate image"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.flip()"><img class="svg-icon" src="../img/SVGs/icon-flip-left.svg" alt="flip"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.watermark()"><img class="svg-icon" src="../img/SVGs/icon-watermark.svg" alt="add sample watermark to image"></button>
+            <button class="toolbar-button" onclick="ToolboxUI.reset()"><i class="fas fa-sync-alt svg-icon" alt="reset image"></i></button>
+            <button class="toolbar-button" onclick="ToolboxUI.view()"><i class="far fa-eye svg-icon" alt="view new image"></i></button>
           </div>
           <p id="rendered" class="rendered">Default image loading, please wait for device-sized image</p>
           <div id="wait_icon" class="wait-icon">
