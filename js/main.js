@@ -211,13 +211,10 @@ function externalFeaturesNav(relate, link) {
 
 window.onload = function hideOnLoad() {
 	let images = document.querySelectorAll('.background-image');
-	let fish = images[3];	
-		if (fish.complete === true) {
-				images[0].style.display = 'block';
-				images[1].style.display = 'block';
-				images[2].style.display = 'block';	
-			}	else {
-				hideOnLoad();
+	let firstImage = images[3];	
+		if (firstImage.complete === true) {
+			for (let i = 0; i < images.length; i++)	{
+				images[i].classList.add('images-all-loaded'); }
 			}
 	changeBackground();
 	updateHeading();
