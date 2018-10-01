@@ -2,42 +2,34 @@
 
 // list of big facing headings
 let headings = [
-	"Simple colour conversion",
 	"Perfect detail at any scale",
 	"Conversions that don't ruffle feathers",
-	"Resize images on-the-fly"
-]
+	"Resize images on-the-fly",
+	"Simple colour conversion"
+];
 
 // record the background image load stats
 let imageStats = {};
 
-function updateHeading() {
-	let heading = document.getElementById('heading')
-	heading.innerHTML = headings[1];
-	heading.style.opacity = 1;
-	let hIndex = 1;
-	setInterval(function () {
-		if (hIndex > 2) {
-			heading.style.opacity = 0;
-			setTimeout(function () {
-				heading.innerHTML = headings[hIndex];
-				heading.style.opacity = 1;
-			}, 500);
-			hIndex = 0;
-		} else {
-			heading.style.opacity = 0;
-			setTimeout(function () {
-				heading.innerHTML = headings[hIndex];
-				heading.style.opacity = 1;
-			}, 500);
-			hIndex++
-		}
-	}, 8000);
+function updateHeading(hIndex) {
+	let heading = document.getElementById('heading'),
+	    savedIndex = hIndex;
+	heading.style.opacity = 0;
+	setTimeout(function () {
+		heading.innerHTML = headings[savedIndex];
+		heading.style.opacity = 1;
+	}, 500);
+	hIndex++;
+	if (hIndex >= headings.length) {
+		hIndex = 0;
+	}
+	setTimeout(function() { updateHeading(hIndex); }, 8000);
 }
 
 function changeBackground() {
 	let backgrounds = document.getElementsByClassName('background-image');
-	let bgIndex = 3;
+	let finalIndex = backgrounds.length - 1,
+	    bgIndex = finalIndex;
 	setInterval(function () {
 		if (bgIndex > 0) {
 			backgrounds[bgIndex].style.opacity = 0;
@@ -46,13 +38,16 @@ function changeBackground() {
 			}, 500);
 			bgIndex = bgIndex - 1;
 		} else {
-			setTimeout(function () {				
+			setTimeout(function () {
 				backgrounds[0].style.opacity = 1;
 				backgrounds[1].style.opacity = 1;
 				backgrounds[2].style.opacity = 1;
 				backgrounds[3].style.opacity = 1;
 			}, 500);
-			bgIndex = 3;
+			bgIndex = finalIndex;
+		}
+		if (imageStats[bgIndex] !== undefined) {
+			ToolboxUI.showImageStats(imageStats[bgIndex]);
 		}
 	}, 8000);
 }
@@ -214,19 +209,23 @@ window.onload = function() {
 	}
 	// start headline rotations
 	changeBackground();
-	updateHeading();
+	updateHeading(0);
 	// download replacement images + stats in the background
 	for (let i = 0; i < images.length; i++)	{
 		let imageNo = i;
 		images[i]._qistools = new QISToolbox(
-			images[i],            // The background img element to load and modify
-			window.innerWidth,    // The viewport size
+			images[i],
+			window.innerWidth,
 			window.innerHeight,
-			'black',              // The page background colour
+			'black',
 			{
 				// 'loading': function() { },
 				'complete': function(stats) {
 					imageStats[imageNo] = stats;
+					// TODO Temporary! Show stats for the first image
+					if (imageNo === 3) {
+						ToolboxUI.showImageStats(stats);
+					}
 				}
 			}
 		);
