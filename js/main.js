@@ -8,8 +8,8 @@ let headings = [
 	"Resize images on-the-fly"
 ]
 
-// pause boolean for background and title rotation
-let pause = false;
+// record the background image load stats
+let imageStats = {};
 
 function updateHeading() {
 	let heading = document.getElementById('heading')
@@ -34,8 +34,6 @@ function updateHeading() {
 		}
 	}, 8000);
 }
-
-
 
 function changeBackground() {
 	let backgrounds = document.getElementsByClassName('background-image');
@@ -104,11 +102,9 @@ function showPanel(e) {
 			all_menu_li[i].classList.remove('li_active');
 		}
 		document.getElementById('menu_li_home').classList.add('li_active');
-		pause = false;
 	} else {
 		// otherwise, open the panel requested, activate the nav with it 
 		// and hide the heading on the left.
-		pause = true;
 		to_be_opened.classList.add('active');
 		navigation.classList.add('navigation-active');
 		heading.style.opacity = '0';
@@ -209,13 +205,30 @@ function externalFeaturesNav(relate, link) {
 	openFeature.style.display = 'block';
 }
 
-window.onload = function hideOnLoad() {
+// onload fires when all resources (including images have loaded)
+window.onload = function() {
+	// show all images
 	let images = document.querySelectorAll('.background-image');
-	let firstImage = images[3];	
-		if (firstImage.complete === true) {
-			for (let i = 0; i < images.length; i++)	{
-				images[i].classList.add('images-all-loaded'); }
-			}
+	for (let i = 0; i < images.length; i++)	{
+		images[i].classList.add('images-all-loaded');
+	}
+	// start headline rotations
 	changeBackground();
 	updateHeading();
+	// download replacement images + stats in the background
+	for (let i = 0; i < images.length; i++)	{
+		let imageNo = i;
+		images[i]._qistools = new QISToolbox(
+			images[i],            // The background img element to load and modify
+			window.innerWidth,    // The viewport size
+			window.innerHeight,
+			'black',              // The page background colour
+			{
+				// 'loading': function() { },
+				'complete': function(stats) {
+					imageStats[imageNo] = stats;
+				}
+			}
+		);
+	}
 }

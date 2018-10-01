@@ -140,5 +140,24 @@
 
   <script src="https://images.quru.com/static/js/common_view.min.js"></script>
   <script src="../js/qis.js"></script>
+  <script>
+    QU.whenReady(function() {
+      ToolboxUI.setup(new QISToolbox(
+          QU.id('bg_image'),    // The background img element to load and modify
+          window.innerWidth,    // The viewport size
+          window.innerHeight,
+          'black',              // The page background colour
+          {
+              'loading': function() {
+                  ToolboxUI.showLoading(true);
+              },
+              'complete': function(stats) {
+                  ToolboxUI.showLoading(false);
+                  ToolboxUI.showImageStats(stats);
+              }
+          }
+      ));
+    });
+  </script>
 </body>
 </html>
