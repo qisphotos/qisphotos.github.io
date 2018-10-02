@@ -1,6 +1,6 @@
 "use strict";
 
-// list of big facing headings
+// list of big facing headings, should match the bg images in the html
 let headings = [
 	"Perfect detail at any scale",
 	"Conversions that don't ruffle feathers",
@@ -11,45 +11,47 @@ let headings = [
 // record the background image load stats
 let imageStats = {};
 
-function updateHeading(hIndex) {
+function rotate(hIndex) {
 	let heading = document.getElementById('heading'),
-	    savedIndex = hIndex;
-	heading.style.opacity = 0;
-	setTimeout(function () {
-		heading.innerHTML = headings[savedIndex];
+	    images = document.querySelectorAll('.backgrounds img'),
+		newIndex = hIndex,
+		prevIndex = newIndex - 1;
+
+	if (prevIndex < 0) {
+		prevIndex = images.length - 1;
+	}
+
+	let newImage = images[newIndex],
+	    prevImage = images[prevIndex];
+
+	// Fade out heading and bring in the next background image (but still hidden)
+	heading.style.opacity = 0;      // Takes 0.5s (see the css)
+	newImage.style.zIndex = -2;
+	newImage.style.display = 'block';
+	newImage.style.opacity = 1;
+
+	setTimeout(function () {        // so do this after 0.5s
+		// Fade in the heading, fade out the old background image
+		heading.innerHTML = headings[newIndex];
 		heading.style.opacity = 1;
+		prevImage.style.opacity = 0;
+		// Show stats for new image
+		if (imageStats[newIndex] !== undefined) {
+			ToolboxUI.showImageStats(imageStats[newIndex]);
+		}
+		setTimeout(function () {
+			// Hide the old background image and make the new one top
+			prevImage.style.display = 'none';
+			newImage.style.zIndex = -1;
+		}, 500);
 	}, 500);
+
+	// Then schedule the next rotation
 	hIndex++;
 	if (hIndex >= headings.length) {
 		hIndex = 0;
 	}
-	setTimeout(function() { updateHeading(hIndex); }, 8000);
-}
-
-function changeBackground() {
-	let backgrounds = document.getElementsByClassName('background-image');
-	let finalIndex = backgrounds.length - 1,
-	    bgIndex = finalIndex;
-	setInterval(function () {
-		if (bgIndex > 0) {
-			backgrounds[bgIndex].style.opacity = 0;
-			setTimeout(function () {
-				backgrounds[bgIndex].style.opacity = 1;
-			}, 500);
-			bgIndex = bgIndex - 1;
-		} else {
-			setTimeout(function () {
-				backgrounds[0].style.opacity = 1;
-				backgrounds[1].style.opacity = 1;
-				backgrounds[2].style.opacity = 1;
-				backgrounds[3].style.opacity = 1;
-			}, 500);
-			bgIndex = finalIndex;
-		}
-		if (imageStats[bgIndex] !== undefined) {
-			ToolboxUI.showImageStats(imageStats[bgIndex]);
-		}
-	}, 8000);
+	setTimeout(function() { rotate(hIndex); }, 8000);
 }
 
 function SetupwhenReady(fn) {
@@ -200,17 +202,12 @@ function externalFeaturesNav(relate, link) {
 	openFeature.style.display = 'block';
 }
 
-// onload fires when all resources (including images have loaded)
+// onload fires when all resources (including images) have loaded
 window.onload = function() {
-	// show all images
-	let images = document.querySelectorAll('.background-image');
-	for (let i = 0; i < images.length; i++)	{
-		images[i].classList.add('images-all-loaded');
-	}
-	// start headline rotations
-	changeBackground();
-	updateHeading(0);
+	// start rotations
+	rotate(0);
 	// download replacement images + stats in the background
+	let images = document.querySelectorAll('.backgrounds img');
 	for (let i = 0; i < images.length; i++)	{
 		let imageNo = i;
 		images[i]._qistools = new QISToolbox(
@@ -222,8 +219,10 @@ window.onload = function() {
 				// 'loading': function() { },
 				'complete': function(stats) {
 					imageStats[imageNo] = stats;
-					// TODO Temporary! Show stats for the first image
-					if (imageNo === 3) {
+					// Show stats for the first image (if the 1st image took more
+					// than 8 seconds to load, this may *briefly* show the stats
+					// on the wrong image, just once)
+					if (imageNo === 0) {
 						ToolboxUI.showImageStats(stats);
 					}
 				}

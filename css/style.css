@@ -12,7 +12,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Open Sans', sans-serif;
-    background-color: rgba(0,0,0,0) !important;
+    background-color: rgb(0,0,0);
 }
 
 .main {
@@ -23,26 +23,17 @@ body {
 }
 
 .backgrounds {
-    list-style: none;
     position: relative;
     z-index: -1;
     margin: 0;
     padding: 0;
 }
 
-.background-image {
+.backgrounds img {
     display: none;
-}
-.background-image.first-image {
-    display: block;
-}
-.background-image.images-all-loaded {
-    display: block;
-}
-
-
-.backgrounds li img {
     position: fixed;
+    top: 0vw;
+    left: 0vw;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -51,6 +42,10 @@ body {
     -ms-transition: opacity .5s ease-in-out;
     -o-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
+}
+
+.try-it .backgrounds img {
+    display: block;
 }
 
 .navigation {
@@ -150,7 +145,6 @@ body {
     font-size: 40px;
     transition: 0.3s;
     display: none;
-    z-index: 99;
     font-weight: 100;
     text-align: center;
     z-index: 99;
@@ -188,7 +182,7 @@ body {
 }
 
 .dark-layer {
-    background: rgba(0, 0, 0, 0.25) no-repeat center center fixed;    
+    background: rgba(0, 0, 0, 0.25) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
