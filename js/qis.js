@@ -286,27 +286,3 @@ ToolboxUI.view = function(download) {
     window.open(this.toolbox.getImageURL() +
                (download ? '&attach=1' : ''));
 }
-
-/* Page setup */
-
-var initialiseToolbox = true;
-
-QU.whenReady(function() {
-    if (initialiseToolbox) {
-        ToolboxUI.setup(new QISToolbox(
-            QU.id('bg_image'),    // The background img element to load and modify
-            window.innerWidth,    // The viewport size
-            window.innerHeight,
-            'black',              // The page background colour
-            {
-                'loading': function() {
-                    ToolboxUI.showLoading(true);
-                },
-                'complete': function(stats) {
-                    ToolboxUI.showLoading(false);
-                    ToolboxUI.showImageStats(stats);
-                }
-            }
-        ));
-    }
-});
