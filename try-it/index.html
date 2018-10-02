@@ -26,18 +26,8 @@
     /* Temporary styles */
     .toolbar {
       position: absolute;
-      bottom: 100px;
+      bottom: 50px;
       margin-left: 5px;
-    }
-    .toolbar-button {
-      background: white;
-      margin-left: 15px;
-      border-radius: 4px;
-      height: 40px;
-      border: none;
-      margin-bottom: 10px;
-      cursor: pointer;
-      transition: 0.3s;
     }
     .toolbar-button:focus {
       outline: none;
@@ -68,12 +58,67 @@
       margin-top: 5px;
       color:#333;
     }
-    .toolbar-button:hover {
-      box-shadow: 0 0 7px #efefee;
+    .toolbar ul {
+      list-style: none;
+    }
+    .toolbar ul li {
+      display: inline-block;
     }
     .animated{
       animation: FadeIn 1s linear;
       animation-fill-mode: both;
+    }
+    .cube {
+      width: 80px;
+      text-align: center;
+      margin: 0 auto;
+      height: 40px;
+      margin: 5px;
+
+      -webkit-transition: -webkit-transform .33s;
+      transition: transform .33s; /* Animate the transform properties */
+
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d; /* <-NB */
+    }
+
+    /* The two faces of the cube */
+    .front,.bottom {
+      background: rgb(247, 247, 247);
+      border: 1px solid rgba(147, 184, 189, .8);
+
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+
+      -webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+      box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+      height: 40px;
+    }
+
+    /* Position the faces */
+    .front {
+      -webkit-transform: translateZ(15px);
+      transform: translateZ(15px);
+    }
+    .front i {
+      margin-top: 10px;
+    }
+
+    .bottom {
+      -webkit-transform: rotateX(-90deg) translateZ(-15px);
+      transform: rotateX(-90deg) translateZ(-15px);
+    }
+    /* Rotate the cube */
+    .cube:hover {
+      -webkit-transform: rotateX(90deg);
+      transform: rotateX(90deg); /* Text bleed at 90º */
+      box-shadow: 0 0 10px white;
+      cursor: pointer;
+    }
+    .bottom p {
+      color: black;
+      font-size: 12px;
+      padding-top: 10px;
     }
 
     @keyframes FadeIn { 
@@ -109,14 +154,80 @@
             <a href=".."><img src="../img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo" alt="quru image server logo"></a>
           </div>
           <div class="toolbar animated">
-            <button class="toolbar-button" onclick="ToolboxUI.zoomIn()"><img class="svg-icon" src="../img/SVGs/icon-zoomin.svg" alt="zoom in"></button>
-            <button class="toolbar-button" onclick="ToolboxUI.zoomOut()"><img class="svg-icon" src="../img/SVGs/icon-zoomout.svg" alt="zoom out"></button>
-            <button class="toolbar-button" onclick="ToolboxUI.rotate()"><img class="svg-icon" src="../img/SVGs/icon-rotate-right.svg" alt="rotate image"></button>
-            <button class="toolbar-button" onclick="ToolboxUI.flip()"><img class="svg-icon" src="../img/SVGs/icon-flip-left.svg" alt="flip"></button>
-            <button class="toolbar-button" onclick="ToolboxUI.watermark()"><img class="svg-icon" src="../img/SVGs/icon-watermark.svg" alt="add sample watermark to image"></button>
-            <button class="toolbar-button" onclick="ToolboxUI.reset()"><i class="fas fa-sync-alt svg-icon" alt="reset image"></i></button>
-            <button class="toolbar-button" onclick="ToolboxUI.view()"><i class="far fa-eye svg-icon" alt="view new image"></i></button>
+            <ul>
+              <li>
+                <div class="cube" onclick="ToolboxUI.zoomIn()">
+                    <div class="front">
+                      <img class="svg-icon" src="../img/SVGs/icon-zoomin.svg" alt="zoom in">
+                    </div>
+                    <div class="bottom">
+                      <p>Zoom In</p> 
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cube" onclick="ToolboxUI.zoomOut()">
+                      <div class="front">
+                        <img class="svg-icon" src="../img/SVGs/icon-zoomout.svg" alt="zoom in">
+                      </div>
+                      <div class="bottom">
+                        <p>Zoom Out</p> 
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cube" onclick="ToolboxUI.rotate()">
+                      <div class="front">
+                        <img class="svg-icon" src="../img/SVGs/icon-rotate-right.svg" alt="zoom in">
+                      </div>
+                      <div class="bottom">
+                        <p>Rotate</p> 
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cube" onclick="ToolboxUI.flip()">
+                      <div class="front">
+                        <img class="svg-icon" src="../img/SVGs/icon-flip-left.svg" alt="zoom in">
+                      </div>
+                      <div class="bottom">
+                        <p>Flip</p> 
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cube" onclick="ToolboxUI.watermark()">
+                      <div class="front">
+                        <img class="svg-icon" src="../img/SVGs/icon-watermark.svg" alt="zoom in">
+                      </div>
+                      <div class="bottom">
+                        <p>Watermark</p> 
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cube" onclick="ToolboxUI.reset()">
+                      <div class="front">
+                          <i class="fas fa-sync-alt svg-icon" alt="reset image"></i> 
+                      </div>
+                      <div class="bottom">
+                        <p>Reset</p> 
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cube" onclick="ToolboxUI.view()">
+                      <div class="front">
+                          <i class="fas fa-eye svg-icon" alt="reset image"></i> 
+                      </div>
+                      <div class="bottom">
+                        <p>View</p> 
+                      </div>
+                  </div>
+                </li>
+              </ul>    
           </div>
+
           <p id="rendered" class="rendered">Default image loading, please wait for device-sized image</p>
           <div id="wait_icon" class="wait-icon">
             Requesting image...
