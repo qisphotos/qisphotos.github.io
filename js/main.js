@@ -2,10 +2,10 @@
 
 // list of big facing headings
 let headings = [
-	"Simple colour conversion",
-	"Resize images on-the-fly",
+	"Perfect detail at any scale",
 	"Conversions that don't ruffle feathers",
-	"Perfect detail at any scale"
+	"Resize images on-the-fly",
+	"Simple colour conversion"
 ];
 
 // record the background image load stats
@@ -19,7 +19,7 @@ function updateHeading(hIndex) {
 		heading.innerHTML = headings[savedIndex];
 		heading.style.opacity = 1;
 	}, 500);
-	hIndex--;
+	hIndex++;
 	if (hIndex >= headings.length) {
 		hIndex = 0;
 	}
@@ -209,7 +209,7 @@ window.onload = function() {
 	}
 	// start headline rotations
 	changeBackground();
-	updateHeading(images.length-1);
+	updateHeading(0);
 	// download replacement images + stats in the background
 	for (let i = 0; i < images.length; i++)	{
 		let imageNo = i;
