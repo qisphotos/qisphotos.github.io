@@ -136,7 +136,6 @@ body {
     height: 64px;
     width: auto;
 }
-
 .custom-button {
     float: right;
     background: rgba(0,0,0,0);
@@ -386,6 +385,12 @@ body {
     margin-top: 62px;
     padding-left: 0;
 }
+
+.features {
+    margin-left: 30px;
+    width: 85%;
+    text-align: center;
+}
 .download-icons li {
     padding: 3px 2px 3px 2px;
     display: inline;
@@ -449,7 +454,7 @@ body {
 .extra-features-list > ul > li {
     list-style-type: disc;
     color: #de0000;
-    margin-left: 10px;    
+    margin-left: 15px;    
     font-size: 12px;
 }
 
@@ -560,6 +565,9 @@ body {
         margin-left: 15px;
         width: 75%;
     }
+    .features {
+        width: 60%;
+    }
 }
 
 /* Mobile */
@@ -662,5 +670,8 @@ body {
     }
     .product-information-main span {
         margin-left:0;
+    }
+    .features {
+        margin-left: 0;
     }
 }

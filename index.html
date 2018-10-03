@@ -102,7 +102,7 @@
           </div>
           <div id="panels">
             <div id="image-resizing-panel" class="side-panel panel image-resizing-panel">
-                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
               <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
@@ -122,7 +122,7 @@
                   </ul>
                   </p>
                 </div>
-                <div class="product-information-main" id="product-information-image-resizing">                   
+                <div class="product-information-main" id="product-information-image-resizing">
                   <div class="heading">
                     <h1>
                       The perfect image at any size
@@ -155,15 +155,34 @@
                   </div>
 
                   <p>
-                    This is some technical data
+                    QIS stores images in a server native filesystem - the limits on storage are thus limited to the
+                    size of the physical storage medium - but need only store a single instance of the image.
+                    Pre-sizing of images is no longer needed due to it's ability to resize images on demand.
                   </p>
+                  <p>
+                    When an image is requested QIS will query it's cache of previously served images for a suitable
+                    base image before reading the original from file if needed. A customized library is called to
+                    render the image at the new size before saving it to cache and returning the new image.
+                  </p>
+                  <p>
+                    QIS can pre-emptively generate subsequent versions of the image in the background if configured to
+                    do so so that new iterations of the image are already in cache ready for a fast response,
+                    frequently in only a few milliseconds. Such optimization results in QIS being one of the fast image
+                    resizing engines available.
+                  </p>
+                  <p>
+                    For more information, please see <a href='https://github.com/quru/qis' alt='Qis on Github'>https://github.com/quru/qis</a>.
+                  </p>
+                  <a class="demo-link" href="try-it/">
+                    <span>Try the online demo</span>
+                  </a>
                 </div>
               </div>
             </div>
 
             <div id="image-conversion-panel" class="side-panel panel image-conversion-panel">
-                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -210,12 +229,89 @@
                 <div class="technical-data-main" id="technical-data-image-conversion">
                   <div class="heading">
                     <h1>
-                      Image Conversion Panel Technical Data
+                      Image Conversion Panel - Technical Data
                     </h1>
                   </div>
 
                   <p>
-                    This is the technical data section
+                    QIS is able to save and use images in a range of formats and more are being added all the time.
+                    From jpg to x-ray images, we attempt to flawlessly convert image formats on demand.
+                  </p>
+                  <p>
+                    The following are some of the most common formats supported:
+                    <table class="features table table-bordered">
+                      <tr>
+                        <th>Format</th>
+                        <th>Community edition</th>
+                        <th>Premium edition</th>
+                      </tr>
+                      <tr>
+                        <td>jpg</td>
+                        <td class='tick'>&#10003;</td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>png</td>
+                        <td class='tick'>&#10003;</td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>tif</td>
+                        <td class='tick'>&#10003;</td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>gif</td>
+                        <td class='tick'>&#10003;</td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>cr2</td>
+                        <td></td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>eps</td>
+                        <td></td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>nef</td>
+                        <td></td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>orf</td>
+                        <td></td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>ps</td>
+                        <td></td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>psd</td>
+                        <td></td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>raw</td>
+                        <td></td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                      <tr>
+                        <td>svg</td>
+                        <td></td>
+                        <td class='tick'>&#10003;</td>
+                      </tr>
+                    </table>
+                  </p>
+                  <p>
+                    The premium version of QIS is able to take a multiple page PDF or tif image and burst it into
+                    individual pages so that each page can be modified on demand. This facilitates embedded pdf viewing
+                    solutions providing a level of zooming that is unsurpassed without downloading the whole, original
+                    document.
                   </p>
                   <a class="demo-link" href="try-it/">
                     <span>Try the online demo</span>
@@ -225,8 +321,8 @@
             </div>
 
             <div id="watermarking-and-protection-panel" class="side-panel panel watermarking-and-protection-panel">
-                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -253,8 +349,8 @@
 
                   <p>
                     Protect your digital assets, manage pricing and create flash sales more easily. Gain more control
-                    and
-                    save time by batch applying watermarks on your product photos rather than individually updating.
+                    and save time by batch applying watermarks on your product photos rather than individually
+                    updating.
                   </p>
                   <p>
                     Ensure images are protected. If you use the server to deliver product images to distributors and
@@ -277,7 +373,25 @@
                   </div>
 
                   <p>
-                    This is the technical data section
+                    QIS can overlay any image on top of any other image. Thus you can watermark and image before it
+                    leaves the server regardless of its size or orientation. Whilst the community version will support
+                    jpg png tif and gif formatted images as watermarks, the premium addition will also support svg
+                    images which can therefore act as a mask, producing final images of varying shapes.
+                  </p>
+                  <p>
+                    The overlay system currently requires the overlaid image to be stored in the QIS server repository.
+                    Having selected the image the following attributes can be change:
+                  </p>
+                  <div class="extra-features-list">
+                    <ul>
+                      <li><span>Size - by percentage</span></li>
+                      <li><span>Position - by compass point, eg top left, centre bottom etc</span></li>
+                      <li><span>Opacity - by percentage with 10% being barely visible and 100% solid</span></li>
+                    </ul>
+                  </div>
+                  <p>
+                    Variations and combinations of these attributes, together with clever use of transparency in the
+                    overlaid image can produce almost any effect needed.</p>
                   </p>
                   <a class="demo-link" href="try-it/">
                     <span>Try the online demo</span>
@@ -287,8 +401,8 @@
             </div>
 
             <div id="image-analytics-panel" class="side-panel panel image-analytics-panel">
-                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -344,7 +458,22 @@
                   </div>
 
                   <p>
-                    another panel for our technical spec
+                    By default, every image served and every download provided is recorded together with the volume of
+                    the data served and a time stamp. This provides a very clear view of the load on the server as a
+                    whole or the demand for any particular image. A zoomable graph showing the performance is provided
+                    in the main analytics page or on each images&rsquo; details.
+                  </p>
+                  <p>
+                    If statistics are not wanted on an image by image basis or on a template by template basis then the
+                    addition of &ldquo;&amp;statistics=0&rdquo; in the image URL will immediately disable them. This is
+                    particularly useful of you want to only record renderings of certain sizes.
+                  </p>
+                  <p>
+                    QIS can be easily integrated into an CRM or other customer centric system by embedding a unique
+                    reference into an &ldquo;&amp;xfref=&lt;value&gt;&rdquo; tag in any image url. If QIS has been
+                    correctly configured, this value will be sent to any api to record exactly when that image was
+                    viewed with that reference. This can be used to prove that the image was opened and thus ensure
+                    statistics are as accurate as possible.
                   </p>
                   <a class="demo-link" href="try-it/">
                     <span>Try the online demo</span>
@@ -354,8 +483,8 @@
             </div>
 
             <div id="pricing-panel" class="side-panel panel pricing-panel">
-                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
                   <div class="heading">
@@ -406,8 +535,8 @@
             </div>
 
             <div id="case-studies-panel" class="side-panel panel case-studies-panel">
-                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
                   <div class="heading">
@@ -432,8 +561,8 @@
             </div>
 
             <div id="about-us-panel" class="side-panel panel about-us-panel">
-                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -496,51 +625,39 @@
             </div>
 
             <div id="extra-features-panel" class="side-panel panel extra-features-panel">
-                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
               <div class="col-md-6 content">
                 <div class="product-information-main">
                   <div class="extra-features-content">
                     <div class="extra-features-nav">
                       <ul>
                         <li>
-                          <span 
-                              id="link_one" 
-                              onclick="externalFeaturesNav('external_features_one', 'link_one')" 
-                              class="all-nav-items"> 
-                              run everything through the api
+                          <span id="link_one" onclick="externalFeaturesNav('external_features_one', 'link_one')" class="all-nav-items">
+                            run everything through the api
                           </span>
                         </li>
                         <li>
-                          <span 
-                              id="link_two" 
-                              onclick="externalFeaturesNav('external_features_two', 'link_two')" 
-                              class="all-nav-items nav-active">
-                              manage effects in the image library browser
+                          <span id="link_two" onclick="externalFeaturesNav('external_features_two', 'link_two')" class="all-nav-items nav-active">
+                            manage effects in the image library browser
                           </span>
                         </li>
                         <li>
-                          <span 
-                              id="link_three" 
-                              onclick="externalFeaturesNav('external_features_three', 'link_three')" 
-                              class="all-nav-items"> 
-                              add viewing features directly to your website
+                          <span id="link_three" onclick="externalFeaturesNav('external_features_three', 'link_three')"
+                            class="all-nav-items">
+                            add viewing features directly to your website
                           </span>
                         </li>
                         <li>
-                          <span 
-                              id="link_four" 
-                              onclick="externalFeaturesNav('external_features_four', 'link_four')" 
-                              class="all-nav-items"> 
-                              no lock-in and no limts
+                          <span id="link_four" onclick="externalFeaturesNav('external_features_four', 'link_four')"
+                            class="all-nav-items">
+                            no lock-in and no limts
                           </span>
                         </li>
                         <li>
-                          <span 
-                              id="link_five" 
-                              onclick="externalFeaturesNav('external_features_five', 'link_five')" 
-                              class="all-nav-items"> 
-                              all in one solution
+                          <span id="link_five" onclick="externalFeaturesNav('external_features_five', 'link_five')"
+                            class="all-nav-items">
+                            all in one solution
                           </span>
                         </li>
                       </ul>
@@ -620,14 +737,17 @@
             </div>
             <div class="col-md-12 content">
               <p>
-                Save considerable time and effort for your team. Converting hundreds of product images is a huge drain on
-                your business. With QIS, just upload your images in whatever format you have, and we do the rest. Forget
+                Save considerable time and effort for your team. Converting hundreds of product images is a huge drain
+                on
+                your business. With QIS, just upload your images in whatever format you have, and we do the rest.
+                Forget
                 manual conversions, QIS does it for you.
               </p>
               <p>
-                QIS currently supports a large number of differing file types and we are continually adding new formats.
+                QIS currently supports a large number of differing file types and we are continually adding new
+                formats.
                 We ensure they are compatible with standard web practices and other systems.
-              </p>    
+              </p>
               <p>
                 Stop wasting time and creating images to upload individually. With QIS, you are future proofing your
                 digital assets whatever image formats you use.
@@ -644,21 +764,23 @@
             <div class="col-md-12 title">
               <h1>The perfect image at any size</h1>
             </div>
-              <div class="col-md-12 content">
-                <p>
-                  Manage your digital assets more efficiently and give website visitors greater confidence in your brand.
-                  Let customers zoom in to images so they can see the full details that will help sell your products, with
-                  minimal hands-on management.
-                </p>
-                <p>
-                  Administrating a large number of images is challenging. The mix of formats, shapes and resolutions can be
-                  expensive. By dynamically resizing images in real time, as people view and adjust them, you deliver the
-                  perfect size image for your audience.
-                </p>
-                <p>
-                  Whatever device and screen size your website visitors are using, they’ll get a perfect, detailed
-                  experience every time.
-                </p>
+            <div class="col-md-12 content">
+              <p>
+                Manage your digital assets more efficiently and give website visitors greater confidence in your brand.
+                Let customers zoom in to images so they can see the full details that will help sell your products,
+                with
+                minimal hands-on management.
+              </p>
+              <p>
+                Administrating a large number of images is challenging. The mix of formats, shapes and resolutions can
+                be
+                expensive. By dynamically resizing images in real time, as people view and adjust them, you deliver the
+                perfect size image for your audience.
+              </p>
+              <p>
+                Whatever device and screen size your website visitors are using, they’ll get a perfect, detailed
+                experience every time.
+              </p>
             </div>
           </div>
         </div>
