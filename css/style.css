@@ -434,6 +434,7 @@ body {
     margin: 5px 15px 10px 15px;
     height: 50px;
     transition: 0.3s;
+    text-transform: capitalize;
 }
 .case-studies-menu ul li:hover {
     background: #222;
