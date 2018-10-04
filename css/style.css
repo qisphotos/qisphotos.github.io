@@ -18,6 +18,11 @@ body {
 .main {
     display: block;
 }
+
+h2 {
+    font-size: 1.5rem;
+    
+}
 .paralax {
     display: none;
 }
