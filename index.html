@@ -2,17 +2,27 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127421453-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127421453-1');
+  </script>
+
   <meta charset="UTF-8">
   <meta author="Mohsin Hanid">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Quru Image Server</title>
+  <title>Quru Image Server - dynamic colour-managed photo resizing</title>
 
   <!-- imports -->
   <!-- Bootstrap  -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Google Fonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700|Open+Sans:200,400,500,700,300|Poppins:200,300,400,700,900"
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,700|Poppins:200"
     rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -27,10 +37,10 @@
 
   <div id="main" class="main">
     <div id="backgrounds" class="backgrounds">
-      <img src="https://images.quru.com/image?src=/web/splash/fish.png&amp;width=800&amp;height=800&amp;format=jpg&amp;autosizefit=1&amp;quality=80">
-      <img src="https://images.quru.com/image?src=/web/splash/peacock.png&amp;width=800&amp;height=800&amp;format=jpg&amp;autosizefit=1&amp;quality=80">
-      <img src="https://images.quru.com/image?src=/web/splash/mite.png&amp;width=800&amp;height=800&amp;format=jpg&amp;autosizefit=1&amp;quality=80">
-      <img src="https://images.quru.com/image?src=/web/splash/chameleon.png&amp;width=800&amp;height=800&amp;format=jpg&amp;autosizefit=1&amp;quality=80">
+      <img src="https://images.quru.com/image?src=/web/splash/fish.png&amp;width=800&amp;height=800&amp;format=jpg&amp;autosizefit=1&amp;quality=80" alt="Quru Image Server - perfect details at every scale">
+      <img src="https://images.quru.com/image?src=/web/splash/peacock.png&amp;width=800&amp;height=800&amp;format=jpg&amp;autosizefit=1&amp;quality=80" alt="Quru Image Server - conversions that don't ruffle feathers">
+      <img src="https://images.quru.com/image?src=/web/splash/mite.png&amp;width=800&amp;height=800&amp;format=jpg&amp;autosizefit=1&amp;quality=80" alt="Quru Image Server - resize images on the fly">
+      <img src="https://images.quru.com/image?src=/web/splash/chameleon.png&amp;width=800&amp;height=800&amp;format=jpg&amp;autosizefit=1&amp;quality=80" alt="Quru Image Server - simple colour conversion">
     </div>
 
     <div class="letter-box-backgrounds">
@@ -40,7 +50,7 @@
       <div class="row" style="margin-left: 0; margin-right: 0;">
         <div id="leftMainPanel" data-panel="leftMainPanel" class="col-md-6 left-main-panel" style="padding-left:0;">
           <div class="quru-image-server-tag">
-            <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo" alt="quru image server logo">
+            <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo" alt="Quru Image Server">
           </div>
           <div id="main_heading" class="main-heading">
             <h1 id="heading"></h1>
@@ -103,7 +113,7 @@
           <div id="panels">
             <div id="image-resizing-panel" class="side-panel panel image-resizing-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -117,7 +127,7 @@
                       dataInnerPanelCurrent="technical-data-image-resizing" dataInnerPanelSwitch="product-information-image-resizing"
                       class="technical-data">
                       <span>Technical Data</span>
-                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="Quru Image Server technical data"></span>
                     </li>
                   </ul>
                   </p>
@@ -182,7 +192,7 @@
 
             <div id="image-conversion-panel" class="side-panel panel image-conversion-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -196,7 +206,7 @@
                       dataInnerPanelCurrent="technical-data-image-conversion" dataInnerPanelSwitch="product-information-image-conversion"
                       class="technical-data">
                       <span>Technical Data</span>
-                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="Quru Image Server technical data"></span>
                     </li>
                   </ul>
                 </div>
@@ -322,7 +332,7 @@
 
             <div id="watermarking-and-protection-panel" class="side-panel panel watermarking-and-protection-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -336,7 +346,7 @@
                       id="product-information-technical-button-watermarking-and-protection" dataInnerPanelCurrent="technical-data-watermarking-and-protection"
                       dataInnerPanelSwitch="product-information-watermarking-and-protection" class="technical-data">
                       <span>Technical Data</span>
-                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="Quru Image Server technical data"></span>
                     </li>
                   </ul>
                 </div>
@@ -402,7 +412,7 @@
 
             <div id="image-analytics-panel" class="side-panel panel image-analytics-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -416,7 +426,7 @@
                       dataInnerPanelCurrent="technical-data-image-analytics" dataInnerPanelSwitch="product-information-image-analytics"
                       class="technical-data">
                       <span>Technical Data</span>
-                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="technical data cog icon"></span>
+                      <span><img class="svg-icon" src="img/SVGs/icon-technical-data.svg" alt="Quru Image Server technical data"></span>
                     </li>
                   </ul>
                 </div>
@@ -483,7 +493,7 @@
 
             <div id="pricing-panel" class="side-panel panel pricing-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
                   <div class="heading">
@@ -535,7 +545,7 @@
 
             <div id="case-studies-panel" class="side-panel panel case-studies-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main">
                   <div class="heading">
@@ -559,7 +569,7 @@
 
             <div id="about-us-panel" class="side-panel panel about-us-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
                 <div class="panel-inside-nav">
                   <ul class="panel-nav-ul">
@@ -620,7 +630,7 @@
 
             <div id="extra-features-panel" class="side-panel panel extra-features-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="quru image server logo">
+              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="content col-md-6" style="margin-top: 8%">
                 <div class="product-information-main"> 
                   <div class="heading">
