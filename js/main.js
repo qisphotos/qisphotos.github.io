@@ -71,8 +71,18 @@ function setUp() {
 
 function showPanel(e) {
 	// get everything we need, nav, side panels ect.
-	let panel = e.target.dataset.panel;
-	let menu_tag = e.target.id;
+    var panel;
+	var menu_tag;
+	var sendGA = false;
+    if (typeof e === 'string') {
+        panel = e;
+        menu_tag = e + "-menu-tag";
+    }
+    else {
+		sendGA = true;
+        panel = e.target.dataset.panel;
+        menu_tag = e.target.id;
+    }
 	let li_ele = document.getElementById(menu_tag);
 	let all_menu_li = document.getElementsByClassName('menu-option')
 	let to_be_opened = document.getElementById(panel);
@@ -108,7 +118,13 @@ function showPanel(e) {
 		for (let i = 0; i < all_menu_li.length; i++) {
 			all_menu_li[i].classList.remove('li_active');
 		}
-		li_ele.classList.add('li_active');
+		li_ele.classList.add('li_active');	
+		// Send page data to Google Analytics
+		let page_path = '?' + panel;
+		history.pushState(null, page_path, page_path);
+		if (sendGA) {
+		gtag('config', 'UA-127421453-1', {page_path : page_path}); 
+		}
 	}
 	let leftMainPanel = document.getElementById('leftMainPanel')
 	leftMainPanel.addEventListener("click", hideAll);
@@ -127,6 +143,7 @@ function hideAll(e) {
 	for (let i = 0; i < all_menu_li.length; i++) {
 		all_menu_li[i].classList.remove('li_active');
 	}
+	history.pushState(null, '?home', '?home');
 	document.getElementById('menu_li_home').classList.add('li_active');
 	e.stopPropagation(); // I don't think this works yet
 }
@@ -135,6 +152,7 @@ function buttonClosePanel() {
 	let nav = document.querySelector('.navigation');
 	let all_menu_li = document.getElementsByClassName('menu-option')
 	let allPanels = document.getElementsByClassName('side-panel')
+	history.pushState(null, '?home', '?home');
 	for (let i = 0; i < allPanels.length; i++) {
 		allPanels[i].classList.remove('active');
 	}
@@ -153,8 +171,6 @@ document.onkeydown = function escPress(evt) {
     }
 }
 
-
-
 // swtich inner sections of panels
 function innerPanelView(obj) {
 	//getting the obj data from the link clicked 
@@ -170,10 +186,11 @@ function innerPanelView(obj) {
 	panelHide.style.display = 'none';
 	let currentButtonID = clicked.attributes.id.nodeValue;
 	let currentButton = document.getElementById(currentButtonID);
-	currentButton.style.color = '#fff';
+	currentButton.style.borderColor = '#de0000';
 	let otherButtonID = clicked.attributes.dataOppButton.nodeValue;
 	let otherButton = document.getElementById(otherButtonID);
-	otherButton.style.color = '#666';
+	otherButton.style.borderColor = 'lightgray';
+
 }
 
 function tryItNow() {
@@ -184,22 +201,6 @@ function tryItNow() {
 	} else {
 		icons.style.opacity = 0;
 	}
-}
-
-function externalFeaturesNav(relate, link) {
-	let allTheFeatures = document.querySelectorAll('.all-features');
-	let allTheMenuItems = document.getElementsByClassName('all-nav-items');	
-	for (let i = 0; i < allTheFeatures.length; i++) {
-		allTheFeatures[i].style.display = 'none';
-		}
-	for (let a = 0; a < allTheMenuItems.length; a++) {
-		allTheMenuItems[a].classList.remove('nav-active');
-	}
-	let activeLink = document.getElementById(link);
-	activeLink.classList.add('nav-active');
-
-	let openFeature = document.getElementById(relate);
-	openFeature.style.display = 'block';
 }
 
 // onload fires when all resources (including images) have loaded

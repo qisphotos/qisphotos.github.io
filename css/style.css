@@ -28,6 +28,7 @@ h2 {
     display: none;
 }
 
+
 .backgrounds {
     position: relative;
     z-index: -1;
@@ -56,7 +57,7 @@ h2 {
 
 .navigation {
     text-align: right;
-    margin-top: 8%;
+    margin-top: 6%;
     position: fixed;
     color: white;  
     right: 0%;
@@ -103,14 +104,19 @@ h2 {
 }
 
 .navigation ul .menu-option:hover  {
-    text-decoration: none;
-    cursor: pointer;    
+    text-decoration: underline;
+    cursor: pointer;  
 }
 
-.li_active {
+a, a:hover {
+    color: black;
+}
+
+.li_active, .li_active a, .li_active a:hover {
     color: white !important;
     background: black !important;
     cursor: pointer;    
+    text-decoration: underline;
 }
 
 .main-heading h1 {
@@ -178,13 +184,17 @@ h2 {
     margin-left: 60px;
     border-radius: 4px;
     padding: 15px 25px 15px 25px;
-    margin-top: 50px;
     text-transform: uppercase;
     font-size: 12px;
     border: none;
     cursor: pointer;
     transition: 0.3s;
 }
+
+.download-button p {
+    margin: 0;
+}
+
 
 .dark-layer {
     background: rgba(0, 0, 0, 0.25) no-repeat center center fixed;
@@ -239,17 +249,35 @@ h2 {
 .panel-nav-ul .pipe {
     color: #666;
     font-weight: 700;
+    padding: 10px;
 }
 
 .panel-nav-ul .technical-data {
     font-weight: 500;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
-    color: #666;    
+    color: white;
+    border: 1px solid lightgray;
+    border-bottom: 5px solid lightgray;
+    padding: 5px 0px 3px 5px;    
+    border-radius: 5px;
+    margin-left: 15px
 }
 
 .panel-nav-ul .technical-data span{
-    padding-right: 10px;
+    padding-right: 5px;
+}
+
+.panel-inside-nav ul .product-information {
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    
+    border: 1px solid #de0000;
+    border-bottom: 5px solid #de0000;
+    padding: 6px 5px 4px 5px;    
+    border-radius: 5px;
 }
 
 .panel-nav-ul li {
@@ -290,18 +318,15 @@ h2 {
     width: 75%;
 }
 
+.fa-github {
+    padding-left: 5px;
+}
+
 .product-information-main span {
     color: #de0000;
     font-weight: 200;
     margin-left: 30px;
     text-transform: uppercase;
-}
-
-.panel-inside-nav ul .product-information {
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .panel .content p {
@@ -312,6 +337,13 @@ h2 {
     width: 75%;
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 20px;
+}
+
+address {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    padding-left: 30px;   
 }
 
 .demo-link:hover {
@@ -331,18 +363,25 @@ h2 {
 }
 
 .svg-icon {
-    width: 25px;
-    margin-bottom: 5px;
+    width: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+    
 } 
 
 .social {
     position: absolute;
-    bottom: 0;
+    bottom: 175px;
+}
+
+.try-it-now {
+    position: absolute;
+    bottom: 135px;
 }
 
 .download {
     position: absolute;
-    bottom: 135px;
+    bottom: 70px;
 }
 
 .social ul {
@@ -367,6 +406,11 @@ h2 {
 .social ul li:hover {
     background: #111;
     color: white;
+}
+
+.rendered-container {
+    position: absolute;
+    bottom: 0;
 }
 
 .rendered {
@@ -624,18 +668,18 @@ h2 {
         font-weight: 400;
     }
     .qis-logo-inpanel {
-        width: 270px;
+        width: 50%;
         height: auto;        
-        padding: 10px;
+        padding: 5px;
         background: #222;
         display: block;
     }
     .navigation {
-        margin-top: 100px;
+        margin-top: 80px;
     }
     .download {
         margin-top: 60%;
-        margin-bottom: 10px;
+        margin-bottom: 1px;
     }
     .download-button {
         margin-left: 10px;
@@ -696,6 +740,7 @@ h2 {
         background: rgba(0, 0, 0, 0.90)
     }
     .panel-nav-ul {
+        margin-top: 60px;
         padding-left: 0;
         background-color: rgba(255,255,255,0.05);
         padding: 5px 5px 5px 5px;
@@ -718,5 +763,11 @@ h2 {
     }
     .case-studies-menu ul li {
         display: list-item;
+    }
+    .panel-nav-ul .technical-data {
+        margin-left: 10px;
+    }
+    .panel-inside-nav ul .product-information {
+        padding-bottom: 8px;
     }
 }
