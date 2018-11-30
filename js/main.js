@@ -131,6 +131,7 @@ function hideAll(e) {
 	let heading = document.getElementById('main_heading')
 	let nav = document.querySelector('.navigation');
 	let allPanels = document.getElementsByClassName('side-panel')
+	history.pushState(null, 'home', '?home')
 	for (let i = 0; i < allPanels.length; i++) {
 		allPanels[i].classList.remove('active');
 	}
@@ -147,6 +148,7 @@ function buttonClosePanel() {
 	let nav = document.querySelector('.navigation');
 	let all_menu_li = document.getElementsByClassName('menu-option')
 	let allPanels = document.getElementsByClassName('side-panel')
+	history.pushState(null, 'home', '?home')
 	for (let i = 0; i < allPanels.length; i++) {
 		allPanels[i].classList.remove('active');
 	}
