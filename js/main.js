@@ -118,7 +118,8 @@ function showPanel(e) {
 		}
 		li_ele.classList.add('li_active');	
 		// Send page data to Google Analytics
-		let page_path = '?' + panel;		
+		let page_path = '?' + panel;
+		history.pushState(null, page_path, page_path);
 		gtag('config', 'UA-127421453-1', {page_path : page_path});
 		
 	}
@@ -139,6 +140,7 @@ function hideAll(e) {
 	for (let i = 0; i < all_menu_li.length; i++) {
 		all_menu_li[i].classList.remove('li_active');
 	}
+	history.pushState(null, '?home', '?home');
 	document.getElementById('menu_li_home').classList.add('li_active');
 	e.stopPropagation(); // I don't think this works yet
 }
@@ -147,6 +149,7 @@ function buttonClosePanel() {
 	let nav = document.querySelector('.navigation');
 	let all_menu_li = document.getElementsByClassName('menu-option')
 	let allPanels = document.getElementsByClassName('side-panel')
+	history.pushState(null, '?home', '?home');
 	for (let i = 0; i < allPanels.length; i++) {
 		allPanels[i].classList.remove('active');
 	}
@@ -196,22 +199,6 @@ function tryItNow() {
 	} else {
 		icons.style.opacity = 0;
 	}
-}
-
-function externalFeaturesNav(relate, link) {
-	let allTheFeatures = document.querySelectorAll('.all-features');
-	let allTheMenuItems = document.getElementsByClassName('all-nav-items');	
-	for (let i = 0; i < allTheFeatures.length; i++) {
-		allTheFeatures[i].style.display = 'none';
-		}
-	for (let a = 0; a < allTheMenuItems.length; a++) {
-		allTheMenuItems[a].classList.remove('nav-active');
-	}
-	let activeLink = document.getElementById(link);
-	activeLink.classList.add('nav-active');
-
-	let openFeature = document.getElementById(relate);
-	openFeature.style.display = 'block';
 }
 
 // onload fires when all resources (including images) have loaded
