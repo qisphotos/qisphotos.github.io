@@ -230,7 +230,3 @@ window.onload = function() {
 		);
 	}
 }
-
-window.on('popstate', function() {
-	console.log(location.pathname);
-})
