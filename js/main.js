@@ -122,7 +122,7 @@ function showPanel(e) {
 		// Send page data to Google Analytics
 		let page_path = '?' + panel;
 		history.pushState(null, page_path, page_path);
-		if (sendGA = true) {
+		if (sendGA) {
 		gtag('config', 'UA-127421453-1', {page_path : page_path}); 
 		}
 	}
