@@ -112,7 +112,7 @@ a, a:hover {
     color: black;
 }
 
-.li_active, .li_active a, .li_actie a:hover {
+.li_active, .li_active a, .li_active a:hover {
     color: white !important;
     background: black !important;
     cursor: pointer;    
