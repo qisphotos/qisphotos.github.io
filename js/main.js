@@ -72,12 +72,14 @@ function setUp() {
 function showPanel(e) {
 	// get everything we need, nav, side panels ect.
     var panel;
-    var menu_tag;
+	var menu_tag;
+	var sendGA = false;
     if (typeof e === 'string') {
         panel = e;
         menu_tag = e + "-menu-tag";
     }
     else {
+		sendGA = true;
         panel = e.target.dataset.panel;
         menu_tag = e.target.id;
     }
@@ -120,8 +122,9 @@ function showPanel(e) {
 		// Send page data to Google Analytics
 		let page_path = '?' + panel;
 		history.pushState(null, page_path, page_path);
-		gtag('config', 'UA-127421453-1', {page_path : page_path});
-		
+		if (sendGA = true) {
+		gtag('config', 'UA-127421453-1', {page_path : page_path}); 
+		}
 	}
 	let leftMainPanel = document.getElementById('leftMainPanel')
 	leftMainPanel.addEventListener("click", hideAll);
@@ -167,8 +170,6 @@ document.onkeydown = function escPress(evt) {
 		buttonClosePanel();
     }
 }
-
-
 
 // swtich inner sections of panels
 function innerPanelView(obj) {
