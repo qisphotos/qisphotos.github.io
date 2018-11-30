@@ -71,8 +71,16 @@ function setUp() {
 
 function showPanel(e) {
 	// get everything we need, nav, side panels ect.
-	let panel = e.target.dataset.panel;
-	let menu_tag = e.target.id;
+    var panel;
+    var menu_tag;
+    if (typeof e === 'string') {
+        panel = e;
+        menu_tag = e + "-menu-tag";
+    }
+    else {
+        panel = e.target.dataset.panel;
+        menu_tag = e.target.id;
+    }
 	let li_ele = document.getElementById(menu_tag);
 	let all_menu_li = document.getElementsByClassName('menu-option')
 	let to_be_opened = document.getElementById(panel);
@@ -109,6 +117,10 @@ function showPanel(e) {
 			all_menu_li[i].classList.remove('li_active');
 		}
 		li_ele.classList.add('li_active');
+		// Send page data to Google Analytics
+		page_path = '?' + panel;
+		gtag('config', 'UA-127421453-1', {page_path : page_path});
+		gtag('send', panel, '?' + panel);
 	}
 	let leftMainPanel = document.getElementById('leftMainPanel')
 	leftMainPanel.addEventListener("click", hideAll);

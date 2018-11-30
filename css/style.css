@@ -28,6 +28,7 @@ h2 {
     display: none;
 }
 
+
 .backgrounds {
     position: relative;
     z-index: -1;
@@ -107,7 +108,11 @@ h2 {
     cursor: pointer;    
 }
 
-.li_active {
+a, a:hover {
+    color: black;
+}
+
+.li_active, .li_active a, .li_active a:hover {
     color: white !important;
     background: black !important;
     cursor: pointer;    
