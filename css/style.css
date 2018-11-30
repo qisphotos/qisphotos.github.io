@@ -104,8 +104,8 @@ h2 {
 }
 
 .navigation ul .menu-option:hover  {
-    text-decoration: none;
-    cursor: pointer;    
+    text-decoration: underline;
+    cursor: pointer;  
 }
 
 a, a:hover {
@@ -116,6 +116,7 @@ a, a:hover {
     color: white !important;
     background: black !important;
     cursor: pointer;    
+    text-decoration: underline;
 }
 
 .main-heading h1 {
