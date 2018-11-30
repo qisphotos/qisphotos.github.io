@@ -117,6 +117,10 @@ function showPanel(e) {
 			all_menu_li[i].classList.remove('li_active');
 		}
 		li_ele.classList.add('li_active');
+		// Send page data to Google Analytics
+		page_path = '?' + panel;
+		gtag('config', 'UA-127421453-1', {page_path : page_path});
+		gtag('send', panel, '?' + panel);
 	}
 	let leftMainPanel = document.getElementById('leftMainPanel')
 	leftMainPanel.addEventListener("click", hideAll);

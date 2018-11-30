@@ -62,41 +62,41 @@
         <div class="col-md-6 right-main-panel" style="padding-right:0; height: 100%;">
           <div id="navigation" class="navigation navigation-inactive" data-panel="navigation">
             <ul id="mainNavUl" data-panel="nav-ul">
-              <li id="menu_li_home" class="menu-option li_active" data-panel="home">
-                <a href="?home">Home</a>
-              </li>
+                <li id="menu_li_home" class="menu-option li_active" data-panel="home">
+                  Home
+                </li>
               <br>
-              <li class="menu-option" id="image-resizing-menu-tag" data-panel="image-resizing">
-                <a href="?image-resizing">Image Resizing</a>
-              </li>
+                <li class="menu-option" id="image-resizing-menu-tag" data-panel="image-resizing" onclick="javascript:history.pushState(null, null, '?image-resizing')">
+                    Image Resizing
+                </li>
               <br>
-              <li class="menu-option" id="image-conversion-menu-tag" data-panel="image-conversion">
-                <a href="?image-conversion">Image Conversion</a>
-              </li>
+                <li class="menu-option" id="image-conversion-menu-tag" data-panel="image-conversion" onclick="javascript:history.pushState(null, null, '?image-conversion')">
+                  Image Conversion
+                </li>
               <br>
-              <li class="menu-option" id="watermarking-and-protection-menu-tag" data-panel="watermarking-and-protection">
-                <a href="?watermarking-and-protection">Watermarking & protection</a>
-              </li>
+                <li class="menu-option" id="watermarking-and-protection-menu-tag" data-panel="watermarking-and-protection" onclick="javascript:history.pushState(null, null, '?watermarking-and-protection')">
+                  Watermarking & protection
+                </li>
               <br>
-              <li class="menu-option" id="image-analytics-menu-tag" data-panel="image-analytics">
-                <a href="?image-analytics">Image analytics</a>
-              </li>
+                <li class="menu-option" id="image-analytics-menu-tag" data-panel="image-analytics" onclick="javascript:history.pushState(null, null, '?image-analytics')">
+                  Image analytics
+                </li>
               <br>
-              <li class="menu-option" id="extra-features-menu-tag" data-panel="extra-features">
-                <a href="?extra-features">Extra Features</a>
-              </li>
+                <li class="menu-option" id="extra-features-menu-tag" data-panel="extra-features" onclick="javascript:history.pushState(null, null, '?extra-features')">
+                  Extra Features
+                </li>
               <br>
-              <li class="menu-option" id="pricing-menu-tag" data-panel="pricing">
-                <a href="?pricing">Pricing</a>
-              </li>
+                <li class="menu-option" id="pricing-menu-tag" data-panel="pricing" onclick="javascript:history.pushState(null, null, '?pricing')">
+                  Pricing
+                </li>
               <br>
-              <li class="menu-option" id="case-studies-menu-tag" data-panel="case-studies">
-                <a href="?case-studies">Case studies</a>
-              </li>
+                <li class="menu-option" id="case-studies-menu-tag" data-panel="case-studies" onclick="javascript:history.pushState(null, null, '?case-studies')">
+                  Case studies
+                </li>
               <br>
-              <li class="menu-option" id="about-us-menu-tag" data-panel="about-us">
-                <a href="?about-us">About us</a>
-              </li>
+                <li class="menu-option" id="about-us-menu-tag" data-panel="about-us" onclick="javascript:history.pushState(null, null, '?about-us')">
+                  About us
+                </li>
               <br>
             </ul>
           </div>
@@ -730,6 +730,17 @@
   </div>
   </div>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127421453-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127421453-1');
+  </script>
+
+
   <script src="https://images.quru.com/static/js/common_view.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/qis.js"></script>
@@ -740,15 +751,6 @@
      if (tabid != "") {
         showPanel(tabid);
      }
-  </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127421453-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-127421453-1');
   </script>
 
 </body>
