@@ -2,18 +2,8 @@
 <html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127421453-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-127421453-1');
-  </script>
-
   <meta charset="UTF-8">
-  <meta author="Mohsin Hanid">
+  <meta author="Mohsin Hanid, Quru">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Quru Image Server - dynamic colour-managed photo resizing</title>
@@ -73,45 +63,45 @@
           <div id="navigation" class="navigation navigation-inactive" data-panel="navigation">
             <ul id="mainNavUl" data-panel="nav-ul">
               <li id="menu_li_home" class="menu-option li_active" data-panel="home">
-                Home
+                <a href="?home">Home</a>
               </li>
               <br>
-              <li class="menu-option" id="image-resizing-menu-tag" data-panel="image-resizing-panel">
-                Image Resizing
+              <li class="menu-option" id="image-resizing-menu-tag" data-panel="image-resizing">
+                <a href="?image-resizing">Image Resizing</a>
               </li>
               <br>
-              <li class="menu-option" id="image-conversion-menu-tag" data-panel="image-conversion-panel">
-                Image Conversion
+              <li class="menu-option" id="image-conversion-menu-tag" data-panel="image-conversion">
+                <a href="?image-conversion">Image Conversion</a>
               </li>
               <br>
-              <li class="menu-option" id="watermarking-and-protection-menu-tag" data-panel="watermarking-and-protection-panel">
-                Watermarking & protection
+              <li class="menu-option" id="watermarking-and-protection-menu-tag" data-panel="watermarking-and-protection">
+                <a href="?watermarking-and-protection">Watermarking & protection</a>
               </li>
               <br>
-              <li class="menu-option" id="image-analytics-menu-tag" data-panel="image-analytics-panel">
-                Image analytics
+              <li class="menu-option" id="image-analytics-menu-tag" data-panel="image-analytics">
+                <a href="?image-analytics">Image analytics</a>
               </li>
               <br>
-              <li class="menu-option" id="extra-features-menu-tag" data-panel="extra-features-panel">
-                Extra Features
+              <li class="menu-option" id="extra-features-menu-tag" data-panel="extra-features">
+                <a href="?extra-features">Extra Features</a>
               </li>
               <br>
-              <li class="menu-option" id="pricing-menu-tag" data-panel="pricing-panel">
-                Pricing
+              <li class="menu-option" id="pricing-menu-tag" data-panel="pricing">
+                <a href="?pricing">Pricing</a>
               </li>
               <br>
-              <li class="menu-option" id="case-studies-menu-tag" data-panel="case-studies-panel">
-                Case studies
+              <li class="menu-option" id="case-studies-menu-tag" data-panel="case-studies">
+                <a href="?case-studies">Case studies</a>
               </li>
               <br>
-              <li class="menu-option" id="about-us-menu-tag" data-panel="about-us-panel">
-                About us
+              <li class="menu-option" id="about-us-menu-tag" data-panel="about-us">
+                <a href="?about-us">About us</a>
               </li>
               <br>
             </ul>
           </div>
           <div id="panels">
-            <div id="image-resizing-panel" class="side-panel panel image-resizing-panel">
+            <div id="image-resizing" class="side-panel panel image-resizing-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
               <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
@@ -190,7 +180,7 @@
               </div>
             </div>
 
-            <div id="image-conversion-panel" class="side-panel panel image-conversion-panel">
+            <div id="image-conversion" class="side-panel panel image-conversion-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
               <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
@@ -330,7 +320,7 @@
               </div>
             </div>
 
-            <div id="watermarking-and-protection-panel" class="side-panel panel watermarking-and-protection-panel">
+            <div id="watermarking-and-protection" class="side-panel panel watermarking-and-protection-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
               <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
@@ -410,7 +400,7 @@
               </div>
             </div>
 
-            <div id="image-analytics-panel" class="side-panel panel image-analytics-panel">
+            <div id="image-analytics" class="side-panel panel image-analytics-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
               <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
@@ -491,7 +481,7 @@
               </div>
             </div>
 
-            <div id="pricing-panel" class="side-panel panel pricing-panel">
+            <div id="pricing" class="side-panel panel pricing-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
               <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="content col-md-6" style="margin-top: 8%">
@@ -543,7 +533,7 @@
               </div>
             </div>
 
-            <div id="case-studies-panel" class="side-panel panel case-studies-panel">
+            <div id="case-studies" class="side-panel panel case-studies-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
               <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="content col-md-6" style="margin-top: 8%">
@@ -567,7 +557,7 @@
               </div>
             </div>
 
-            <div id="about-us-panel" class="side-panel panel about-us-panel">
+            <div id="about-us" class="side-panel panel about-us-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
               <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="col-md-6 content">
@@ -628,7 +618,7 @@
               </div>
             </div>
 
-            <div id="extra-features-panel" class="side-panel panel extra-features-panel">
+            <div id="extra-features" class="side-panel panel extra-features-panel">
               <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
               <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
               <div class="content col-md-6" style="margin-top: 8%">
@@ -743,6 +733,24 @@
   <script src="https://images.quru.com/static/js/common_view.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/qis.js"></script>
+  <!-- Trap for query params and call different tab if required -->
+  <script>
+     var reqestedurl = window.location.search;
+     var tabid = reqestedurl.substring(1);      
+     if (tabid != "") {
+        showPanel(tabid);
+     }
+  </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127421453-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127421453-1');
+  </script>
+
 </body>
 
 </html>
