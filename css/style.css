@@ -320,6 +320,13 @@ a, a:hover {
     margin-bottom: 20px;
 }
 
+address {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    padding-left: 30px;   
+}
+
 .demo-link:hover {
     text-decoration: none;
 }
