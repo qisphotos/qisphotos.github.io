@@ -190,8 +190,8 @@ function innerPanelView(obj) {
 	currentButton.style.borderColor = '#fff';
 	let otherButtonID = clicked.attributes.dataOppButton.nodeValue;
 	let otherButton = document.getElementById(otherButtonID);
-	otherButton.style.color = '#666';
-	otherButton.style.borderColor = '#666';
+	otherButton.style.color = 'maroon';
+	otherButton.style.borderColor = 'maroon';
 
 }
 
