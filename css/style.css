@@ -256,11 +256,12 @@ a, a:hover {
     font-weight: 500;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
-    color: maroon;
-    border: 1px solid maroon;
+    color: white;
+    border: 1px solid lightgray;
+    border-bottom: 5px solid lightgray;
     padding: 5px 0px 3px 5px;    
     border-radius: 5px;
-    margin-left: 10px
+    margin-left: 15px
 }
 
 .panel-nav-ul .technical-data span{
@@ -272,7 +273,9 @@ a, a:hover {
     font-weight: 500;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
-    border: 1px solid white;
+    
+    border: 1px solid #de0000;
+    border-bottom: 5px solid #de0000;
     padding: 6px 5px 4px 5px;    
     border-radius: 5px;
 }

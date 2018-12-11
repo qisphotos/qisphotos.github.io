@@ -186,12 +186,10 @@ function innerPanelView(obj) {
 	panelHide.style.display = 'none';
 	let currentButtonID = clicked.attributes.id.nodeValue;
 	let currentButton = document.getElementById(currentButtonID);
-	currentButton.style.color = '#fff';
-	currentButton.style.borderColor = '#fff';
+	currentButton.style.borderColor = '#de0000';
 	let otherButtonID = clicked.attributes.dataOppButton.nodeValue;
 	let otherButton = document.getElementById(otherButtonID);
-	otherButton.style.color = 'maroon';
-	otherButton.style.borderColor = 'maroon';
+	otherButton.style.borderColor = 'lightgray';
 
 }
 
