@@ -48,17 +48,29 @@
           <div id="main_heading" class="main-heading">
             <h1 id="heading"></h1>
           </div>
-          <div class="download">
+          <div class="try-it-now">
             <a href="try-it/">
-              <button class="download-button">Try it now</button>
+              <button class="download-button">
+                <p>Try it now</p>
+              </button>
+            </a>
+          </div>
+          <div class="download">
+            <a href="https://github.com/quru/qis">
+              <button class="download-button">
+                <ul style="list-style: none; margin-bottom: 0; padding-left: 0;">
+                  <li style="display: inline-block;"><p>Free Standard Edition</p>  </li>
+                  <li style="display: inline-block;"><i class="fab fa-github fa-2x"></i></li>
+                </ul> 
+              </button>
             </a>
           </div>
           <div class="social">
             <ul class="socail-list-ul">
               <li class="socail-list-ul-li" alt="link to instagram"><a href="https://www.instagram.com/quruimageserver/"
                   alt="Instagram" target="_new"><i class="fab fa-instagram fa-2x"></i></a></li>
-              <li class="socail-list-ul-li" alt="link to github"><a href="https://github.com/quru/qis" alt="Github"
-                  target="_new"><i class="fab fa-github fa-2x"></i></a></li>
+              <!-- <li class="socail-list-ul-li" alt="link to github"><a href="https://github.com/quru/qis" alt="Github"
+                  target="_new"><i class="fab fa-github fa-2x"></i></a></li> -->
             </ul>
             <p id="rendered" class="rendered">Loading...</p>
           </div>
@@ -111,82 +123,81 @@
             </ul>
           </div>
           <div id="panels">
-
             <div id="what-it-does" class="side-panel panel what-it-does">
-              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
-              <div class="col-md-6 content">
-                <div class="product-information-main" id="product-information-image-resizing">
-                  <div class="heading">
-                    <h1>
-                      What it does
-                    </h1>
-                  </div>
+              <div style="margin-top: 8%">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
+                <div class="col-md-6 content">
+                  <div class="product-information-main" id="product-information-image-resizing">
+                    <div class="heading">
+                      <h1>
+                        What it does
+                      </h1>
+                    </div>
 
-                  <p>
-                    The Quru Image Server (QIS - pronounced ‘kiss’) ensures you deliver the best brand image experience
-                    to your customers every time, on any device. We’re the service of choice for brands with thousands
-                    of images that need to be adaptable
-                  </p>
-                  <p>
-                    Only a single copy of each image is stored so that, no matter where they are seen, it remains 100%
-                    consistent when viewed or downloaded. And you can manage this with simplicity, speed and ease.
-                    Each image is adapted for multiple use. Full colour high-res images, ready for high quality
-                    printing can adapt down to a thumbnail for use on a smartphone instantly. No manual resizing and
-                    storing multiple versions of the same image.
-                  </p>
-                  <p>
-                    <u><strong>With QIS you get:</strong></u><br>
-                    Full control over your images including re-sizing,
-                    conversion, watermarking, and much more.
-                    Analytics include: Integrated reporting of image traffic; viewing overall image traffic on site;
-                    viewing individual traffic on site; tracking number of requests hourly
-                  </p>
+                    <p>
+                      The Quru Image Server (QIS - pronounced ‘kiss’) ensures you deliver the best brand image experience
+                      to your customers every time, on any device. We’re the service of choice for brands with thousands
+                      of images that need to be adaptable
+                    </p>
+                    <p>
+                      Only a single copy of each image is stored so that, no matter where they are seen, it remains 100%
+                      consistent when viewed or downloaded. And you can manage this with simplicity, speed and ease.
+                      Each image is adapted for multiple use. Full colour high-res images, ready for high quality
+                      printing can adapt down to a thumbnail for use on a smartphone instantly. No manual resizing and
+                      storing multiple versions of the same image.
+                    </p>
+                    <p>
+                      With QIS you get: Full control over your images including re-sizing,
+                      conversion, watermarking, and much more.
+                      Analytics include: Integrated reporting of image traffic; viewing overall image traffic on site;
+                      viewing individual traffic on site; tracking number of requests hourly
+                    </p>
 
-                  <p>
-                    Find out how QIS can support your business by talking to us now on +44 20 7160 2888.
-                  </p>
-                  <a class="demo-link" href="try-it/">
-                    <span>Try the online demo</span>
-                  </a>
-                  <a class="demo-link" href="https://github.com/quru/qis">
-                    <span>Free Standard Edition</span>  
+                    <p>
+                      Find out how QIS can support your business by talking to us now on:
+                      <br>
+                      <a href="tel:+44 20 7160 2888" style="color:white; text-decoration: underline">+44 20 7160 2888</a>
+                    </p>
+                    <a class="demo-link" href="try-it/">
+                      <span>Try the online demo</span>
                     </a>
-                </div>
-
-                
-                <div class="technical-data-main" id="technical-data-image-resizing">
-                  <div class="heading">
-                    <h1>
-                      Image Resizing
-                    </h1>
                   </div>
 
-                  <p>
-                    QIS stores images in a server native filesystem - the limits on storage are thus the
-                    size of the physical storage medium - but you need only store a single instance of the image.
-                    Pre-sizing of images is no longer a regular activity due to QIS's ability to resize images on
-                    demand.
-                  </p>
-                  <p>
-                    When an image is requested QIS will query its cache of previously served images for a suitable
-                    base image before reading the original from file if needed. A customized library is called to
-                    render the image at the new size before saving it to cache and returning the new image.
-                  </p>
-                  <p>
-                    QIS can pre-emptively generate subsequent versions of the image in the background if configured to
-                    do so so that new iterations of the image are already in cache ready for a fast response,
-                    frequently in only a few milliseconds. Such optimization results in QIS being one of the fast image
-                    resizing engines available.
-                  </p>
-                  <p>
-                    For more information, please see <a href='https://github.com/quru/qis' alt='Qis on Github'>https://github.com/quru/qis</a>.
-                  </p>
-                  <a class="demo-link" href="try-it/">
-                    <span>Try the online demo</span>
-                  </a>
+
+                  <div class="technical-data-main" id="technical-data-image-resizing">
+                    <div class="heading">
+                      <h1>
+                        Image Resizing
+                      </h1>
+                    </div>
+
+                    <p>
+                      QIS stores images in a server native filesystem - the limits on storage are thus the
+                      size of the physical storage medium - but you need only store a single instance of the image.
+                      Pre-sizing of images is no longer a regular activity due to QIS's ability to resize images on
+                      demand.
+                    </p>
+                    <p>
+                      When an image is requested QIS will query its cache of previously served images for a suitable
+                      base image before reading the original from file if needed. A customized library is called to
+                      render the image at the new size before saving it to cache and returning the new image.
+                    </p>
+                    <p>
+                      QIS can pre-emptively generate subsequent versions of the image in the background if configured to
+                      do so so that new iterations of the image are already in cache ready for a fast response,
+                      frequently in only a few milliseconds. Such optimization results in QIS being one of the fast image
+                      resizing engines available.
+                    </p>
+                    <p>
+                      For more information, please see <a href='https://github.com/quru/qis' alt='Qis on Github'>https://github.com/quru/qis</a>.
+                    </p>
+                    <a class="demo-link" href="try-it/">
+                      <span>Try the online demo</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
+              </div>  
             </div>
 
 
@@ -669,63 +680,49 @@
             </div>
 
             <div id="about-us" class="side-panel panel about-us-panel">
-              <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
-              <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
-              <div class="col-md-6 content">
-                <div class="panel-inside-nav">
-                  <ul class="panel-nav-ul">
-                    <li onclick="innerPanelView(this)" dataOppButton="product-information-technical-button-about-us" id="product-information-button-about-us"
-                      dataInnerPanelCurrent="product-information-about-us" dataInnerPanelSwitch="technical-data-about-us"
-                      class="product-information">
-                      About Quru
-                    </li>
-                    <!--<li class="pipe">|</li>
-                    <li onclick="innerPanelView(this)" dataOppButton="product-information-button-about-us" id="product-information-technical-button-about-us"
-                      dataInnerPanelCurrent="technical-data-about-us" dataInnerPanelSwitch="product-information-about-us"
-                      class="technical-data">
-                      <span>Customer Testimonials</span>
-                      <img src="img/SVGs/icon-testimonials.svg" class="svg-icon" alt="speech bubble">
-                    </li>-->
-                  </ul>
-                </div>
-                <div class="product-information-main" id="product-information-about-us" style="margin-top:40px;">
-                  <div class="heading">
-                    <h1>
-                      The only choice for the most demanding brands
-                    </h1>
-                  </div>
+              <div style="margin-top: 8%;">
+                <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
+                <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
+                <div class="col-md-6 content">                
+                  <div class="product-information-main" id="product-information-about-us" style="margin-top:40px;">
+                    <div class="heading">
+                      <h1>
+                        The only choice for the most demanding brands
+                      </h1>
+                    </div>
 
-                  <p>
-                    The Quru Image Server (QIS - pronounced ‘kiss’) ensures you deliver the best brand image experience
-                    to your customers every time, on any device. We’re the service of choice for brands with thousands
-                    of images that need to be adaptable.
-                  </p>
-                  <p>
-                    All your images are stored and delivered from one place meaning that, no matter where they are
-                    seen, they remain 100% consistent when viewed or downloaded. And you can manage this with
-                    simplicity, speed and ease.
-                  </p>
-                  <p>
-                    Each image is adapted for multiple use. Full colour high-res images, ready for high quality
-                    printing can adapt down to a thumbnail for use on a smartphone instantly. No manual resizing and
-                    storing multiple versions of the same image.
-                  </p>
-                  <p>
-                    Find out how QIS can support your business by talking to us now on +44 20 7160 2888.
-                  </p>
-                </div>
-                <!--
-                <div class="technical-data-main" id="technical-data-about-us"style="margin-top:40px;">
-                  <div class="heading">
-                    <h1>
-                      Customer Testimonials
-                    </h1>
+                    <p>
+                      The Quru Image Server (QIS - pronounced ‘kiss’) ensures you deliver the best brand image experience
+                      to your customers every time, on any device. We’re the service of choice for brands with thousands
+                      of images that need to be adaptable.
+                    </p>
+                    <p>
+                      All your images are stored and delivered from one place meaning that, no matter where they are
+                      seen, they remain 100% consistent when viewed or downloaded. And you can manage this with
+                      simplicity, speed and ease.
+                    </p>
+                    <p>
+                      Each image is adapted for multiple use. Full colour high-res images, ready for high quality
+                      printing can adapt down to a thumbnail for use on a smartphone instantly. No manual resizing and
+                      storing multiple versions of the same image.
+                    </p>
+                    <p>
+                      Find out how QIS can support your business by talking to us now on +44 20 7160 2888.
+                    </p>
                   </div>
-                  <p>
-                    Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
-                  </p>
+                  <!--
+                  <div class="technical-data-main" id="technical-data-about-us"style="margin-top:40px;">
+                    <div class="heading">
+                      <h1>
+                        Customer Testimonials
+                      </h1>
+                    </div>
+                    <p>
+                      Reiciendis, molestias tempora a iusto illum magnam labore numquam error.
+                    </p>
+                  </div>
+                  -->
                 </div>
-                -->
               </div>
             </div>
 

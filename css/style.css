@@ -192,6 +192,11 @@ a, a:hover {
     transition: 0.3s;
 }
 
+.download-button p {
+    margin: 0;
+}
+
+
 .dark-layer {
     background: rgba(0, 0, 0, 0.25) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -245,6 +250,7 @@ a, a:hover {
 .panel-nav-ul .pipe {
     color: #666;
     font-weight: 700;
+    padding: 10px;
 }
 
 .panel-nav-ul .technical-data {
@@ -253,12 +259,12 @@ a, a:hover {
     font-family: 'Open Sans', sans-serif;
     color: #666;
     border: 1px solid #666;
-    padding: 5px;    
+    padding: 5px 0px 3px 5px;    
     border-radius: 5px;
 }
 
 .panel-nav-ul .technical-data span{
-    padding-right: 10px;
+    padding-right: 5px;
 }
 
 .panel-inside-nav ul .product-information {
@@ -267,7 +273,7 @@ a, a:hover {
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     border: 1px solid white;
-    padding: 5px;    
+    padding: 6px 5px 4px 5px;    
     border-radius: 5px;
 }
 
@@ -309,6 +315,10 @@ a, a:hover {
     width: 75%;
 }
 
+.fa-github {
+    padding-left: 5px;
+}
+
 .product-information-main span {
     color: #de0000;
     font-weight: 200;
@@ -343,14 +353,20 @@ a, a:hover {
 }
 
 .svg-icon {
-    width: 18px;
+    width: 20px;
     margin-bottom: 0px;
     padding-bottom: 1px;
+    
 } 
 
 .social {
     position: absolute;
     bottom: 0;
+}
+
+.try-it-now {
+    position: absolute;
+    bottom: 195px;
 }
 
 .download {
@@ -648,7 +664,7 @@ a, a:hover {
     }
     .download {
         margin-top: 60%;
-        margin-bottom: 10px;
+        margin-bottom: 1px;
     }
     .download-button {
         margin-left: 10px;
