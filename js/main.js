@@ -187,9 +187,12 @@ function innerPanelView(obj) {
 	let currentButtonID = clicked.attributes.id.nodeValue;
 	let currentButton = document.getElementById(currentButtonID);
 	currentButton.style.color = '#fff';
+	currentButton.style.borderColor = '#fff';
 	let otherButtonID = clicked.attributes.dataOppButton.nodeValue;
 	let otherButton = document.getElementById(otherButtonID);
 	otherButton.style.color = '#666';
+	otherButton.style.borderColor = '#666';
+
 }
 
 function tryItNow() {
