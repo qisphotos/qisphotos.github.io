@@ -257,10 +257,11 @@ a, a:hover {
     font-weight: 500;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
-    color: #666;
-    border: 1px solid #666;
+    color: maroon;
+    border: 1px solid maroon;
     padding: 5px 0px 3px 5px;    
     border-radius: 5px;
+    margin-left: 10px
 }
 
 .panel-nav-ul .technical-data span{
@@ -368,17 +369,17 @@ address {
 
 .social {
     position: absolute;
-    bottom: 0;
+    bottom: 175px;
 }
 
 .try-it-now {
     position: absolute;
-    bottom: 195px;
+    bottom: 135px;
 }
 
 .download {
     position: absolute;
-    bottom: 135px;
+    bottom: 70px;
 }
 
 .social ul {
@@ -403,6 +404,11 @@ address {
 .social ul li:hover {
     background: #111;
     color: white;
+}
+
+.rendered-container {
+    position: absolute;
+    bottom: 0;
 }
 
 .rendered {

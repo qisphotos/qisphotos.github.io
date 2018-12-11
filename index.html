@@ -48,6 +48,15 @@
           <div id="main_heading" class="main-heading">
             <h1 id="heading"></h1>
           </div>
+          <div class="social">
+            <ul class="socail-list-ul">
+              <li class="socail-list-ul-li" alt="link to instagram"><a href="https://www.instagram.com/quruimageserver/"
+                  alt="Instagram" target="_new"><i class="fab fa-instagram fa-2x"></i></a></li>
+              <!-- <li class="socail-list-ul-li" alt="link to github"><a href="https://github.com/quru/qis" alt="Github"
+                  target="_new"><i class="fab fa-github fa-2x"></i></a></li> -->
+            </ul>
+            
+          </div>
           <div class="try-it-now">
             <a href="try-it/">
               <button class="download-button">
@@ -60,19 +69,13 @@
               <button class="download-button">
                 <ul style="list-style: none; margin-bottom: 0; padding-left: 0;">
                   <li style="display: inline-block;"><p>Free Standard Edition</p>  </li>
-                  <li style="display: inline-block;"><i class="fab fa-github fa-2x"></i></li>
+                  <li style="display: inline-block; margin-left: px"><i class="fab fa-github fa-2x"></i></li>
                 </ul> 
               </button>
             </a>
           </div>
-          <div class="social">
-            <ul class="socail-list-ul">
-              <li class="socail-list-ul-li" alt="link to instagram"><a href="https://www.instagram.com/quruimageserver/"
-                  alt="Instagram" target="_new"><i class="fab fa-instagram fa-2x"></i></a></li>
-              <!-- <li class="socail-list-ul-li" alt="link to github"><a href="https://github.com/quru/qis" alt="Github"
-                  target="_new"><i class="fab fa-github fa-2x"></i></a></li> -->
-            </ul>
-            <p id="rendered" class="rendered">Loading...</p>
+          <div class="rendered-container">
+              <p id="rendered" class="rendered">Loading...</p>
           </div>
         </div>
 
@@ -128,7 +131,7 @@
                 <button onclick="buttonClosePanel()" class="btn custom-button" alt="click or tap to close panel">X</button>
                 <img src="img/SVGs/Quru-Image-Server-Full-ID.svg" class="qis-logo-inpanel" alt="Quru Image Server">
                 <div class="col-md-6 content">
-                  <div class="product-information-main" id="product-information-image-resizing">
+                  <div class="product-information-main">
                     <div class="heading">
                       <h1>
                         What it does
@@ -163,39 +166,6 @@
                       <span>Try the online demo</span>
                     </a>
                   </div>
-
-
-                  <div class="technical-data-main" id="technical-data-image-resizing">
-                    <div class="heading">
-                      <h1>
-                        Image Resizing
-                      </h1>
-                    </div>
-
-                    <p>
-                      QIS stores images in a server native filesystem - the limits on storage are thus the
-                      size of the physical storage medium - but you need only store a single instance of the image.
-                      Pre-sizing of images is no longer a regular activity due to QIS's ability to resize images on
-                      demand.
-                    </p>
-                    <p>
-                      When an image is requested QIS will query its cache of previously served images for a suitable
-                      base image before reading the original from file if needed. A customized library is called to
-                      render the image at the new size before saving it to cache and returning the new image.
-                    </p>
-                    <p>
-                      QIS can pre-emptively generate subsequent versions of the image in the background if configured to
-                      do so so that new iterations of the image are already in cache ready for a fast response,
-                      frequently in only a few milliseconds. Such optimization results in QIS being one of the fast image
-                      resizing engines available.
-                    </p>
-                    <p>
-                      For more information, please see <a href='https://github.com/quru/qis' alt='Qis on Github'>https://github.com/quru/qis</a>.
-                    </p>
-                    <a class="demo-link" href="try-it/">
-                      <span>Try the online demo</span>
-                    </a>
-                  </div>
                 </div>
               </div>  
             </div>
@@ -214,7 +184,6 @@
                       dataInnerPanelSwitch="technical-data-image-resizing" class="product-information">
                       Product Information
                     </li>
-                    <li class="pipe">|</li>
                     <li onclick="innerPanelView(this)" dataOppButton="product-information-button-image-resizing" id="product-information-technical-button-image-resizing"
                       dataInnerPanelCurrent="technical-data-image-resizing" dataInnerPanelSwitch="product-information-image-resizing"
                       class="technical-data">
@@ -274,7 +243,7 @@
                     resizing engines available.
                   </p>
                   <p>
-                    For more information, please see <a href='https://github.com/quru/qis' alt='Qis on Github'>https://github.com/quru/qis</a>.
+                    For more information, please see <a style="color:white" href='https://github.com/quru/qis' alt='Qis on Github'>https://github.com/quru/qis</a>.
                   </p>
                   <a class="demo-link" href="try-it/">
                     <span>Try the online demo</span>
@@ -294,7 +263,6 @@
                       dataInnerPanelSwitch="technical-data-image-conversion" class="product-information">
                       Product Information
                     </li>
-                    <li class="pipe">|</li>
                     <li onclick="innerPanelView(this)" dataOppButton="product-information-button-image-conversion" id="product-information-technical-button-image-conversion"
                       dataInnerPanelCurrent="technical-data-image-conversion" dataInnerPanelSwitch="product-information-image-conversion"
                       class="technical-data">
@@ -434,7 +402,6 @@
                       dataInnerPanelSwitch="technical-data-watermarking-and-protection" class="product-information">
                       Product Information
                     </li>
-                    <li class="pipe">|</li>
                     <li onclick="innerPanelView(this)" dataOppButton="product-information-button-watermarking-and-protection"
                       id="product-information-technical-button-watermarking-and-protection" dataInnerPanelCurrent="technical-data-watermarking-and-protection"
                       dataInnerPanelSwitch="product-information-watermarking-and-protection" class="technical-data">
@@ -514,7 +481,6 @@
                       dataInnerPanelSwitch="technical-data-image-analytics" class="product-information">
                       Product Information
                     </li>
-                    <li class="pipe">|</li>
                     <li onclick="innerPanelView(this)" dataOppButton="product-information-button-image-analytics" id="product-information-technical-button-image-analytics"
                       dataInnerPanelCurrent="technical-data-image-analytics" dataInnerPanelSwitch="product-information-image-analytics"
                       class="technical-data">
