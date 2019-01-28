@@ -57,7 +57,7 @@ h2 {
 
 .navigation {
     text-align: right;
-    margin-top: 8%;
+    margin-top: 6%;
     position: fixed;
     color: white;  
     right: 0%;
@@ -675,7 +675,7 @@ address {
         display: block;
     }
     .navigation {
-        margin-top: 100px;
+        margin-top: 80px;
     }
     .download {
         margin-top: 60%;
@@ -763,5 +763,11 @@ address {
     }
     .case-studies-menu ul li {
         display: list-item;
+    }
+    .panel-nav-ul .technical-data {
+        margin-left: 10px;
+    }
+    .panel-inside-nav ul .product-information {
+        padding-bottom: 8px;
     }
 }
