@@ -112,13 +112,13 @@ function showPanel(e) {
 	} else {
 		// otherwise, open the panel requested, activate the nav with it 
 		// and hide the heading on the left.
-		to_be_opened.classList.add('active');
+		if (to_be_opened) {to_be_opened.classList.add('active');}
 		navigation.classList.add('navigation-active');
 		heading.style.opacity = '0';
 		for (let i = 0; i < all_menu_li.length; i++) {
 			all_menu_li[i].classList.remove('li_active');
 		}
-		li_ele.classList.add('li_active');	
+		if (li_ele) {li_ele.classList.add('li_active');	}
 		// Send page data to Google Analytics
 		let page_path = '?' + panel;
 		history.pushState(null, page_path, page_path);
