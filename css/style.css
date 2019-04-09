@@ -191,6 +191,14 @@ a, a:hover {
     transition: 0.3s;
 }
 
+.week-trial .download-button {
+    margin-left: 5px;
+}
+
+.download .download-button {
+    background: #222;
+}
+
 .download-button p {
     margin: 0;
 }
@@ -374,9 +382,17 @@ address {
     bottom: 175px;
 }
 
-.try-it-now {
+.try-it {
     position: absolute;
     bottom: 135px;
+}
+
+.try-it-now, .week-trial {
+    display: inline;
+}
+
+.week-trial {
+    border-left: 10px;
 }
 
 .download {
